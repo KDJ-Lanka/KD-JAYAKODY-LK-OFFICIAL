@@ -34,77 +34,136 @@
 
     <main class="pt-32 pb-20">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <!-- Header -->
-            <div class="mb-20 animate-on-scroll">
-                <h1 class="text-6xl md:text-8xl font-bold font-space text-transparent bg-clip-text bg-gradient-to-r from-gray-100 to-gray-600 mb-6">About Me</h1>
-                <div class="w-24 h-1 bg-gold"></div>
-            </div>
-
-            <!-- Main Content Grid -->
-            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
-                <!-- Left: Image & Stats -->
-                <div class="lg:col-span-4 space-y-8 animate-on-scroll">
-                    <div class="relative group">
-                        <div class="absolute inset-0 bg-gold blur-2xl opacity-20 group-hover:opacity-40 transition-opacity duration-500"></div>
-                        <img src="assets/images/profile.jpg" alt="K.D. Jayakody" class="relative rounded-2xl border-2 border-white/10 shadow-2xl z-10 w-full object-cover">
-                        <!-- Decor element -->
-                        <div class="absolute -bottom-6 -right-6 w-24 h-24 bg-dark-surface border border-white/10 rounded-full flex items-center justify-center z-20">
-                             <i class="fas fa-code text-gold text-2xl"></i>
+            
+            <!-- Hero Section -->
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center mb-20 animate-on-scroll">
+                <div class="lg:col-span-5 relative group">
+                    <div class="absolute inset-0 bg-gold blur-3xl opacity-20 group-hover:opacity-30 transition-opacity duration-500"></div>
+                    <img src="assets/images/profile.jpg" alt="K.D. Jayakody" class="relative rounded-3xl border-2 border-white/10 shadow-2xl z-10 w-full object-cover">
+                    <div class="absolute -bottom-6 -right-6 glass p-4 rounded-xl border border-white/10 flex items-center gap-4 z-20">
+                        <div class="bg-gold/20 p-3 rounded-full text-gold">
+                            <i class="fas fa-quote-right text-xl"></i>
                         </div>
-                    </div>
-
-                    <div class="grid grid-cols-2 gap-4">
-                        <div class="glass p-6 rounded-lg text-center">
-                            <span class="block text-3xl font-bold text-white mb-1">9+</span>
-                            <span class="text-xs uppercase tracking-widest text-gray-500">Years Exp.</span>
-                        </div>
-                        <div class="glass p-6 rounded-lg text-center">
-                            <span class="block text-3xl font-bold text-white mb-1">90k+</span>
-                            <span class="text-xs uppercase tracking-widest text-gray-500">Community</span>
+                        <div>
+                            <p class="text-xs text-gray-400 uppercase tracking-widest">Philosophy</p>
+                            <p class="text-sm font-bold text-white">Logic is Universal.</p>
                         </div>
                     </div>
                 </div>
-
-                <!-- Right: Bio -->
-                <div class="lg:col-span-8 space-y-12 animate-on-scroll">
+                <div class="lg:col-span-1 space-y-12"></div>
+                <div class="lg:col-span-6 space-y-6">
+                    <h1 class="text-5xl md:text-7xl font-bold font-space text-white leading-tight">
+                        Bridging <span class="text-gold">Innovation</span> & <span class="text-cyan-400">Education</span>
+                    </h1>
                     <div class="prose prose-lg prose-invert text-gray-400">
-                        <p class="lead text-2xl text-white font-light">
-                            Widely recognized as <b>"KDJ"</b>, I am a Founder, Educator, and CTO bridging high-level corporate innovation with grassroots technical education.
+                        <p class="text-xl text-white font-light leading-relaxed">
+                            Widely recognized as <b>"KDJ"</b>, I serve as a bridge between high-level corporate innovation and grassroots technical education.
                         </p>
                         <p>
-                            As the **Founder & CEO of KDJ Lanka (Pvt) Ltd**, I have steered the company from a humble hosting provider (2016) to a sophisticated **SaaS Product House** (2025). Our portfolio now includes **KDJ Tools** (100+ utilities) and **KDJ POS**, serving the local retail sector.
+                            As the **Founder & CEO of KDJ Lanka (Pvt) Ltd**, I bring over a decade of experience as a Software Architect and CTO for international firms. My mission is to democratize complex concepts—from DevOps to AI—making them accessible to Sri Lankan youth by breaking the "Linguistic Divide."
                         </p>
-                        <p>
-                            Recently, I have led high-impact national initiatives, including a **5-Day AI Boot Camp for the Special Task Force (STF)** and "Future-Proofing" workshops for multiple universities. My mission is to build a "Smart Workforce" for Sri Lanka—one that is fluent in AI, DevOps, and strategic thinking.
-                        </p>
-                    </div>
-
-                    <!-- Timeline / Trajectory -->
-                    <div>
-                        <h3 class="text-2xl font-bold text-white mb-6 border-l-4 border-cyan pl-4">Impact Trajectory</h3>
-                        <div class="space-y-8 pl-4 border-l border-gray-800 ml-2">
-                            <div class="relative pl-8">
-                                <div class="absolute -left-[9px] top-2 w-4 h-4 rounded-full bg-dark border-2 border-red-500"></div>
-                                <h4 class="text-xl font-bold text-white">STF AI Boot Camp Lead</h4>
-                                <span class="text-sm text-red-500">Dec 2025</span>
-                                <p class="mt-2 text-gray-500 text-sm">Led a 5-day intensive "Cyber Division" training for the Special Task Force. Covered Gemini, Forensics, and deployed custom Mobile Apps.</p>
-                            </div>
-                            <div class="relative pl-8">
-                                <div class="absolute -left-[9px] top-2 w-4 h-4 rounded-full bg-dark border-2 border-cyan"></div>
-                                <h4 class="text-xl font-bold text-white">Managing Director, KDJ Lanka</h4>
-                                <span class="text-sm text-cyan-400">2020 - Present</span>
-                                <p class="mt-2 text-gray-500 text-sm">Formal incorporation. Launched KDJ Tools & KDJ AI (Super App) in 2025.</p>
-                            </div>
-                            <div class="relative pl-8">
-                                <div class="absolute -left-[9px] top-2 w-4 h-4 rounded-full bg-dark border-2 border-gold"></div>
-                                <h4 class="text-xl font-bold text-white">Founder, KDJ Hosting</h4>
-                                <span class="text-sm text-gold">2016</span>
-                                <p class="mt-2 text-gray-500 text-sm">The operational roots of the ecosystem.</p>
-                            </div>
-                        </div>
                     </div>
                 </div>
             </div>
+
+            <!-- The KDJ Philosophy -->
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-32 animate-on-scroll">
+                <div class="glass p-8 rounded-2xl border-t-4 border-gold group hover:-translate-y-2 transition-transform duration-300">
+                    <i class="fas fa-language text-4xl text-gold mb-6"></i>
+                    <h3 class="text-2xl font-bold text-white mb-4">Sinhala-First Approach</h3>
+                    <p class="text-gray-400">
+                        For many, English is a barrier. I explain high-level concepts using local metaphors (Colombo bus routes for server traffic), proving that <span class="text-white italic">"Once you understand the concept, English is just a label."</span>
+                    </p>
+                </div>
+                <div class="glass p-8 rounded-2xl border-t-4 border-cyan group hover:-translate-y-2 transition-transform duration-300">
+                    <i class="fas fa-heart-pulse text-4xl text-cyan-400 mb-6"></i>
+                    <h3 class="text-2xl font-bold text-white mb-4">Well-Being in Tech</h3>
+                    <p class="text-gray-400">
+                        Following a severe health scare detailed in <i>"The Day My Body Forced Me to Listen,"</i> I now advocate against toxic "hustle culture," teaching students that technical skill is useless without health.
+                    </p>
+                </div>
+                <div class="glass p-8 rounded-2xl border-t-4 border-purple-500 group hover:-translate-y-2 transition-transform duration-300">
+                    <i class="fas fa-building text-4xl text-purple-500 mb-6"></i>
+                    <h3 class="text-2xl font-bold text-white mb-4">Corporate & Product</h3>
+                    <p class="text-gray-400">
+                        Founder of <b>KDJ Lanka</b>. Shifted from Hosting (2016) to a product-led SaaS house (2025) with <b>KDJ Tools</b>, <b>Singlish</b>, and <b>KDJ AI</b>.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Detailed Timeline -->
+            <div class="mb-20 animate-on-scroll">
+                <h2 class="text-4xl font-bold text-white mb-12 text-center">The Journey <span class="text-gold">(2016-2025)</span></h2>
+                <div class="relative border-l-2 border-white/10 ml-6 md:ml-12 space-y-16">
+                    
+                    <!-- 2025: STF Boot Camp -->
+                    <div class="relative pl-8 md:pl-12">
+                        <div class="absolute -left-[9px] top-2 w-4 h-4 rounded-full bg-red-500 border-4 border-dark shadow-[0_0_15px_rgba(239,68,68,0.5)]"></div>
+                        <span class="inline-block px-3 py-1 rounded-full bg-red-500/10 text-red-500 text-xs font-bold border border-red-500/20 mb-2">Dec 15-20, 2025</span>
+                        <h3 class="text-2xl font-bold text-white mb-2">STF Cyber Division Boot Camp</h3>
+                        <div class="glass p-6 rounded-xl border border-white/5 relative overflow-hidden">
+                             <div class="absolute inset-0 bg-gradient-to-r from-red-900/10 to-transparent"></div>
+                             <p class="text-gray-400 mb-4 relative z-10">
+                                <b>"From the Jungle to the Digital Frontier."</b> A historic 5-day residential workshop transforming the Special Task Force into "Digital Warriors."
+                             </p>
+                             <ul class="space-y-2 text-sm text-gray-500 relative z-10">
+                                 <li><i class="fas fa-check text-red-500 mr-2"></i>Day 01: "Virtual Staff Officer" with Gemini & NotebookLM.</li>
+                                 <li><i class="fas fa-check text-red-500 mr-2"></i>Day 03: Cracking Python Logic & Mobile App Dev.</li>
+                                 <li><i class="fas fa-check text-red-500 mr-2"></i>Day 05: Commended by DIG Samantha de Silva.</li>
+                             </ul>
+                        </div>
+                    </div>
+
+                    <!-- 2025: Provincial Impact -->
+                    <div class="relative pl-8 md:pl-12">
+                         <div class="absolute -left-[9px] top-2 w-4 h-4 rounded-full bg-cyan-400 border-4 border-dark"></div>
+                         <span class="inline-block px-3 py-1 rounded-full bg-cyan-400/10 text-cyan-400 text-xs font-bold border border-cyan-400/20 mb-2">Late 2025</span>
+                         <h3 class="text-2xl font-bold text-white mb-2">Revolutionizing Regional Administration</h3>
+                         <div class="space-y-4">
+                            <div class="glass p-4 rounded-lg border-l-4 border-cyan-400">
+                                <h4 class="text-white font-bold">Uva Provincial Officials (Nov 17)</h4>
+                                <p class="text-sm text-gray-400">"Physical AI" workshop in Badulla. Officers learned to automate red tape using AI in real-time.</p>
+                            </div>
+                            <div class="glass p-4 rounded-lg border-l-4 border-purple-500">
+                                <h4 class="text-white font-bold">ICQE 2025 Keynote (Oct 10)</h4>
+                                <p class="text-sm text-gray-400">Addressed the International Conference on Quality Education on "AI for Future-Ready Classrooms."</p>
+                            </div>
+                         </div>
+                    </div>
+
+                    <!-- 2025: Product Launch -->
+                    <div class="relative pl-8 md:pl-12">
+                        <div class="absolute -left-[9px] top-2 w-4 h-4 rounded-full bg-gold border-4 border-dark"></div>
+                        <span class="inline-block px-3 py-1 rounded-full bg-gold/10 text-gold text-xs font-bold border border-gold/20 mb-2">June 1, 2025</span>
+                        <h3 class="text-2xl font-bold text-white mb-2">KDJ Lanka: Product Launch 2025</h3>
+                        <p class="text-gray-400">
+                            Celebrated 9 years of excellence. Shifted from service-based revenue to a product ecosystem. Unveiled <b>KDJ AI</b> (Super App) and upgrades to the <b>KDJ Tools</b> suite.
+                        </p>
+                    </div>
+
+                    <!-- 2024: Nas.io Community -->
+                    <div class="relative pl-8 md:pl-12">
+                         <div class="absolute -left-[9px] top-2 w-4 h-4 rounded-full bg-white border-4 border-dark"></div>
+                         <span class="inline-block px-3 py-1 rounded-full bg-white/10 text-white text-xs font-bold border border-white/20 mb-2">Early 2024</span>
+                         <h3 class="text-2xl font-bold text-white mb-2">The "Pro Hub" Launch</h3>
+                         <p class="text-gray-400">
+                            Joined <b>Nas.io</b> to solve local payment hurdles and fix passive learning. Launched the "$1 Subscription" model, offering access to uncut masterclasses and "Learn & Earn" challenges.
+                         </p>
+                    </div>
+
+                     <!-- Nenasala Roots -->
+                     <div class="relative pl-8 md:pl-12">
+                        <div class="absolute -left-[9px] top-2 w-4 h-4 rounded-full bg-green-500 border-4 border-dark"></div>
+                        <span class="inline-block px-3 py-1 rounded-full bg-green-500/10 text-green-500 text-xs font-bold border border-green-500/20 mb-2">2016 - Roots</span>
+                        <h3 class="text-2xl font-bold text-white mb-2">Nenasala & The Beginning</h3>
+                        <p class="text-gray-400">
+                           Started at <b>Nenasala Gampaha (Medagama)</b>. Known for teaching Grade 6-9 students advanced skills like Python and Hardware Engineering, laying the foundation for a career in mass education.
+                        </p>
+                   </div>
+
+                </div>
+            </div>
+
         </div>
     </main>
 
