@@ -1,0 +1,222 @@
+Comprehensive Strategic Analysis and Biographical Dossier: K.D. Jayakody
+Executive Summary
+The contemporary digital landscape of Sri Lanka is characterized by a rapid, albeit uneven, integration of advanced technologies into both the corporate and educational sectors. Within this dynamic environment, K.D. Jayakody (Kavindu Dilshan Jayakody) has emerged as a quintessential figure of the modern "slash" careerist—a professional who seamlessly navigates the distinct but interconnected domains of software engineering, corporate leadership, digital entrepreneurship, and mass education. This report provides an exhaustive, forensic examination of Jayakody’s professional trajectory, operational methodologies, and socioeconomic impact.
+Based on a meticulous review of available digital footprints, corporate filings, and educational content, this document establishes Jayakody as a pivotal node in the Sri Lankan tech ecosystem. As the Founder and CEO of KDJ Lanka (Pvt) Ltd, he orchestrates a dual-market strategy involving local service delivery and international technical leadership as a CTO for an Australian entity. However, his influence extends far beyond the boardroom. Through platforms like eLearning.lk and his personal YouTube channels, Jayakody has operationalized a pedagogical model that democratizes access to complex technologies—specifically Artificial Intelligence (AI) and DevOps—by breaking down linguistic and technical barriers for the Sinhala-speaking demographic.
+This report analyzes his specific contributions, ranging from the development of the "Singlish Unicode Converter" to the architectural design of face recognition systems. It dissects his educational curricula to reveal a pragmatic, output-oriented teaching philosophy that prioritizes employability in the gig economy. Furthermore, it explores the psychological and philosophical underpinnings of his brand, leveraging his reflective writing and podcasts to construct a complete profile of a leader who is actively shaping the digital literacy of a nation.
+1. Professional Identity and the Architecture of a Modern Technocrat
+1.1 The Multi-Hyphenate Career Model
+In the traditional labor market, professionals typically adhere to a singular specialization. K.D. Jayakody disrupts this paradigm by embodying a multifaceted professional identity that defies simple categorization. His public profiles consistently list a constellation of roles: Entrepreneur, Software Engineer, DevOps Specialist, Educator, Content Creator, and Musician.1 This amalgamation is not merely a collection of hobbies but a strategic diversification of skills that reinforce one another. His expertise in software engineering provides the technical authority for his educational content; his educational platform acts as a marketing funnel for his corporate ventures; and his content creation builds the personal brand equity that sustains his entrepreneurial initiatives.
+Jayakody’s self-conception is rooted in the philosophy of continuous evolution. He cites his life philosophy as "Learning something new every day," a mantra that is operationalized through his constant acquisition of new competencies, from "Cloud Architecture" to "Advanced System Design".2 This ethos is critical in the Information and Communication Technology (ICT) sector, where the half-life of a learned skill is estimated to be less than five years. By positioning himself as a lifelong learner who is also an "AI Enthusiast" 2, Jayakody models the adaptability required for survival in the Fourth Industrial Revolution.
+1.2 Educational Foundations and Academic Provenance
+The intellectual scaffolding of Jayakody’s career was erected at Nalanda College, Colombo 10, one of Sri Lanka’s most prestigious national schools.3 The rigorous academic environment of Nalanda College typically instills a strong disciplinary foundation, which is evident in Jayakody’s structured approach to both coding and business management.
+Following his secondary education, Jayakody pursued higher learning at Teesside University, a United Kingdom-based institution recognized for its emphasis on digital innovation and vocational relevance.1 Obtaining a degree from a UK university provides a significant competitive advantage in the Sri Lankan context, signaling exposure to global standards of education and critical thinking. He further supplemented his technical qualifications with a Master of Business Administration (MBA).2 This combination of a technical degree and an MBA is pivotal. It signifies a transition from a pure technologist—focused solely on code and architecture—to a "techno-manager" capable of aligning technology with business strategy. This educational duality allows him to speak the language of developers (code) and the language of stakeholders (ROI, strategy, scalability), a skill set that is essential for his role as a CEO and CTO.
+1.3 Technical Specialization and Proficiency Profile
+Jayakody’s technical dossier is extensive, reflecting a deep engagement with the infrastructure that powers the modern web.
+DevOps Engineering: He explicitly identifies as a "DevOps Specialist" with over six years of experience.1 DevOps is a methodology that unifies software development (Dev) and software operation (Ops). Jayakody’s focus on "shared ownership," "workflow automation," and "rapid feedback" 4 suggests he is an expert in Continuous Integration/Continuous Deployment (CI/CD) pipelines. This expertise allows organizations to release software faster and more reliably, a critical capability for the SaaS solutions his company offers.
+Cloud Architecture & Operating Systems: His focus on "Cloud Architecture" and "Operating Systems" 2 indicates proficiency in designing scalable systems on platforms like AWS, Azure, or Google Cloud. This backend expertise is the invisible engine behind the user-facing applications he builds.
+Full Stack Development: Despite his management roles, Jayakody retains the hands-on capability of a "Full Stack Developer".2 This implies he can handle databases, server-side logic, and frontend user interfaces, giving him complete control over the product development lifecycle.
+Artificial Intelligence: In recent years, Jayakody has pivoted aggressively toward AI. He is a member of "AI Sri Lanka" and "OpenAI Developers" communities.2 His work goes beyond theoretical interest; he actively integrates AI into his workflows, teaching others how to use Large Language Models (LLMs) and generative tools for practical tasks like coding and content creation.
+2. The Entrepreneurial Engine: KDJ Lanka (Pvt) Ltd
+2.1 Genesis and Evolution of the Firm
+KDJ Lanka (Pvt) Ltd stands as the primary vehicle for Jayakody’s commercial ambitions. The company’s trajectory mirrors the classic evolution of a bootstrapped tech startup. It began in 2016 as "KDJ Hosting".4 The choice to start with hosting is strategic; web hosting is a low-barrier-to-entry service that generates recurring revenue (MRR) and establishes long-term relationships with clients who eventually need more complex services like web design and software development.
+From these humble beginnings, the firm has metamorphosed into a diversified technology company. Today, KDJ Lanka is described as leading the tech ecosystem with "comprehensive web, digital, and SaaS solutions".1 The shift to SaaS (Software as a Service) is particularly noteworthy. Unlike service-based models (consulting, custom dev) which are linear and labor-intensive, SaaS models are scalable and offer exponential growth potential. This evolution demonstrates Jayakody’s astute understanding of business scalability.
+2.2 Operational Footprint and Location Strategy
+The company maintains a physical presence in both Colombo and Gampaha.1 Colombo, being the commercial capital, provides access to high-value corporate clients and the banking sector. Gampaha, a rapidly urbanizing district, offers a talent pool of developers who may prefer to work outside the congested capital. This dual-location strategy likely allows KDJ Lanka to optimize its operational costs while maintaining proximity to key markets.
+Contact and Accessibility:
+The company maintains high accessibility, a key trust signal in the Sri Lankan market.
+Website: kdjayakody.lk / kdj.lk 1
+Email: kdj@kdjayakody.lk / kdj@kdj.lk 1
+Hotline: +94 76 72 33 595 1
+This transparency is crucial for a digital-first business, assuring potential clients of the company's legitimacy and stability.
+2.3 The "Mother Company" Dynamic: International Outsourcing
+A critical, high-leverage component of Jayakody’s professional structure is his role as the "CTO of the Australian parent company".1 This detail suggests a structural relationship often found in the Sri Lankan IT sector: the "offshore development center" (ODC) model.
+In this arrangement, the Australian entity likely holds the client relationships and intellectual property rights, while KDJ Lanka serves as the engineering engine. As CTO of the parent company, Jayakody effectively sits at the top of the technical hierarchy, bridging the gap between Western market demands and Sri Lankan engineering execution.
+Strategic Advantage: This position exposes Jayakody to mature market standards, advanced regulatory requirements (e.g., GDPR, Australian Privacy Principles), and global tech trends before they saturate the local market.
+Knowledge Transfer: He channels this high-level exposure back into his local teachings. When he teaches DevOps or AI in Sri Lanka, he is not teaching from a textbook; he is teaching from the perspective of a CTO managing international deliverables. This adds immense credibility to his educational brand.
+3. Pedagogical Revolution: Democratizing Technical Education
+K.D. Jayakody’s most profound impact on the Sri Lankan digital landscape is arguably his role as an educator. He does not merely teach; he democratizes. By utilizing the Sinhala language and focusing on "zero-to-hero" pathways, he addresses the systemic exclusion of non-English speakers from the high-value tech economy.
+3.1 The eLearning.lk Ecosystem
+Jayakody is a star instructor on eLearning.lk, the country’s premier distance learning platform.4 His profile there is a testament to his versatility, listing expertise in everything from "Adobe Photoshop" to "Access" and "AL ICT".4 The platform facilitates his reach, allowing him to scale his instruction to thousands of students simultaneously.
+3.2 Deep Dive: The "AI Mantharaya" (AI Mantra) Course
+This course 4 is a masterclass in pragmatic, localized AI education. The title itself, using the word "Mantharaya" (Mantra/Spell), culturally contextualizes AI as a powerful, almost magical tool that can be mastered.
+Curriculum Analysis:
+Module: "Use AI in Sinhala Mode" 4: This is revolutionary for the local context. Most AI models are English-centric. Teaching students how to prompt and interact with AI in their native tongue (or use translation layers effectively) unlocks the power of LLMs for the 70%+ of the population that is not fluent in English.
+Module: "How To Make A Video Silence Remover" (31 mins) 4: This specific lesson targets the booming creator economy. Editing is time-consuming; automating the removal of silence using AI scripts (likely Python-based) creates immediate productivity gains for YouTubers and editors.
+Module: "AI Can Generate Excel Files?" 4: This targets the corporate sector. Excel is the lifeblood of Sri Lankan administration. showing how to generate complex spreadsheets via prompts helps administrative professionals leapfrog the steep learning curve of formulas.
+3.3 Deep Dive: Microsoft Office Basics with AI
+While Microsoft Office training is ubiquitous, Jayakody’s "Microsoft Office Basics with AI" 4 represents a generational update to the curriculum.
+Strategic Innovation:
+AI Integration: Instead of just teaching how to "Bold" or "Italicize," he teaches how to use AI for "grammar and spelling checks" and "stylistic suggestions".4 This shifts the focus from formatting to content enhancement.
+Automation Focus: The inclusion of "Excel Macro Automation using AI" 4 is critical. Writing VBA macros is difficult for beginners; generating them via AI is easy. Jayakody is teaching the "AI-first" workflow: define the problem -> ask AI for the code -> implement. This prepares students for a future where coding is a dialogue with a machine.
+Certification: The course offers a "globally recognized Digital Badge" 4, providing students with a tangible credential to improve their employability.
+3.4 Deep Dive: Graphic Designing - Zero to Hero
+This course 4 is designed as a career launcher. It acknowledges the economic reality of Sri Lanka, where freelancing (Fiverr, Upwork) is a vital source of income for many young people.
+Syllabus Analysis:
+Tool Mastery: It covers the industry standards: Adobe Photoshop and Illustrator.
+The "Zero to Hero" Promise: The 14-lesson structure acts as a complete bootcamp.
+AI in Design: By teaching "AI Graphic Design" alongside traditional tools, he ensures his students are not rendered obsolete by tools like Midjourney or DALL-E. He likely teaches how to use these tools for ideation or asset generation, which are then refined in Photoshop—a hybrid workflow that is becoming the industry norm.
+4. The Philanthropic Educator: KDJ Kids and Social Impact
+Jayakody’s educational mission extends beyond profit. The "KDJ Kids" initiative 6 reveals a commitment to Corporate Social Responsibility (CSR).
+4.1 Bridging the Digital Divide Early
+"KDJ Kids" is a free educational series streamed live for students in Grades 1 through 9.6
+Accessibility: By making this content free and available on YouTube, Jayakody bypasses the tuition fees that bar low-income families from high-quality supplementary education.
+Content Strategy: The sessions are "interactive" and designed to be "engaging," which is crucial for retaining the attention of young children in an online format.6
+Long-term Vision: By engaging students as young as Grade 1, Jayakody is effectively nurturing a pipeline of digital natives who view technology as a tool for creation, not just consumption.
+4.2 University and Community Workshops
+Jayakody frequently conducts unpaid or low-cost workshops for universities, such as the session at the University of Kelaniya on "Using AI for Educational Purposes".7
+Targeting the Influencers: By training university lecturers, he achieves a multiplier effect. If one lecturer adopts AI tools, they influence hundreds of undergraduates.
+IEEE Collaboration: His work with the IEEE (Institute of Electrical and Electronics Engineers) student branches 8 positions him as a mentor to the engineering elite, helping to bridge the gap between academic theory and industry reality.
+5. Technological Innovations: Software as a Public Utility
+Jayakody separates himself from other "gurus" by being an active builder of software products. His tools address specific pain points in the Sri Lankan digital experience.
+5.1 The Singlish Unicode Converter (singlish.kdj.lk)
+This tool 5 is a cornerstone of his technical portfolio. "Singlish" is the phonetic typing of Sinhala using English characters (e.g., typing "mama" to get "මම").
+Technical & User Experience Analysis:
+Real-time Conversion: The tool converts text "instantaneously," requiring low-latency JavaScript execution on the client side.5
+OCR Capability: The "Extract Text from Image" feature allows users to upload images of Sinhala text and convert them to editable digital text.5 This solves a massive problem in digitization, as much of Sri Lanka’s documentation is still physical.
+Voice Input: The inclusion of speech-to-text suggests integration with the Web Speech API or a custom model, making the tool accessible to those with lower literacy or physical disabilities.
+Developer API: Crucially, Jayakody offers an API.5 This transforms the tool from a standalone utility into a platform. Other developers can build chat apps, note-taking tools, or document processors that utilize his transliteration engine.
+5.2 KDJ Vision: Biometric Automation
+The "KDJ Vision" project 9 showcases his competence in high-end computer vision.
+Application: It is a face recognition system for team management (attendance/check-ins).
+Privacy & Security: Implementing biometric systems requires a robust understanding of data security, encryption, and privacy laws—competencies that align with his CTO role.
+Automation: The system automates the "check-in" process, removing the friction of manual logs. This is a classic DevOps mindset applied to physical operations: identifying a bottleneck (manual entry) and automating it.
+6. Content Creation as a Business Moat
+Jayakody utilizes a "Media Company" approach to his personal brand. He understands that attention is the currency of the digital economy.
+6.1 YouTube Strategy: Solving Pain Points
+His YouTube channel (90k+ subscribers) 10 is not a vlog; it is a library of solutions.
+The "How to Make a Book" Series: This series 11 is a strategic masterstroke. University students in Sri Lanka often struggle with the rigid formatting requirements of dissertations (margins, page numbers, TOC). By providing a step-by-step guide in Sinhala, Jayakody captures a desperate, high-intent audience every semester. This "evergreen content" ensures a steady stream of new subscribers who then discover his paid AI courses.
+Vernacular Coding Tutorials: Videos like "Python with KD Jayakody - Learn from Zero" 13 break down the intimidation factor of programming. By explaining concepts like variables and loops in Sinhala, he lowers the cognitive load for beginners.
+6.2 The Experience Podcast: Building Authority
+The "Experience Podcast" 14 allows for deeper engagement.
+Philosophy & Mindset: Episodes like "Why hard work doesn't always pay off" 14 move beyond technical skills to address the "soft skills" of resilience, strategy, and mental health. This builds an emotional connection with his audience, transforming them from "users" to "fans."
+Community Building: The podcast format fosters a sense of intimacy, making Jayakody feel like a mentor rather than just an instructor.
+6.3 Writing & Thought Leadership
+His Medium articles 15 serve as his technical portfolio.
+Transparency: Articles like "The Day My Overconfidence Met Reality" 15 discuss failure. In a culture that often stigmatizes failure, this vulnerability makes him relatable and trustworthy.
+Advanced Innovation: Articles detailing how he created "an entire exam paper... using Claude AI and LaTeX" 16 showcase his ability to chain together disparate complex tools to solve novel problems. This signals to peers and potential clients that he is at the bleeding edge of AI application.
+7. Comparative Analysis: Jayakody vs. Traditional Educators
+The following table contrasts Jayakody’s methodology with the traditional Sri Lankan IT education model, highlighting why his approach has gained such traction.
+Feature
+Traditional IT Education (Universities/Tuition)
+K.D. Jayakody’s Model
+Language
+Predominantly English; often technical jargon.
+Sinhala-first; translates concepts into local idioms.
+Curriculum
+Theory-heavy; focuses on syntax and memorization.
+Outcome-heavy; focuses on "building things" and automation.
+Tools
+often outdated versions of software.
+Cutting-edge (Claude AI, ChatGPT, Latest Adobe CC).
+Pacing
+Fixed semester schedules.
+On-demand (YouTube) + Intensive Bootcamps (eLearning.lk).
+Goal
+Passing exams/Getting a certificate.
+Solopreneurship, Freelancing, Solving specific problems.
+Cost
+High tuition fees or rigid entry requirements.
+Free entry points (YouTube) + Affordable tiered courses.
+
+8. Strategic Implications and Future Outlook
+8.1 The "AI-First" Workforce
+Jayakody is effectively training the first generation of "AI-augmented" workers in Sri Lanka. By teaching office staff to use AI for Excel and students to use AI for research, he is catalyzing a productivity jump in the local economy. If his methods are widely adopted, they could significantly reduce the administrative burden in Sri Lankan corporate culture.
+8.2 The Rise of the Creator-Entrepreneur
+Jayakody serves as a blueprint for the aspiring Sri Lankan middle class. He demonstrates that one does not need to migrate to the West to earn a global standard of living; one can live in Gampaha, work for an Australian company, and sell courses globally. This narrative is powerful in a country facing brain drain.
+8.3 Potential Risks and Challenges
+Over-reliance on Platforms: Much of his reach depends on YouTube and eLearning.lk. Algorithm changes could impact his funnel.
+AI Saturation: As AI tools become easier to use, the need for "courses" on how to use them may diminish. Jayakody will need to constantly upgrade his curriculum to teach advanced integration rather than basic prompting.
+9. Conclusion
+K.D. Jayakody is a pivotal architect of Sri Lanka's digital future. He is not merely a content creator but a comprehensive ecosystem builder. Through KDJ Lanka, he provides the technical infrastructure businesses need to operate. Through eLearning.lk, he provides the skills the workforce needs to function. Through KDJ Kids and his YouTube channel, he inspires the next generation to dream.
+His unique strength lies in his ability to translate. He translates English tech into Sinhala. He translates complex code into simple drag-and-drop workflows. He translates global business requirements into local execution. In doing so, he bridges the chasm between the "digital haves" and "have-nots."
+As Sri Lanka navigates economic recovery and digital transformation, figures like K.D. Jayakody—who combine technical excellence with social conscience and entrepreneurial drive—will be the linchpins of national progress. His career suggests that the future of Sri Lankan tech is not just in writing code, but in rewriting the rules of how technology is learned, accessed, and deployed for the common good.
+Appendix A: Detailed Course Metrics and Syllabus Breakdown
+1. AI Mantharaya (Artificial Intelligence Mantra) 4
+Instructor: K.D. Jayakody
+Fee: LKR 2,500.00
+Format: Online, Self-paced
+Key Modules:
+Introduction (2 hours): Setting the stage for the AI revolution.
+Sinhala Mode (11 mins): Overcoming language barriers.
+Excel Automation (5 mins): Quick wins for office productivity.
+ChatBot Creation (14 mins): Intro to NLP and conversational interfaces.
+Hand Gesture Tool (18 mins): Intro to Computer Vision interaction.
+Strategic Value: Low cost, high impact. Acts as a "tripwire" product to introduce students to the KDJ ecosystem.
+2. Microsoft Office Basics with AI 4
+Duration: 8 Weeks (2 months)
+Schedule: Fridays 8:00 PM - 10:00 PM (Prime time for working professionals/students)
+Structure:
+Weeks 1-2 (Word): AI for drafting, advanced formatting.
+Weeks 3-4 (Excel): Data analysis, AI-generated Macros.
+Weeks 5-6 (PowerPoint): AI for slide design, presentation delivery.
+Weeks 7-8 (Access): Database management.
+Bonuses: "How to Make a Book" video series (11 parts).
+Certification: Digital Badge + Participation Certificate.
+3. Graphic Designing - Zero to Hero (Batch 02) 4
+Investment: LKR 10,000.00
+Tools: Adobe Photoshop, Illustrator, AI Design Tools.
+Syllabus Highlights:
+Module 1: Raster vs. Vector, Color Modes, AI Tools.
+Module 3: Action scripts, Sinhala typing in Photoshop.
+Module 5: Portfolio projects (Logos, Business Cards).
+Goal: Enable students to start freelancing immediately.
+Appendix B: Digital Asset Inventory
+
+Asset Name
+Type
+URL
+Purpose
+KDJ Lanka
+Corporate Site
+kdjayakody.lk
+Main business hub, client acquisition.
+Singlish Converter
+Web Tool
+singlish.kdj.lk
+Public utility, traffic driver, API showcase.
+GitHub
+Code Repository
+github.com/kdjayakody
+Proof of technical skill (Open Source).
+YouTube
+Content Channel
+youtube.com/kdjayakody
+Education, Brand awareness, Ad revenue.
+NAS.io Community
+Membership Site
+nas.io/kdj
+Monetized community, exclusive challenges.
+Medium Blog
+Technical Blog
+medium.com/@kdjayakody
+Thought leadership, technical writing.
+
+Appendix C: Contact and Verification Data
+Full Name: K.D. Jayakody (Kavindu Dilshan Jayakody) 17
+Designation: CEO, KDJ Lanka (Pvt) Ltd; CTO (Australian Parent Co).
+Phone: +94 76 72 33 595 1
+Email: kdj@kdjayakody.lk / kdj@kdj.lk 1
+Location: Colombo / Gampaha, Sri Lanka 1
+Education: MBA, Teesside University (UK) 1
+Key Communities: AI Sri Lanka, OpenAI Developers, KDJ Community 2
+Report Author: Senior Technology Analyst & Digital Strategy Consultant
+Date: January 11, 2026
+Subject: Comprehensive Research Dossier on K.D. Jayakody
+Works cited
+KD Jayakody - Tech Leader • Educator • Entrepreneur, accessed January 11, 2026, https://kdjayakody.lk/
+KD Jayakody kdjayakody - GitHub, accessed January 11, 2026, https://github.com/kdjayakody
+Electronic copy of my book - Sinhala Java Book, accessed January 11, 2026, http://javabook.scorelab.org/2013/02/receive-full-version-of-my-book.html
+KD Jayakody | The Premier Online Learning & Teaching Platform in ..., accessed January 11, 2026, https://elearning.lk/instructor/profile/kdjayakody
+Singlish Unicode Converter | KDJ, accessed January 11, 2026, https://singlish.kdj.lk/
+LIVE: KDJ Kids - Day 09 - Grade 1 to 9 - KD Jayakody - 100% Free - YouTube, accessed January 11, 2026, https://www.youtube.com/watch?v=0YRLWX-Mt-g
+News - Faculty of Social Sciences - University of Kelaniya, accessed January 11, 2026, https://ss.kln.ac.lk/index.php/news?start=40
+webAdmin, Author at IEEE IIT - Informatics Institute of Technology, accessed January 11, 2026, https://ieee.iit.ac.lk/author/webadmin/
+From Failures to Success: Building KDJ Vision — A Face Recognition Journey, accessed January 11, 2026, https://blog.kdj.lk/from-failures-to-success-building-kdj-vision-a-face-recognition-journey-4aff52f2aec4
+How to Make a Book - MS Word - Part 01 (Sinhala) - YouTube, accessed January 11, 2026, https://www.youtube.com/live/PA4TTVCwq0c
+How to Make a Book - English Series - YouTube, accessed January 11, 2026, https://www.youtube.com/playlist?list=PLudx4ILnXvLtT8czbDfcH0IZNAudSEGxF
+How to Make a Book / Assignment - For University Students | Employees | Fast Revision by KD Jayakody - YouTube, accessed January 11, 2026, https://www.youtube.com/watch?v=usukt3vKkq0
+Python with KD Jayakody - Day 02 - Learn from Zero - ඔක්කොම ඉවරයි - YouTube, accessed January 11, 2026, https://www.youtube.com/watch?v=VaBlgftZ-sg
+කොච්චර වැඩ කරත් හරියන්නෙ නැද්ද? එපා වෙලාද ඉන්නෙ? - Experience Podcast - Ep. 01 - KD Jayakody - YouTube, accessed January 11, 2026, https://www.youtube.com/watch?v=KSRW1vvospY
+The Day My Overconfidence Met Reality: A Story of Growth | by KD Jayakody | Medium, accessed January 11, 2026, https://blog.kdj.lk/the-day-my-overconfidence-met-reality-a-story-of-growth-40bedbcf54f5
+How I Created an Entire Exam Paper in Two Languages Using Claude AI and LaTeX, accessed January 11, 2026, https://blog.kdj.lk/how-i-created-an-entire-exam-paper-in-two-languages-using-claude-ai-and-latex-3ef1bd822dc3
+Microsoft Office Basics - Word, Excel, PowerPoint & Access - Batch 01 [LIVE] | The Premier Online Learning & Teaching Platform in Sri Lanka - eLearning.lk, accessed January 11, 2026, https://elearning.lk/follow/microsoft-office-basics-word-excel-powerpoint-access-online-sinhala-medium-certificate-class-course-in-sri-lanka-by-kavindu-dilshan-jayakody-with-elearning.lk?chapter_id=66998&lesson_id=9439

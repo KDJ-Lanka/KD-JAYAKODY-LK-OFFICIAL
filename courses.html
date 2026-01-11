@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Courses | K.D. Jayakody</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        gold: '#FFD700',
+                        cyan: '#00bcd4',
+                        dark: '#050505',
+                        'dark-surface': '#0a0a0a'
+                    },
+                    fontFamily: {
+                        sans: ['Outfit', 'sans-serif'],
+                        space: ['Space Grotesk', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+</head>
+<body class="bg-dark text-gray-200 antialiased">
+    <div class="grain-overlay"></div>
+    <div id="header-container"></div>
+
+    <main class="pt-32 pb-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <!-- Hero / Intro -->
+            <section class="mb-20 animate-on-scroll text-center">
+                <span class="text-gold font-bold tracking-widest uppercase">Education</span>
+                <h1 class="text-5xl md:text-8xl font-bold font-space text-white mb-6">Learn. Build. <span class="text-gold">Dominate</span>.</h1>
+                <p class="text-xl text-gray-400 max-w-2xl mx-auto">
+                    Join Sri Lanka's most advanced tech community. From "Physical AI" workshops for the STF to mass education for students.
+                </p>
+            </section>
+
+             <!-- Nas.io Community Feature -->
+             <section class="mb-24 animate-on-scroll">
+                <div class="glass p-8 md:p-12 rounded-3xl relative overflow-hidden border border-gold/20">
+                    <div class="absolute inset-0 bg-gradient-to-r from-gold/10 to-transparent pointer-events-none"></div>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center relative z-10">
+                        <div class="space-y-6">
+                            <span class="inline-block px-4 py-1 rounded-full bg-gold/20 text-gold border border-gold/30 font-bold uppercase tracking-widest text-sm">The Pro Hub</span>
+                            <h2 class="text-4xl font-bold text-white">Nas.io / KDJ Community</h2>
+                            <p class="text-gray-300 text-lg">
+                                Bypass the algorithm. Join the exclusive "Pro" hub for serious learners. Access uncut masterclasses, source code, and direct mentorship.
+                            </p>
+                            <ul class="space-y-3 text-gray-400">
+                                <li class="flex items-center"><i class="fas fa-check text-gold mr-3"></i> Monthly AI Challenges</li>
+                                <li class="flex items-center"><i class="fas fa-check text-gold mr-3"></i> "Learn & Earn" Rewards System</li>
+                                <li class="flex items-center"><i class="fas fa-check text-gold mr-3"></i> Direct Access to KDJ Tools</li>
+                            </ul>
+                            <a href="https://nas.io/kdj" target="_blank" class="inline-block bg-gold text-black font-bold py-4 px-8 rounded-lg hover:bg-white transition-all transform hover:scale-105 shadow-lg shadow-gold/20">
+                                Join Community (Starts at $1)
+                            </a>
+                        </div>
+                        <div class="relative">
+                            <div class="aspect-video bg-dark-surface rounded-xl border border-white/10 flex items-center justify-center overflow-hidden">
+                                <i class="fas fa-users text-6xl text-gray-600"></i>
+                                 <!-- Placeholder for Community Image/Video -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- YouTube Section -->
+            <div class="mb-24 animate-on-scroll">
+                <div class="glass p-8 rounded-2xl border-l-4 border-red-600 bg-gradient-to-r from-red-900/10 to-transparent">
+                    <div class="flex flex-col md:flex-row items-center justify-between gap-8">
+                        <div>
+                            <h2 class="text-3xl font-bold text-white mb-2"><i class="fab fa-youtube text-red-500 mr-2"></i> Free Content</h2>
+                            <p class="text-gray-400 mb-4">90,000+ Subscribers learning Python, Graphic Design, and Career skills.</p>
+                            <a href="https://youtube.com/kdjayakody" target="_blank" class="text-white hover:text-red-400 font-bold decoration-red-500 underline underline-offset-4">Visit Channel</a>
+                        </div>
+                        <div class="flex gap-4">
+                            <div class="text-center p-4 bg-black/50 rounded-lg">
+                                <span class="block text-2xl font-bold text-white">Python</span>
+                                <span class="text-xs text-gray-500">Zero to Hero</span>
+                            </div>
+                            <div class="text-center p-4 bg-black/50 rounded-lg">
+                                <span class="block text-2xl font-bold text-white">Design</span>
+                                <span class="text-xs text-gray-500">Graphic Pro</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Premium Courses Grid -->
+            <h2 class="text-3xl font-bold text-white mb-8 animate-on-scroll">Premium Courses (eLearning.lk)</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                
+                <!-- Card 1 -->
+                <div class="bg-dark-surface border border-white/5 rounded-xl overflow-hidden hover:border-cyan transition-all duration-300 hover:shadow-lg hover:shadow-cyan/10 animate-on-scroll group">
+                    <div class="h-48 bg-gray-900 relative">
+                        <div class="absolute inset-0 bg-blue-600/20 group-hover:bg-blue-600/30 transition-colors"></div>
+                        <div class="absolute bottom-4 left-4">
+                             <span class="bg-blue-600 text-white text-xs font-bold px-2 py-1 rounded">Challenge Based</span>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-white mb-2 group-hover:text-cyan-400 transition-colors">AI Mantharaya</h3>
+                        <p class="text-gray-400 text-sm mb-6">Master ChatGPT, Midjourney, and AI automation tools in Sinhala.</p>
+                        <a href="#" class="inline-block w-full text-center py-3 border border-white/20 text-white hover:bg-white hover:text-black transition font-bold rounded">View Course</a>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="bg-dark-surface border border-white/5 rounded-xl overflow-hidden hover:border-gold transition-all duration-300 hover:shadow-lg hover:shadow-gold/10 animate-on-scroll group">
+                    <div class="h-48 bg-gray-900 relative">
+                         <div class="absolute inset-0 bg-yellow-600/20 group-hover:bg-yellow-600/30 transition-colors"></div>
+                        <div class="absolute bottom-4 left-4">
+                             <span class="bg-yellow-600 text-white text-xs font-bold px-2 py-1 rounded">Challenge Based</span>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-white mb-2 group-hover:text-gold transition-colors">Microsoft Office with AI</h3>
+                        <p class="text-gray-400 text-sm mb-6">Modernize your office workflow. Learn Excel Macros fueled by AI logic.</p>
+                        <a href="#" class="inline-block w-full text-center py-3 border border-white/20 text-white hover:bg-white hover:text-black transition font-bold rounded">View Course</a>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="bg-dark-surface border border-white/5 rounded-xl overflow-hidden hover:border-purple-500 transition-all duration-300 hover:shadow-lg hover:shadow-purple-500/10 animate-on-scroll group">
+                    <div class="h-48 bg-gray-900 relative">
+                        <div class="absolute inset-0 bg-purple-600/20 group-hover:bg-purple-600/30 transition-colors"></div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-white mb-2 group-hover:text-purple-400 transition-colors">Graphic Design: Zero to Hero</h3>
+                        <p class="text-gray-400 text-sm mb-6">From Photoshop basics to full freelance readiness.</p>
+                        <a href="#" class="inline-block w-full text-center py-3 border border-white/20 text-white hover:bg-white hover:text-black transition font-bold rounded">View Course</a>
+                    </div>
+                </div>
+            </div>
+
+             <!-- CSR Section -->
+             <div class="mt-24 p-8 glass rounded-2xl animate-on-scroll text-center">
+                 <h2 class="text-2xl font-bold text-white mb-4">KDJ Kids CSR Initiative</h2>
+                 <p class="text-gray-400 max-w-3xl mx-auto mb-6">Providing free computer education streams for Grade 1-9 students. Bridging the digital divide early.</p>
+                 <a href="#" class="text-gold border-b border-gold pb-1 hover:text-white hover:border-white transition-colors">Watch KDJ Kids</a>
+             </div>
+        </div>
+    </main>
+
+    <div id="footer-container"></div>
+    <script src="js/main.js"></script>
+</body>
+</html>

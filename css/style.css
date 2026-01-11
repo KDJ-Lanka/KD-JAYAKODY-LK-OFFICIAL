@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;700;900&family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
+
+:root {
+    --gold: #FFD700;
+    --gold-glow: rgba(255, 215, 0, 0.5);
+    --cyan: #00bcd4;
+    --cyan-glow: rgba(0, 188, 212, 0.5);
+    --dark-bg: #050505; /* Deep Black */
+    --dark-surface: #0a0a0a;
+    --border-color: rgba(255, 255, 255, 0.08);
+}
+
+html {
+    scroll-behavior: smooth;
+    background-color: var(--dark-bg);
+}
+
+body {
+    font-family: 'Outfit', sans-serif;
+    color: #e0e0e0;
+    overflow-x: hidden;
+    background-color: var(--dark-bg);
+    cursor: default; /* We will add custom cursor later if possible, effectively just standard for now */
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Space Grotesk', sans-serif;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 6px;
+}
+::-webkit-scrollbar-track {
+    background: var(--dark-bg);
+}
+::-webkit-scrollbar-thumb {
+    background: #333;
+    border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: var(--gold);
+}
+
+/* Glassmorphism Ultra Dark */
+.glass {
+    background: rgba(20, 20, 20, 0.4);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    border: 1px solid var(--border-color);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+}
+
+.glass-nav {
+    background: rgba(5, 5, 5, 0.85);
+    backdrop-filter: blur(20px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.03);
+}
+
+/* Glow Effects */
+.glow-text {
+    text-shadow: 0 0 20px var(--gold-glow);
+}
+
+.glow-card:hover {
+    box-shadow: 0 0 30px rgba(255, 215, 0, 0.15);
+    border-color: var(--gold);
+}
+
+/* Text Gradients */
+.text-gradient-gold {
+    background: linear-gradient(to right, #FFD700, #FDB931);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.text-gradient-cyan {
+    background: linear-gradient(to right, #00E5FF, #2979FF);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+/* Utility Animations */
+.hover-lift {
+    transition: transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+}
+.hover-lift:hover {
+    transform: translateY(-8px);
+}
+
+/* Page Transition Shutter Effect */
+.transition-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: 9999;
+    pointer-events: none;
+    display: flex;
+}
+
+.transition-bar {
+    flex: 1;
+    height: 100%;
+    background-color: #050505; /* Deep Black */
+    transform: scaleY(0);
+    transform-origin: top;
+    border-right: 1px solid rgba(255, 255, 255, 0.05);
+    box-shadow: 0 0 20px rgba(0,0,0,0.5);
+}
+
+/* Custom Selection */
+::selection {
+    background: var(--gold);
+    color: #000;
+}
+
+/* Grain Effect overlay for texture */
+.grain-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 9998; /* Just below transition */
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.05'/%3E%3C/svg%3E");
+    opacity: 0.3;
+}
+
+.reveal-text-char {
+    display: inline-block;
+}

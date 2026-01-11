@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>K.D. Jayakody | Digital Architect</title>
+    <!-- Tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        gold: '#FFD700',
+                        cyan: '#00bcd4',
+                        dark: '#050505',
+                        'dark-surface': '#0a0a0a'
+                    },
+                    fontFamily: {
+                        sans: ['Outfit', 'sans-serif'],
+                        space: ['Space Grotesk', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- GSAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+</head>
+<body class="bg-dark text-gray-200 antialiased overflow-hidden-y">
+
+    <div class="grain-overlay"></div>
+    <div id="header-container"></div>
+
+    <main class="relative h-screen w-full overflow-hidden flex items-center justify-center">
+        <!-- Background Video/Image Parallax -->
+        <div class="absolute inset-0 z-0 scale-110" id="hero-bg-wrapper">
+            <img src="assets/images/hero_bg_v2.png" class="w-full h-full object-cover opacity-60 brightness-50" alt="Background">
+            <div class="absolute inset-0 bg-gradient-to-t from-dark via-dark/40 to-transparent"></div>
+        </div>
+
+        <div class="relative z-10 text-center px-4 max-w-6xl mx-auto">
+             <div class="mb-4 overflow-hidden">
+                 <h2 class="text-gold tracking-[0.8em] text-sm md:text-lg uppercase font-bold animate-reveal transform translate-y-full">Visionary • Engineer • Educator</h2>
+             </div>
+             
+             <h1 class="text-6xl md:text-8xl lg:text-9xl font-bold font-space text-white mb-8 tracking-tighter leading-none mix-blend-screen opacity-0" id="hero-title">
+                KD<span class="text-transparent bg-clip-text bg-gradient-to-r from-gold to-yellow-600">JAYAKODY</span>
+             </h1>
+
+             <p class="text-xl text-gray-400 max-w-2xl mx-auto mb-12 font-light leading-relaxed opacity-0" id="hero-subtitle">
+                 Redefining the digital landscape of Sri Lanka through <span class="text-white font-medium">SaaS Innovation</span> and <span class="text-white font-medium">Mass Education</span>. Most recently building <b>KDJ Vision</b>.
+             </p>
+
+             <div class="flex flex-col md:flex-row justify-center gap-6 opacity-0" id="hero-cta">
+                 <a href="projects.html" class="group relative px-8 py-4 bg-white/5 backdrop-blur border border-white/10 overflow-hidden hover:border-gold transition-colors duration-300">
+                     <span class="relative z-10 font-bold uppercase tracking-widest text-sm group-hover:text-gold transition-colors">View Works</span>
+                     <div class="absolute inset-0 bg-gold/10 transform -translate-x-full group-hover:translate-x-0 transition-transform duration-500 ease-out"></div>
+                 </a>
+                 <a href="about.html" class="px-8 py-4 text-gray-400 hover:text-white font-medium tracking-widest text-sm uppercase transition-colors flex items-center gap-2">
+                     About Me <i class="fas fa-arrow-right text-xs"></i>
+                 </a>
+             </div>
+        </div>
+
+        <!-- Social Side Bar -->
+        <div class="hidden lg:flex flex-col absolute left-10 bottom-0 z-20 space-y-6 pb-20 items-center">
+            <div class="w-[1px] h-20 bg-gray-700"></div>
+            <a href="#" class="text-gray-500 hover:text-gold transition-colors text-xl"><i class="fab fa-github"></i></a>
+            <a href="#" class="text-gray-500 hover:text-cyan-400 transition-colors text-xl"><i class="fab fa-linkedin-in"></i></a>
+            <a href="#" class="text-gray-500 hover:text-red-500 transition-colors text-xl"><i class="fab fa-youtube"></i></a>
+        </div>
+    </main>
+
+    <script src="js/main.js"></script>
+    <script>
+        // Local animation script for Index only
+        document.addEventListener('DOMContentLoaded', () => {
+             const tl = gsap.timeline();
+             
+             tl.to('.animate-reveal', { y: 0, duration: 1, ease: 'power4.out', delay: 0.5 })
+               .to('#hero-title', { opacity: 1, duration: 1.5, ease: 'power2.inOut' }, "-=0.5")
+               .to('#hero-subtitle', { opacity: 1, y: 0, duration: 1, ease: 'power3.out' }, "-=1")
+               .to('#hero-cta', { opacity: 1, y: 0, duration: 1, ease: 'power3.out' }, "-=0.8");
+
+             // Subtle parallax on mouse move
+             document.addEventListener('mousemove', (e) => {
+                 const x = (e.clientX / window.innerWidth - 0.5) * 20;
+                 const y = (e.clientY / window.innerHeight - 0.5) * 20;
+                 gsap.to('#hero-bg-wrapper', { x: -x, y: -y, duration: 2, ease: 'power1.out' });
+             });
+        });
+    </script>
+</body>
+</html>

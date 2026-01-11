@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects | K.D. Jayakody</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        gold: '#FFD700',
+                        cyan: '#00bcd4',
+                        dark: '#050505',
+                        'dark-surface': '#0a0a0a'
+                    },
+                    fontFamily: {
+                        sans: ['Outfit', 'sans-serif'],
+                        space: ['Space Grotesk', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+</head>
+<body class="bg-dark text-gray-200 antialiased">
+    <div class="grain-overlay"></div>
+    <div id="header-container"></div>
+
+    <main class="pt-32 pb-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="mb-20 animate-on-scroll">
+                <span class="text-gold font-bold tracking-widest uppercase">Portfolio</span>
+                <h1 class="text-6xl md:text-8xl font-bold font-space text-white mb-6">Digital <span class="text-cyan-400">Solutions</span>.</h1>
+                <p class="text-xl text-gray-400 max-w-2xl">Solving Sri Lankan problems with world-class engineering.</p>
+            </div>
+
+            <div class="space-y-32">
+                
+                <!-- Singlish Converter -->
+                <div class="group grid grid-cols-1 lg:grid-cols-2 gap-12 items-center animate-on-scroll">
+                    <div class="order-2 lg:order-1 relative rounded-2xl overflow-hidden glass p-2 hover-lift">
+                        <div class="bg-gradient-to-br from-gray-900 to-black h-80 flex items-center justify-center relative overflow-hidden">
+                             <!-- Abstract code background for thumbnail -->
+                            <div class="absolute inset-0 opacity-20">
+                                <pre class="text-xs text-green-500 p-4">function convert(text) { return text.replace(...) }</pre>
+                            </div>
+                            <h3 class="text-4xl font-bold text-white z-10">Singlish</h3>
+                        </div>
+                    </div>
+                    <div class="order-1 lg:order-2 space-y-6">
+                        <h2 class="text-4xl font-bold text-white">Singlish Unicode Converter</h2>
+                        <div class="flex flex-wrap gap-2">
+                             <span class="px-3 py-1 bg-white/5 rounded-full text-xs text-cyan-400 border border-white/10">Voice Typing</span>
+                             <span class="px-3 py-1 bg-white/5 rounded-full text-xs text-cyan-400 border border-white/10">OCR</span>
+                             <span class="px-3 py-1 bg-white/5 rounded-full text-xs text-cyan-400 border border-white/10">SaaS</span>
+                        </div>
+                        <p class="text-gray-400 text-lg leading-relaxed">
+                            Sri Lanka's premier transliteration engine. Breaks the linguistic divide by allowing phonetically typed Sinhala. Features advanced <b>Voice Typing</b> and <b>Image-to-Text OCR</b>, making it a critical tool for digitizing bureaucratic archives.
+                        </p>
+                        <ul class="text-gray-500 space-y-2 list-disc list-inside">
+                            <li>Available as a Chrome Extension & Android App</li>
+                            <li>Real-time transliteration (Amma -> අම්මා)</li>
+                            <li>Used for official documentation</li>
+                        </ul>
+                         <div class="pt-4">
+                            <a href="https://singlish.kdj.lk" target="_blank" class="inline-flex items-center text-gold font-bold hover:underline">
+                                Launch Tool <i class="fas fa-external-link-alt ml-2 text-xs"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- KDJ Tools Ecosystem -->
+                <div class="group grid grid-cols-1 lg:grid-cols-2 gap-12 items-center animate-on-scroll">
+                    <div class="order-1 lg:order-1 space-y-6">
+                        <h2 class="text-4xl font-bold text-white">KDJ Tools Ecosystem</h2>
+                        <div class="flex gap-2">
+                             <span class="px-3 py-1 bg-white/5 rounded-full text-xs text-purple-400 border border-white/10">100+ Apps</span>
+                             <span class="px-3 py-1 bg-white/5 rounded-full text-xs text-purple-400 border border-white/10">Productivity</span>
+                             <span class="px-3 py-1 bg-white/5 rounded-full text-xs text-purple-400 border border-white/10">SaaS</span>
+                        </div>
+                        <p class="text-gray-400 text-lg leading-relaxed">
+                            A massive suite of over 100 free utilities designed to eliminate "context switching." From <b>Markdown Studio</b> for technical writers to <b>KDJ Video</b> for creative animation and subtitle generation, this ecosystem supports the entire project lifecycle.
+                        </p>
+                        <ul class="text-gray-500 space-y-2 list-disc list-inside">
+                            <li>Includes Markdown Studio (Live Preview/PDF Export)</li>
+                            <li>Completely Free ($0) access model</li>
+                        </ul>
+                         <div class="pt-4">
+                           <a href="#" class="inline-flex items-center text-gold font-bold hover:underline">
+                                Explore Ecosystem <i class="fas fa-arrow-right ml-2 text-xs"></i>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="order-2 lg:order-2 relative rounded-2xl overflow-hidden glass p-2 hover-lift">
+                        <div class="bg-gradient-to-br from-indigo-900 to-black h-80 flex items-center justify-center relative overflow-hidden">
+                             <i class="fas fa-toolbox text-6xl text-white z-10 opacity-80"></i>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </main>
+
+    <div id="footer-container"></div>
+    <script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact | K.D. Jayakody</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        gold: '#FFD700',
+                        cyan: '#00bcd4',
+                        dark: '#050505',
+                        'dark-surface': '#0a0a0a'
+                    },
+                    fontFamily: {
+                        sans: ['Outfit', 'sans-serif'],
+                        space: ['Space Grotesk', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+</head>
+<body class="bg-dark text-gray-200 antialiased">
+    <div class="grain-overlay"></div>
+    <div id="header-container"></div>
+
+    <main class="min-h-screen pt-32 pb-20 flex items-center">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                <!-- Text Info -->
+                <div class="space-y-10 animate-on-scroll">
+                    <div>
+                        <span class="text-cyan-400 font-bold tracking-widest uppercase mb-2 block">Get in Touch</span>
+                        <h1 class="text-5xl md:text-7xl font-bold font-space text-white mb-6">Let's Build the Future.</h1>
+                        <p class="text-gray-400 text-lg">Whether you need a scalable Cloud Architecture, a custom AI solution, or just want to chat about the next big thing.</p>
+                    </div>
+
+                    <div class="space-y-6">
+                        <div class="flex items-center space-x-4">
+                            <div class="w-12 h-12 rounded-full bg-white/5 flex items-center justify-center text-gold">
+                                <i class="fas fa-envelope text-xl"></i>
+                            </div>
+                            <div>
+                                <span class="block text-gray-500 text-sm">Email</span>
+                                <a href="mailto:hello@kdjayakody.com" class="text-white text-xl hover:text-gold transition">hello@kdjayakody.com</a>
+                            </div>
+                        </div>
+
+                        <div class="flex items-center space-x-4">
+                            <div class="w-12 h-12 rounded-full bg-white/5 flex items-center justify-center text-gold">
+                                <i class="fas fa-phone-alt text-xl"></i>
+                            </div>
+                            <div>
+                                <span class="block text-gray-500 text-sm">Phone</span>
+                                <a href="tel:+94702424677" class="text-white text-xl hover:text-gold transition">+94 70 24 24 677</a>
+                            </div>
+                        </div>
+
+                        <div class="flex items-center space-x-4">
+                            <div class="w-12 h-12 rounded-full bg-white/5 flex items-center justify-center text-gold">
+                                <i class="fas fa-map-marker-alt text-xl"></i>
+                            </div>
+                            <div>
+                                <span class="block text-gray-500 text-sm">Address</span>
+                                <span class="text-white text-lg">8/31, Weerakonwatte,<br>Amunugoda, Imbulgoda.</span>
+                            </div>
+                        </div>
+                         
+                         <div class="pt-8 flex gap-4">
+                             <a href="#" class="w-12 h-12 flex items-center justify-center rounded-full border border-white/10 hover:bg-white hover:text-black transition-all duration-300"><i class="fab fa-linkedin-in"></i></a>
+                             <a href="#" class="w-12 h-12 flex items-center justify-center rounded-full border border-white/10 hover:bg-white hover:text-black transition-all duration-300"><i class="fab fa-github"></i></a>
+                             <a href="#" class="w-12 h-12 flex items-center justify-center rounded-full border border-white/10 hover:bg-white hover:text-black transition-all duration-300"><i class="fab fa-instagram"></i></a>
+                         </div>
+                    </div>
+                </div>
+
+                <!-- Form -->
+                <div class="glass p-10 rounded-2xl animate-on-scroll delay-200">
+                    <form onsubmit="event.preventDefault(); alert('Looking forward to connecting!');" class="space-y-6">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                            <div class="space-y-2">
+                                <label class="text-sm uppercase tracking-widest text-gray-500">Name</label>
+                                <input type="text" class="w-full bg-dark/50 border border-white/10 rounded-lg p-3 text-white focus:outline-none focus:border-gold focus:ring-1 focus:ring-gold transition-colors" placeholder="John Doe">
+                            </div>
+                            <div class="space-y-2">
+                                <label class="text-sm uppercase tracking-widest text-gray-500">Email</label>
+                                <input type="email" class="w-full bg-dark/50 border border-white/10 rounded-lg p-3 text-white focus:outline-none focus:border-gold focus:ring-1 focus:ring-gold transition-colors" placeholder="john@example.com">
+                            </div>
+                        </div>
+                        <div class="space-y-2">
+                            <label class="text-sm uppercase tracking-widest text-gray-500">Subject</label>
+                            <select class="w-full bg-dark/50 border border-white/10 rounded-lg p-3 text-white focus:outline-none focus:border-gold focus:ring-1 focus:ring-gold transition-colors">
+                                <option>Business Inquiry</option>
+                                <option>Mentorship</option>
+                                <option>Speaking Opportunity</option>
+                                <option>Other</option>
+                            </select>
+                        </div>
+                        <div class="space-y-2">
+                            <label class="text-sm uppercase tracking-widest text-gray-500">Message</label>
+                            <textarea rows="4" class="w-full bg-dark/50 border border-white/10 rounded-lg p-3 text-white focus:outline-none focus:border-gold focus:ring-1 focus:ring-gold transition-colors" placeholder="Tell me about your project..."></textarea>
+                        </div>
+                        <button type="submit" class="w-full py-4 bg-gold text-black font-bold uppercase tracking-widest hover:bg-white transition-colors duration-300 rounded-lg">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <div id="footer-container"></div>
+    <script src="js/main.js"></script>
+</body>
+</html>

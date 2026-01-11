@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About | K.D. Jayakody</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        gold: '#FFD700',
+                        cyan: '#00bcd4',
+                        dark: '#050505',
+                        'dark-surface': '#0a0a0a'
+                    },
+                    fontFamily: {
+                        sans: ['Outfit', 'sans-serif'],
+                        space: ['Space Grotesk', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+</head>
+<body class="bg-dark text-gray-200 antialiased">
+    <div class="grain-overlay"></div>
+    <div id="header-container"></div>
+
+    <main class="pt-32 pb-20">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <!-- Header -->
+            <div class="mb-20 animate-on-scroll">
+                <h1 class="text-6xl md:text-8xl font-bold font-space text-transparent bg-clip-text bg-gradient-to-r from-gray-100 to-gray-600 mb-6">About Me</h1>
+                <div class="w-24 h-1 bg-gold"></div>
+            </div>
+
+            <!-- Main Content Grid -->
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+                <!-- Left: Image & Stats -->
+                <div class="lg:col-span-4 space-y-8 animate-on-scroll">
+                    <div class="relative group">
+                        <div class="absolute inset-0 bg-gold blur-2xl opacity-20 group-hover:opacity-40 transition-opacity duration-500"></div>
+                        <img src="assets/images/profile.jpg" alt="K.D. Jayakody" class="relative rounded-2xl border-2 border-white/10 shadow-2xl z-10 w-full object-cover">
+                        <!-- Decor element -->
+                        <div class="absolute -bottom-6 -right-6 w-24 h-24 bg-dark-surface border border-white/10 rounded-full flex items-center justify-center z-20">
+                             <i class="fas fa-code text-gold text-2xl"></i>
+                        </div>
+                    </div>
+
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="glass p-6 rounded-lg text-center">
+                            <span class="block text-3xl font-bold text-white mb-1">9+</span>
+                            <span class="text-xs uppercase tracking-widest text-gray-500">Years Exp.</span>
+                        </div>
+                        <div class="glass p-6 rounded-lg text-center">
+                            <span class="block text-3xl font-bold text-white mb-1">90k+</span>
+                            <span class="text-xs uppercase tracking-widest text-gray-500">Community</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right: Bio -->
+                <div class="lg:col-span-8 space-y-12 animate-on-scroll">
+                    <div class="prose prose-lg prose-invert text-gray-400">
+                        <p class="lead text-2xl text-white font-light">
+                            Widely recognized as <b>"KDJ"</b>, I am a Founder, Educator, and CTO bridging high-level corporate innovation with grassroots technical education.
+                        </p>
+                        <p>
+                            As the **Founder & CEO of KDJ Lanka (Pvt) Ltd**, I have steered the company from a humble hosting provider (2016) to a sophisticated **SaaS Product House** (2025). Our portfolio now includes **KDJ Tools** (100+ utilities) and **KDJ POS**, serving the local retail sector.
+                        </p>
+                        <p>
+                            Recently, I have led high-impact national initiatives, including a **5-Day AI Boot Camp for the Special Task Force (STF)** and "Future-Proofing" workshops for multiple universities. My mission is to build a "Smart Workforce" for Sri Lanka—one that is fluent in AI, DevOps, and strategic thinking.
+                        </p>
+                    </div>
+
+                    <!-- Timeline / Trajectory -->
+                    <div>
+                        <h3 class="text-2xl font-bold text-white mb-6 border-l-4 border-cyan pl-4">Impact Trajectory</h3>
+                        <div class="space-y-8 pl-4 border-l border-gray-800 ml-2">
+                            <div class="relative pl-8">
+                                <div class="absolute -left-[9px] top-2 w-4 h-4 rounded-full bg-dark border-2 border-red-500"></div>
+                                <h4 class="text-xl font-bold text-white">STF AI Boot Camp Lead</h4>
+                                <span class="text-sm text-red-500">Dec 2025</span>
+                                <p class="mt-2 text-gray-500 text-sm">Led a 5-day intensive "Cyber Division" training for the Special Task Force. Covered Gemini, Forensics, and deployed custom Mobile Apps.</p>
+                            </div>
+                            <div class="relative pl-8">
+                                <div class="absolute -left-[9px] top-2 w-4 h-4 rounded-full bg-dark border-2 border-cyan"></div>
+                                <h4 class="text-xl font-bold text-white">Managing Director, KDJ Lanka</h4>
+                                <span class="text-sm text-cyan-400">2020 - Present</span>
+                                <p class="mt-2 text-gray-500 text-sm">Formal incorporation. Launched KDJ Tools & KDJ AI (Super App) in 2025.</p>
+                            </div>
+                            <div class="relative pl-8">
+                                <div class="absolute -left-[9px] top-2 w-4 h-4 rounded-full bg-dark border-2 border-gold"></div>
+                                <h4 class="text-xl font-bold text-white">Founder, KDJ Hosting</h4>
+                                <span class="text-sm text-gold">2016</span>
+                                <p class="mt-2 text-gray-500 text-sm">The operational roots of the ecosystem.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <div id="footer-container"></div>
+    <script src="js/main.js"></script>
+</body>
+</html>
