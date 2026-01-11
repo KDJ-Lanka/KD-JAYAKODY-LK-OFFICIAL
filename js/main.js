@@ -36,47 +36,51 @@ async function loadFooter() {
 }
 
 function initPageTransition() {
-    // Create the shutter overlay structure
-    const container = document.createElement('div');
-    container.className = 'transition-container';
-    
-    // Create 5 bars
-    for(let i=0; i<5; i++) {
-        const bar = document.createElement('div');
-        bar.className = 'transition-bar';
-        // Set initial state to "covering" the screen, so we can reveal
-        bar.style.transform = "scaleY(1)"; 
-        container.appendChild(bar);
-    }
-    document.body.appendChild(container);
+    // Create the overlay
+    const overlay = document.createElement('div');
+    overlay.className = 'transition-overlay';
+    document.body.appendChild(overlay);
 
-    // Animate out (Reveal page from bottom up)
-    gsap.to(container.querySelectorAll('.transition-bar'), {
-        scaleY: 0,
-        transformOrigin: "bottom",
-        duration: 1,
-        stagger: 0.1,
-        ease: "power4.inOut",
-        delay: 0.2
+    // Initial State: Complete black covering the screen
+    gsap.set(overlay, { 
+        position: 'fixed',
+        top: 0, 
+        left: 0, 
+        width: '100%', 
+        height: '100%', 
+        backgroundColor: '#050505', 
+        zIndex: 9999,
+        transformOrigin: 'bottom'
     });
 
-    // Handle Link Clicks for internal navigation
+    // Animate out (Reveal page) - Smooth Fade/Slide Up
+    gsap.to(overlay, {
+        scaleY: 0,
+        duration: 1.2,
+        ease: "power4.inOut",
+        delay: 0.1
+    });
+
+    // Handle Link Clicks
     document.body.addEventListener('click', (e) => {
         const link = e.target.closest('a');
-        if (link && link.href.includes(window.location.origin) && !link.href.includes('#') && !link.target) {
+        // Check if internal link and not a hash link or new tab
+        if (link && 
+            link.href.startsWith(window.location.origin) && 
+            !link.href.includes('#') && 
+            link.target !== '_blank') {
+            
             e.preventDefault();
             const target = link.href;
             
-            // Check if clicking same page
             if(target === window.location.href) return;
 
-            // Animate in (Cover page from top down)
-            gsap.to(container.querySelectorAll('.transition-bar'), {
+            // Animate in (Cover page) - Smooth Slide Down
+            gsap.set(overlay, { transformOrigin: 'top' });
+            gsap.to(overlay, {
                 scaleY: 1,
-                transformOrigin: "top",
                 duration: 0.8,
-                stagger: 0.1,
-                ease: "power4.inOut",
+                ease: "power3.inOut",
                 onComplete: () => {
                     window.location.href = target;
                 }
