@@ -276,77 +276,34 @@
     <script src="js/gallery-images.js"></script>
     <script>
         // =====================================================
-        // GALLERY AUTO-LOAD FUNCTIONALITY
+        // GALLERY - FAST LOADING (No async checks)
         // =====================================================
-        // Automatically loads images from folders without needing to specify filenames
-        // Just name your images: 1.jpg, 2.jpg, 3.jpg, etc. in each folder
+        // Images are loaded from the list in js/gallery-images.js
+        // Just add filenames to the arrays - no detection needed!
         // =====================================================
 
+        // Build image list from configuration (instant, no async!)
         const galleryImages = [];
-        const galleryBasePath = 'assets/images/gallery/';
-        let loadedCount = 0;
-        let totalFolders = Object.keys(galleryConfig.maxImages).length;
 
-        // Async function to check if an image exists
-        function imageExists(url) {
-            return new Promise((resolve) => {
-                const img = new Image();
-                img.onload = () => resolve(true);
-                img.onerror = () => resolve(false);
-                img.src = url;
+        for (const [category, files] of Object.entries(galleryImagesData)) {
+            files.forEach(filename => {
+                // Generate title from filename
+                const title = filename
+                    .replace(/\.[^/.]+$/, '') // Remove extension
+                    .replace(/[-_]/g, ' ')     // Replace hyphens/underscores
+                    .replace(/\b\w/g, l => l.toUpperCase()); // Capitalize
+
+                galleryImages.push({
+                    src: galleryConfig.basePath + category + '/' + filename,
+                    title: title,
+                    categorySlug: category,
+                    category: galleryConfig.categoryNames[category],
+                    date: ''
+                });
             });
         }
 
-        // Auto-load images from a folder
-        async function loadImagesFromFolder(category, maxNum) {
-            const folderPath = galleryBasePath + category + '/';
-
-            for (let i = 1; i <= maxNum; i++) {
-                let found = false;
-
-                // Try each extension until we find one that works
-                for (const ext of galleryConfig.extensions) {
-                    const imgUrl = folderPath + i + '.' + ext;
-
-                    if (await imageExists(imgUrl)) {
-                        galleryImages.push({
-                            src: imgUrl,
-                            title: `${galleryConfig.categoryNames[category]} ${i}`,
-                            categorySlug: category,
-                            category: galleryConfig.categoryNames[category],
-                            date: ''
-                        });
-                        found = true;
-                        break; // Stop trying extensions for this number
-                    }
-                }
-
-                // If we tried all extensions and none worked for this number,
-                // and we're past the first few images, assume no more images
-                if (!found && i > 5) {
-                    // Check if we should stop (optional optimization)
-                    // Uncomment below to stop at first gap:
-                    // break;
-                }
-            }
-
-            loadedCount++;
-            checkAllLoaded();
-        }
-
-        // Check if all folders have been scanned
-        function checkAllLoaded() {
-            if (loadedCount >= totalFolders) {
-                // Update allImages reference
-                allImages = [...galleryImages];
-                // Shuffle images for random order
-                shuffleArray(galleryImages);
-                // Render the gallery
-                renderGallery(galleryImages);
-            }
-        }
-
-        // Shuffle array for random order
+        // Shuffle for random order
         function shuffleArray(array) {
             for (let i = array.length - 1; i > 0; i--) {
                 const j = Math.floor(Math.random() * (i + 1));
@@ -354,20 +311,16 @@
             }
         }
 
-        // Start loading images from all folders
-        async function initGallery() {
-            for (const [category, maxNum] of Object.entries(galleryConfig.maxImages)) {
-                await loadImagesFromFolder(category, maxNum);
-            }
-        }
+        // Shuffle on load
+        shuffleArray(galleryImages);
 
         // =====================================================
-        // GALLERY FUNCTIONALITY (No need to edit below)
+        // GALLERY FUNCTIONALITY
         // =====================================================
 
         let currentImageIndex = 0;
         let currentImages = [];
-        let allImages = [];
+        let allImages = [...galleryImages];
 
         // Render gallery
         function renderGallery(images) {
@@ -472,7 +425,7 @@
 
         // Initialize gallery on page load
         document.addEventListener('DOMContentLoaded', function() {
-            initGallery();
+            renderGallery(allImages);
         });
     </script>
 </body>

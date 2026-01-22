@@ -1,25 +1,47 @@
 // =====================================================
-// GALLERY AUTO-LOAD CONFIGURATION
+// GALLERY IMAGES CONFIGURATION
 // =====================================================
-// Set the maximum number of images to auto-detect in each folder.
-// Images should be named: 1.jpg, 2.jpg, 3.jpg, etc.
-// Or you can use any naming pattern - the script will try all extensions.
+// Just add your image filenames here - they will be automatically loaded!
+// No order required - just list the filenames that exist in each folder.
 // =====================================================
+
+const galleryImagesData = {
+    // Workshop images - add filenames here
+    workshops: [
+        '1.jpg',
+        '2.jpg',
+        '3.jpg',
+        '4.jpg',
+        '5.jpg',
+        '6.jpg',
+        '7.jpg',
+        '8.jpg',
+        // Add more workshop images here - any filename works!
+    ],
+
+    // Events
+    events: [
+        // Add event images here
+    ],
+
+    // Conferences
+    conferences: [
+        // Add conference images here
+    ],
+
+    // Training
+    training: [
+        // Add training images here
+    ],
+
+    // Awards
+    awards: [
+        // Add award images here
+    ]
+};
 
 const galleryConfig = {
-    // Maximum images to try loading from each folder
-    maxImages: {
-        workshops: 100,    // Will try 1.jpg to 100.jpg in workshops folder
-        events: 50,
-        conferences: 50,
-        training: 50,
-        awards: 20
-    },
-
-    // Image extensions to try (in order)
-    extensions: ['jpg', 'jpeg', 'png', 'webp', 'gif', 'JPG', 'JPEG', 'PNG', 'WEBP'],
-
-    // Category display names
+    basePath: 'assets/images/gallery/',
     categoryNames: {
         workshops: 'Workshops',
         events: 'Events',
@@ -28,10 +50,3 @@ const galleryConfig = {
         awards: 'Awards'
     }
 };
-
-// =====================================================
-// AUTO-LOAD FUNCTION - No need to edit below
-// =====================================================
-
-// This will automatically build the image list when the page loads
-// by detecting which images exist in each folder
