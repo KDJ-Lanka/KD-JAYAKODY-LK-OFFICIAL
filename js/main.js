@@ -1,20 +1,12 @@
-// Main JavaScript - Multi-page Logic
+// Main JavaScript - Multi-page Logic (NO GSAP dependency!)
 
 document.addEventListener('DOMContentLoaded', () => {
     // Inject Layout Components if elements exist
     if(document.getElementById('header-container')) loadHeader();
     if(document.getElementById('footer-container')) loadFooter();
 
-    // Init Page Transition
-    initPageTransition();
-    
-    // Init GSAP
-    gsap.registerPlugin(ScrollTrigger);
-    
-    // Slight delay to ensure DOM is ready for certain animations
-    setTimeout(() => {
-        initAnimations();
-    }, 100);
+    // Note: Page transitions and animations are now handled by CSS and Intersection Observer
+    // See index.html for the lightweight animation implementation
 });
 
 async function loadHeader() {
@@ -22,8 +14,6 @@ async function loadHeader() {
         const res = await fetch('components/header.html');
         const html = await res.text();
         document.getElementById('header-container').innerHTML = html;
-        
-        // Highlight active link manually if needed (though script inside header.html handles it too)
     } catch(e) { console.error(e); }
 }
 
@@ -35,76 +25,17 @@ async function loadFooter() {
     } catch(e) { console.error(e); }
 }
 
-function initPageTransition() {
-    // Create the overlay
-    const overlay = document.createElement('div');
-    overlay.className = 'transition-overlay';
-    document.body.appendChild(overlay);
-
-    // Initial State: Complete black covering the screen
-    gsap.set(overlay, { 
-        position: 'fixed',
-        top: 0, 
-        left: 0, 
-        width: '100%', 
-        height: '100%', 
-        backgroundColor: '#050505', 
-        zIndex: 9999,
-        transformOrigin: 'bottom'
-    });
-
-    // Animate out (Reveal page) - Smooth Fade/Slide Up
-    gsap.to(overlay, {
-        scaleY: 0,
-        duration: 1.2,
-        ease: "power4.inOut",
-        delay: 0.1
-    });
-
-    // Handle Link Clicks
-    document.body.addEventListener('click', (e) => {
-        const link = e.target.closest('a');
-        // Check if internal link and not a hash link or new tab
-        if (link && 
-            link.href.startsWith(window.location.origin) && 
-            !link.href.includes('#') && 
-            link.target !== '_blank') {
-            
+// Smooth scroll for anchor links (if not handled in index.html)
+document.addEventListener('click', (e) => {
+    const link = e.target.closest('a[href^="#"]');
+    if (link) {
+        const href = link.getAttribute('href');
+        if (href !== '#' && href.length > 1) {
             e.preventDefault();
-            const target = link.href;
-            
-            if(target === window.location.href) return;
-
-            // Animate in (Cover page) - Smooth Slide Down
-            gsap.set(overlay, { transformOrigin: 'top' });
-            gsap.to(overlay, {
-                scaleY: 1,
-                duration: 0.8,
-                ease: "power3.inOut",
-                onComplete: () => {
-                    window.location.href = target;
-                }
-            });
+            const target = document.querySelector(href);
+            if (target) {
+                target.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }
         }
-    });
-}
-
-function initAnimations() {
-    // General Fade In Up
-    const fadeElements = document.querySelectorAll('.animate-on-scroll');
-    fadeElements.forEach(el => {
-        gsap.from(el, {
-            scrollTrigger: {
-                trigger: el,
-                start: "top 90%",
-            },
-            y: 40,
-            opacity: 0,
-            duration: 1,
-            ease: "power3.out"
-        });
-    });
-
-    // Text splitting/reveals if any
-    // ...
-}
+    }
+});

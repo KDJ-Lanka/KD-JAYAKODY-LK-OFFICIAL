@@ -3,17 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>About KDJ | The Visionary Behind KDJ Lanka</title>
-    <meta name="description" content="Learn about K.D. Jayakody (KDJ), the Founder of KDJ Lanka. From Nenasala instructor to CTO of International firms. Read the story of the man bridging the Digital Divide in Sri Lanka.">
-    <meta name="keywords" content="Biography K.D. Jayakody, Story of KDJ, KDJ Lanka Founder, STF AI Training, ICQE 2025 Keynote, Digital Transformation Sri Lanka">
+    <title>About K.D. Jayakody (KDJ) | The Digital Architect of Sri Lanka</title>
+    <meta name="description" content="Discover the journey of K.D. Jayakody (KDJ) - from Nenasala instructor to training the Special Task Force. Sri Lanka's Digital Architect bridging the innovation gap through education.">
+    <meta name="keywords" content="K.D. Jayakody, KDJ, KDJ Lanka, AI Sri Lanka, Tech Educator Sri Lanka, STF Training, Sinhala Tech Education">
+    <meta name="author" content="K.D. Jayakody">
     <meta name="robots" content="index, follow">
-    
-    <!-- Open Graph -->
-    <meta property="og:title" content="The Story of K.D. Jayakody (KDJ)">
-    <meta property="og:description" content="From humble beginnings at a Nenasala to training the Special Task Force. The journey of Sri Lanka's top Digital Architect.">
-    <meta property="og:image" content="https://www.kdj.lk/assets/images/profile.jpg">
-    <meta property="og:url" content="https://www.kdj.lk/about">
 
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.kdj.lk/about">
+    <meta property="og:title" content="About K.D. Jayakody (KDJ) | The Digital Architect">
+    <meta property="og:description" content="From Nenasala classrooms to the Special Task Force — discover the journey of Sri Lanka's Digital Architect.">
+    <meta property="og:image" content="https://www.kdj.lk/assets/images/kdjayakodybrand.png">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://www.kdj.lk/about">
+    <meta property="twitter:title" content="About K.D. Jayakody (KDJ) | The Digital Architect">
+    <meta property="twitter:description" content="From Nenasala classrooms to the Special Task Force — discover the journey of Sri Lanka's Digital Architect.">
+    <meta property="twitter:image" content="https://www.kdj.lk/assets/images/kdjayakodybrand.png">
+
+    <!-- Tailwind -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
@@ -21,9 +31,12 @@
                 extend: {
                     colors: {
                         gold: '#FFD700',
+                        'gold-dark': '#B8860B',
                         cyan: '#00bcd4',
+                        'cyan-light': '#26C6DA',
                         dark: '#050505',
-                        'dark-surface': '#0a0a0a'
+                        'dark-surface': '#0a0a0a',
+                        'dark-card': '#0f0f0f'
                     },
                     fontFamily: {
                         sans: ['Outfit', 'sans-serif'],
@@ -35,149 +48,776 @@
     </script>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
+
+        html {
+            scroll-behavior: smooth;
+            scroll-padding-top: 80px;
+        }
+
+        body {
+            background-color: #050505;
+        }
+
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #0a0a0a;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: linear-gradient(180deg, #FFD700, #B8860B);
+            border-radius: 4px;
+        }
+
+        .gradient-text {
+            background: linear-gradient(135deg, #FFD700 0%, #FFA500 50%, #FFD700 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        /* Unique About Page Hero - Split Screen Design */
+        .about-hero {
+            background: linear-gradient(135deg, #050505 0%, #0f0f0f 50%, #050505 100%);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .about-hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            right: 0;
+            width: 60%;
+            height: 100%;
+            background: radial-gradient(ellipse at center, rgba(255, 215, 0, 0.05) 0%, transparent 70%);
+            pointer-events: none;
+        }
+
+        .about-hero::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 40%;
+            height: 60%;
+            background: radial-gradient(ellipse at center, rgba(0, 188, 212, 0.05) 0%, transparent 70%);
+            pointer-events: none;
+        }
+
+        /* Animated Text Reveal */
+        @keyframes slideInLeft {
+            from {
+                opacity: 0;
+                transform: translateX(-50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        @keyframes slideInRight {
+            from {
+                opacity: 0;
+                transform: translateX(50px);
+            }
+            to {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+
+        .slide-in-left {
+            animation: slideInLeft 0.8s ease-out forwards;
+        }
+
+        .slide-in-right {
+            animation: slideInRight 0.8s ease-out forwards;
+        }
+
+        /* Glitch Effect for Name */
+        .glitch-text {
+            position: relative;
+        }
+
+        .glitch-text::before,
+        .glitch-text::after {
+            content: attr(data-text);
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        .glitch-text::before {
+            left: 2px;
+            text-shadow: -1px 0 #ff00c1;
+            clip: rect(44px, 450px, 56px, 0);
+            animation: glitch-anim 5s infinite linear alternate-reverse;
+        }
+
+        .glitch-text::after {
+            left: -2px;
+            text-shadow: -1px 0 #00fff9;
+            clip: rect(44px, 450px, 56px, 0);
+            animation: glitch-anim2 5s infinite linear alternate-reverse;
+        }
+
+        @keyframes glitch-anim {
+            0% { clip: rect(12px, 9999px, 5px, 0); }
+            5% { clip: rect(65px, 9999px, 89px, 0); }
+            10% { clip: rect(2px, 9999px, 78px, 0); }
+            15% { clip: rect(56px, 9999px, 2px, 0); }
+            20% { clip: rect(89px, 9999px, 23px, 0); }
+            25% { clip: rect(34px, 9999px, 67px, 0); }
+            30% { clip: rect(12px, 9999px, 45px, 0); }
+            35% { clip: rect(78px, 9999px, 34px, 0); }
+            40% { clip: rect(23px, 9999px, 89px, 0); }
+            45% { clip: rect(45px, 9999px, 12px, 0); }
+            50% { clip: rect(67px, 9999px, 56px, 0); }
+            55% { clip: rect(89px, 9999px, 78px, 0); }
+            60% { clip: rect(12px, 9999px, 34px, 0); }
+            65% { clip: rect(56px, 9999px, 12px, 0); }
+            70% { clip: rect(34px, 9999px, 67px, 0); }
+            75% { clip: rect(78px, 9999px, 45px, 0); }
+            80% { clip: rect(23px, 9999px, 89px, 0); }
+            85% { clip: rect(45px, 9999px, 23px, 0); }
+            90% { clip: rect(67px, 9999px, 56px, 0); }
+            95% { clip: rect(89px, 9999px, 34px, 0); }
+            100% { clip: rect(12px, 9999px, 78px, 0); }
+        }
+
+        @keyframes glitch-anim2 {
+            0% { clip: rect(65px, 9999px, 100px, 0); }
+            5% { clip: rect(12px, 9999px, 45px, 0); }
+            10% { clip: rect(89px, 9999px, 23px, 0); }
+            15% { clip: rect(34px, 9999px, 67px, 0); }
+            20% { clip: rect(56px, 9999px, 12px, 0); }
+            25% { clip: rect(23px, 9999px, 89px, 0); }
+            30% { clip: rect(78px, 9999px, 34px, 0); }
+            35% { clip: rect(45px, 9999px, 67px, 0); }
+            40% { clip: rect(12px, 9999px, 56px, 0); }
+            45% { clip: rect(67px, 9999px, 23px, 0); }
+            50% { clip: rect(89px, 9999px, 45px, 0); }
+            55% { clip: rect(34px, 9999px, 78px, 0); }
+            60% { clip: rect(56px, 9999px, 12px, 0); }
+            65% { clip: rect(23px, 9999px, 89px, 0); }
+            70% { clip: rect(78px, 9999px, 34px, 0); }
+            75% { clip: rect(45px, 9999px, 67px, 0); }
+            80% { clip: rect(12px, 9999px, 56px, 0); }
+            85% { clip: rect(67px, 9999px, 23px, 0); }
+            90% { clip: rect(89px, 9999px, 45px, 0); }
+            95% { clip: rect(34px, 9999px, 78px, 0); }
+            100% { clip: rect(56px, 9999px, 12px, 0); }
+        }
+
+        /* Image Reveal Animation */
+        .image-reveal {
+            position: relative;
+            overflow: hidden;
+        }
+
+        .image-reveal::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: #FFD700;
+            transform: translateX(-101%);
+            animation: revealImage 1.5s ease-in-out forwards;
+            animation-delay: 0.5s;
+        }
+
+        @keyframes revealImage {
+            0% { transform: translateX(-101%); }
+            50% { transform: translateX(0); }
+            100% { transform: translateX(101%); }
+        }
+
+        /* Skill Bar Animation */
+        .skill-bar {
+            height: 4px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 2px;
+            overflow: hidden;
+        }
+
+        .skill-progress {
+            height: 100%;
+            background: linear-gradient(90deg, #FFD700, #B8860B);
+            border-radius: 2px;
+            transform-origin: left;
+            transform: scaleX(0);
+            transition: transform 1.5s ease-out;
+        }
+
+        .skill-progress.animate {
+            transform: scaleX(1);
+        }
+
+        /* Rotating Badge */
+        .rotating-badge {
+            animation: rotate 20s linear infinite;
+        }
+
+        @keyframes rotate {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+
+        /* Stats Card Hover */
+        .stat-card {
+            transition: all 0.3s ease;
+        }
+
+        .stat-card:hover {
+            background: linear-gradient(135deg, rgba(255, 215, 0, 0.1), rgba(0, 188, 212, 0.1));
+            transform: translateY(-5px);
+        }
+
+        /* Grain Overlay */
+        .grain-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 9998;
+            opacity: 0.3;
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.05'/%3E%3C/svg%3E");
+        }
+
+        /* Scroll Animations */
+        .fade-up {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.6s ease, transform 0.6s ease;
+        }
+
+        .fade-up.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Horizontal Timeline */
+        .h-timeline-item {
+            position: relative;
+        }
+
+        .h-timeline-item::after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            right: -20px;
+            width: 20px;
+            height: 2px;
+            background: linear-gradient(90deg, #FFD700, transparent);
+        }
+
+        .h-timeline-item:last-child::after {
+            display: none;
+        }
+    </style>
 </head>
 <body class="bg-dark text-gray-200 antialiased">
+
+    <!-- Grain Overlay -->
     <div class="grain-overlay"></div>
+
+    <!-- Header -->
     <div id="header-container"></div>
 
-    <main class="pt-32 pb-20">
+    <!-- Unique Hero Section - Split Screen Design -->
+    <section class="about-hero min-h-screen flex items-center py-20 pt-32">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            
-            <!-- Hero Section -->
-            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center mb-20 animate-on-scroll">
-                <div class="lg:col-span-5 relative group">
-                    <div class="absolute inset-0 bg-gold blur-3xl opacity-20 group-hover:opacity-30 transition-opacity duration-500"></div>
-                    <img src="assets/images/profile.jpg" alt="K.D. Jayakody" class="relative rounded-3xl border-2 border-white/10 shadow-2xl z-10 w-full object-cover">
-                    <div class="absolute -bottom-6 -right-6 glass p-4 rounded-xl border border-white/10 flex items-center gap-4 z-20">
-                        <div class="bg-gold/20 p-3 rounded-full text-gold">
-                            <i class="fas fa-quote-right text-xl"></i>
-                        </div>
-                        <div>
-                            <p class="text-xs text-gray-400 uppercase tracking-widest">Philosophy</p>
-                            <p class="text-sm font-bold text-white">Logic is Universal.</p>
-                        </div>
+            <div class="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+
+                <!-- Left Side - Content -->
+                <div class="space-y-8">
+                    <!-- Badge -->
+                    <div class="slide-in-left inline-flex items-center gap-2">
+                        <div class="w-2 h-2 bg-gold rounded-full animate-pulse"></div>
+                        <span class="text-gold text-sm tracking-widest uppercase">About Me</span>
                     </div>
-                </div>
-                <div class="lg:col-span-1 space-y-12"></div>
-                <div class="lg:col-span-6 space-y-6">
-                    <h1 class="text-5xl md:text-7xl font-bold font-space text-white leading-tight">
-                        Bridging <span class="text-gold">Innovation</span> & <span class="text-cyan-400">Education</span>
-                    </h1>
-                    <div class="prose prose-lg prose-invert text-gray-400">
-                        <p class="text-xl text-white font-light leading-relaxed">
-                            Widely recognized as <b>"KDJ"</b>, I serve as a bridge between high-level corporate innovation and grassroots technical education.
+
+                    <!-- Glitch Name -->
+                    <div class="slide-in-left" style="animation-delay: 0.1s;">
+                        <h1 class="text-6xl md:text-8xl font-bold font-space leading-none">
+                            <span class="text-white block">K.D.</span>
+                            <span class="glitch-text gradient-text block" data-text="Jayakody">Jayakody</span>
+                        </h1>
+                    </div>
+
+                    <!-- Tagline -->
+                    <div class="slide-in-left" style="animation-delay: 0.2s;">
+                        <p class="text-2xl md:text-3xl text-gray-400 font-light">
+                            <span class="text-white">The</span> <span class="text-gold font-semibold">Digital Architect</span>
                         </p>
-                        <p>
-                            As the **Founder & CEO of KDJ Lanka (Pvt) Ltd**, I bring over a decade of experience as a Software Architect and CTO for international firms. My mission is to democratize complex concepts—from DevOps to AI—making them accessible to Sri Lankan youth by breaking the "Linguistic Divide."
+                        <p class="text-lg text-gray-500 mt-2">of Sri Lanka</p>
+                    </div>
+
+                    <!-- Description -->
+                    <div class="slide-in-left" style="animation-delay: 0.3s;">
+                        <p class="text-gray-400 leading-relaxed text-lg">
+                            A <span class="text-white font-medium">Sovereign Technologist</span> and cultural translator bridging the gap between hyper-innovation and grassroots reality. Transforming Sri Lanka's technological landscape through education in Sinhala.
                         </p>
                     </div>
-                </div>
-            </div>
 
-            <!-- The KDJ Philosophy -->
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-32 animate-on-scroll">
-                <div class="glass p-8 rounded-2xl border-t-4 border-gold group hover:-translate-y-2 transition-transform duration-300">
-                    <i class="fas fa-language text-4xl text-gold mb-6"></i>
-                    <h3 class="text-2xl font-bold text-white mb-4">Sinhala-First Approach</h3>
-                    <p class="text-gray-400">
-                        For many, English is a barrier. I explain high-level concepts using local metaphors (Colombo bus routes for server traffic), proving that <span class="text-white italic">"Once you understand the concept, English is just a label."</span>
-                    </p>
-                </div>
-                <div class="glass p-8 rounded-2xl border-t-4 border-cyan group hover:-translate-y-2 transition-transform duration-300">
-                    <i class="fas fa-heart-pulse text-4xl text-cyan-400 mb-6"></i>
-                    <h3 class="text-2xl font-bold text-white mb-4">Well-Being in Tech</h3>
-                    <p class="text-gray-400">
-                        Following a severe health scare detailed in <i>"The Day My Body Forced Me to Listen,"</i> I now advocate against toxic "hustle culture," teaching students that technical skill is useless without health.
-                    </p>
-                </div>
-                <div class="glass p-8 rounded-2xl border-t-4 border-purple-500 group hover:-translate-y-2 transition-transform duration-300">
-                    <i class="fas fa-building text-4xl text-purple-500 mb-6"></i>
-                    <h3 class="text-2xl font-bold text-white mb-4">Corporate & Product</h3>
-                    <p class="text-gray-400">
-                        Founder of <b>KDJ Lanka</b>. Shifted from Hosting (2016) to a product-led SaaS house (2025) with <b>KDJ Tools</b>, <b>Singlish</b>, and <b>KDJ AI</b>.
-                    </p>
-                </div>
-            </div>
-
-            <!-- Detailed Timeline -->
-            <div class="mb-20 animate-on-scroll">
-                <h2 class="text-4xl font-bold text-white mb-12 text-center">The Journey <span class="text-gold">(2016-2025)</span></h2>
-                <div class="relative border-l-2 border-white/10 ml-6 md:ml-12 space-y-16">
-                    
-                    <!-- 2025: STF Boot Camp -->
-                    <div class="relative pl-8 md:pl-12">
-                        <div class="absolute -left-[9px] top-2 w-4 h-4 rounded-full bg-red-500 border-4 border-dark shadow-[0_0_15px_rgba(239,68,68,0.5)]"></div>
-                        <span class="inline-block px-3 py-1 rounded-full bg-red-500/10 text-red-500 text-xs font-bold border border-red-500/20 mb-2">Dec 15-20, 2025</span>
-                        <h3 class="text-2xl font-bold text-white mb-2">STF Cyber Division Boot Camp</h3>
-                        <div class="glass p-6 rounded-xl border border-white/5 relative overflow-hidden">
-                             <div class="absolute inset-0 bg-gradient-to-r from-red-900/10 to-transparent"></div>
-                             <p class="text-gray-400 mb-4 relative z-10">
-                                <b>"From the Jungle to the Digital Frontier."</b> A historic 5-day residential workshop transforming the Special Task Force into "Digital Warriors."
-                             </p>
-                             <ul class="space-y-2 text-sm text-gray-500 relative z-10">
-                                 <li><i class="fas fa-check text-red-500 mr-2"></i>Day 01: "Virtual Staff Officer" with Gemini & NotebookLM.</li>
-                                 <li><i class="fas fa-check text-red-500 mr-2"></i>Day 03: Cracking Python Logic & Mobile App Dev.</li>
-                                 <li><i class="fas fa-check text-red-500 mr-2"></i>Day 05: Commended by DIG Samantha de Silva.</li>
-                             </ul>
-                        </div>
+                    <!-- Key Highlights -->
+                    <div class="slide-in-left flex flex-wrap gap-4" style="animation-delay: 0.4s;">
+                        <span class="px-4 py-2 bg-gold/10 border border-gold/30 rounded-lg text-gold text-sm">
+                            <i class="fas fa-graduation-cap mr-2"></i>90,000+ Students
+                        </span>
+                        <span class="px-4 py-2 bg-cyan/10 border border-cyan/30 rounded-lg text-cyan text-sm">
+                            <i class="fas fa-shield-alt mr-2"></i>STF Trainer
+                        </span>
+                        <span class="px-4 py-2 bg-purple-500/10 border border-purple-500/30 rounded-lg text-purple-400 text-sm">
+                            <i class="fas fa-robot mr-2"></i>AI Educator
+                        </span>
                     </div>
 
-                    <!-- 2025: Provincial Impact -->
-                    <div class="relative pl-8 md:pl-12">
-                         <div class="absolute -left-[9px] top-2 w-4 h-4 rounded-full bg-cyan-400 border-4 border-dark"></div>
-                         <span class="inline-block px-3 py-1 rounded-full bg-cyan-400/10 text-cyan-400 text-xs font-bold border border-cyan-400/20 mb-2">Late 2025</span>
-                         <h3 class="text-2xl font-bold text-white mb-2">Revolutionizing Regional Administration</h3>
-                         <div class="space-y-4">
-                            <div class="glass p-4 rounded-lg border-l-4 border-cyan-400">
-                                <h4 class="text-white font-bold">Uva Provincial Officials (Nov 17)</h4>
-                                <p class="text-sm text-gray-400">"Physical AI" workshop in Badulla. Officers learned to automate red tape using AI in real-time.</p>
+                    <!-- CTA Buttons -->
+                    <div class="slide-in-left flex flex-wrap gap-4" style="animation-delay: 0.5s;">
+                        <a href="#story" class="px-8 py-4 bg-white text-black font-bold rounded-full hover:bg-gold transition-colors duration-300">
+                            Read My Story
+                            <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                        <a href="contact.html" class="px-8 py-4 border border-white/30 rounded-full hover:border-gold hover:text-gold transition-all duration-300">
+                            Let's Connect
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Right Side - Image with Unique Design -->
+                <div class="relative slide-in-right" style="animation-delay: 0.3s;">
+                    <!-- Rotating Badge Circle -->
+                    <div class="absolute -top-8 -right-8 w-32 h-32 rotating-badge hidden lg:block">
+                        <svg viewBox="0 0 100 100" class="w-full h-full">
+                            <defs>
+                                <path id="circle" d="M 50, 50 m -37, 0 a 37,37 0 1,1 74,0 a 37,37 0 1,1 -74,0"/>
+                            </defs>
+                            <text font-size="8" fill="#FFD700" font-family="Space Grotesk">
+                                <textPath href="#circle">
+                                    ★ DIGITAL ARCHITECT ★ TECH EDUCATOR ★ INNOVATOR ★
+                                </textPath>
+                            </text>
+                        </svg>
+                    </div>
+
+                    <!-- Main Image Container -->
+                    <div class="image-reveal relative">
+                        <div class="relative">
+                            <!-- Frame Design -->
+                            <div class="absolute -inset-4 border-2 border-gold/20 rounded-3xl"></div>
+                            <div class="absolute -inset-8 border border-cyan/10 rounded-3xl"></div>
+
+                            <!-- Image -->
+                            <img src="assets/images/kdjayakodybrand.png" alt="K.D. Jayakody" class="relative w-full rounded-2xl shadow-2xl grayscale hover:grayscale-0 transition-all duration-500">
+
+                            <!-- Overlay Stats -->
+                            <div class="absolute bottom-6 left-6 right-6 flex justify-between">
+                                <div class="bg-black/80 backdrop-blur px-4 py-2 rounded-lg">
+                                    <span class="text-gold font-bold text-xl">9+</span>
+                                    <span class="text-gray-400 text-xs ml-1">Years</span>
+                                </div>
+                                <div class="bg-black/80 backdrop-blur px-4 py-2 rounded-lg">
+                                    <span class="text-cyan font-bold text-xl">100K+</span>
+                                    <span class="text-gray-400 text-xs ml-1">Reach</span>
+                                </div>
                             </div>
-                            <div class="glass p-4 rounded-lg border-l-4 border-purple-500">
-                                <h4 class="text-white font-bold">ICQE 2025 Keynote (Oct 10)</h4>
-                                <p class="text-sm text-gray-400">Addressed the International Conference on Quality Education on "AI for Future-Ready Classrooms."</p>
-                            </div>
-                         </div>
+                        </div>
                     </div>
-
-                    <!-- 2025: Product Launch -->
-                    <div class="relative pl-8 md:pl-12">
-                        <div class="absolute -left-[9px] top-2 w-4 h-4 rounded-full bg-gold border-4 border-dark"></div>
-                        <span class="inline-block px-3 py-1 rounded-full bg-gold/10 text-gold text-xs font-bold border border-gold/20 mb-2">June 1, 2025</span>
-                        <h3 class="text-2xl font-bold text-white mb-2">KDJ Lanka: Product Launch 2025</h3>
-                        <p class="text-gray-400">
-                            Celebrated 9 years of excellence. Shifted from service-based revenue to a product ecosystem. Unveiled <b>KDJ AI</b> (Super App) and upgrades to the <b>KDJ Tools</b> suite.
-                        </p>
-                    </div>
-
-                    <!-- 2024: Nas.io Community -->
-                    <div class="relative pl-8 md:pl-12">
-                         <div class="absolute -left-[9px] top-2 w-4 h-4 rounded-full bg-white border-4 border-dark"></div>
-                         <span class="inline-block px-3 py-1 rounded-full bg-white/10 text-white text-xs font-bold border border-white/20 mb-2">Early 2024</span>
-                         <h3 class="text-2xl font-bold text-white mb-2">The "Pro Hub" Launch</h3>
-                         <p class="text-gray-400">
-                            Joined <b>Nas.io</b> to solve local payment hurdles and fix passive learning. Launched the "$1 Subscription" model, offering access to uncut masterclasses and "Learn & Earn" challenges.
-                         </p>
-                    </div>
-
-                     <!-- Nenasala Roots -->
-                     <div class="relative pl-8 md:pl-12">
-                        <div class="absolute -left-[9px] top-2 w-4 h-4 rounded-full bg-green-500 border-4 border-dark"></div>
-                        <span class="inline-block px-3 py-1 rounded-full bg-green-500/10 text-green-500 text-xs font-bold border border-green-500/20 mb-2">2016 - Roots</span>
-                        <h3 class="text-2xl font-bold text-white mb-2">Nenasala & The Beginning</h3>
-                        <p class="text-gray-400">
-                           Started at <b>Nenasala Gampaha (Medagama)</b>. Known for teaching Grade 6-9 students advanced skills like Python and Hardware Engineering, laying the foundation for a career in mass education.
-                        </p>
-                   </div>
-
                 </div>
             </div>
-
         </div>
-    </main>
+    </section>
 
+    <!-- Stats Section - Horizontal Cards -->
+    <section class="py-16 bg-dark-surface">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-6">
+                <div class="stat-card p-6 bg-dark-card rounded-xl border border-white/5 text-center fade-up">
+                    <div class="text-4xl font-bold text-white mb-1">90K+</div>
+                    <div class="text-gray-500 text-sm">YouTube Subscribers</div>
+                </div>
+                <div class="stat-card p-6 bg-dark-card rounded-xl border border-white/5 text-center fade-up">
+                    <div class="text-4xl font-bold text-white mb-1">500+</div>
+                    <div class="text-gray-500 text-sm">Videos Created</div>
+                </div>
+                <div class="stat-card p-6 bg-dark-card rounded-xl border border-white/5 text-center fade-up">
+                    <div class="text-4xl font-bold text-white mb-1">9</div>
+                    <div class="text-gray-500 text-sm">Years Experience</div>
+                </div>
+                <div class="stat-card p-6 bg-dark-card rounded-xl border border-white/5 text-center fade-up">
+                    <div class="text-4xl font-bold text-white mb-1">3</div>
+                    <div class="text-gray-500 text-sm">Companies Founded</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Story Section -->
+    <section id="story" class="py-24">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="fade-up mb-16">
+                <span class="text-gold text-sm tracking-widest uppercase">The Journey</span>
+                <h2 class="text-4xl md:text-5xl font-bold font-space text-white mt-4">
+                    From <span class="text-cyan">Nenasala</span> to <span class="text-gold">National Impact</span>
+                </h2>
+            </div>
+
+            <!-- Narrative Cards -->
+            <div class="space-y-12">
+                <!-- Chapter 1 -->
+                <div class="fade-up">
+                    <div class="flex items-start gap-6">
+                        <div class="flex-shrink-0 w-16 h-16 bg-gold/20 rounded-xl flex items-center justify-center">
+                            <span class="text-2xl font-bold text-gold">01</span>
+                        </div>
+                        <div class="flex-1">
+                            <h3 class="text-2xl font-bold text-white mb-4">The Beginning - 2016</h3>
+                            <p class="text-gray-400 leading-relaxed">
+                                It all started at <span class="text-white">Nenasala Gampaha (Medagama)</span>. While pursuing my own education, I began teaching Grade 6-9 students advanced skills like Python programming and Hardware Engineering. This experience laid the foundation for my philosophy: technical education should be accessible to everyone, regardless of their background.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Chapter 2 -->
+                <div class="fade-up">
+                    <div class="flex items-start gap-6">
+                        <div class="flex-shrink-0 w-16 h-16 bg-cyan/20 rounded-xl flex items-center justify-center">
+                            <span class="text-2xl font-bold text-cyan">02</span>
+                        </div>
+                        <div class="flex-1">
+                            <h3 class="text-2xl font-bold text-white mb-4">Building KDJ Lanka - 2018-2020</h3>
+                            <p class="text-gray-400 leading-relaxed">
+                                While completing my Bachelor's degree at Teesside University, I transformed KDJ Hosting from a small provider into a major web hosting company. In 2020, I founded <span class="text-gold">KDJ Lanka (Pvt) Ltd</span> and became CTO of an Australian parent company — balancing corporate leadership with my passion for education.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Chapter 3 -->
+                <div class="fade-up">
+                    <div class="flex items-start gap-6">
+                        <div class="flex-shrink-0 w-16 h-16 bg-purple-500/20 rounded-xl flex items-center justify-center">
+                            <span class="text-2xl font-bold text-purple-400">03</span>
+                        </div>
+                        <div class="flex-1">
+                            <h3 class="text-2xl font-bold text-white mb-4">The $1 Revolution - 2024</h3>
+                            <p class="text-gray-400 leading-relaxed">
+                                Recognizing the economic challenges in Sri Lanka, I launched the <span class="text-gold">"Pro Hub"</span> on Nas.io with a revolutionary $1 subscription model. This democratized access to premium tech education, making "uncut masterclasses" and "Learn & Earn" challenges accessible to thousands of students.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Chapter 4 -->
+                <div class="fade-up">
+                    <div class="flex items-start gap-6">
+                        <div class="flex-shrink-0 w-16 h-16 bg-red-500/20 rounded-xl flex items-center justify-center">
+                            <span class="text-2xl font-bold text-red-400">04</span>
+                        </div>
+                        <div class="flex-1">
+                            <h3 class="text-2xl font-bold text-white mb-4">National Impact - 2025</h3>
+                            <p class="text-gray-400 leading-relaxed">
+                                A landmark year: I conducted the first-ever "Physical AI" training for Sri Lanka's <span class="text-red-400">Special Task Force Cyber Division</span> — a 5-day residential workshop that transformed commandos into cyber-operators. I also trained Uva Province officials, helping automate government red tape through AI-powered digitization.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills & Expertise Section -->
+    <section class="py-24 bg-dark-surface">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 fade-up">
+                <span class="text-gold text-sm tracking-widest uppercase">Expertise</span>
+                <h2 class="text-4xl md:text-5xl font-bold font-space text-white mt-4">
+                    Skills & <span class="gradient-text">Domains</span>
+                </h2>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-8">
+                <!-- Skill Category 1 -->
+                <div class="fade-up">
+                    <div class="bg-dark-card p-8 rounded-2xl border border-white/10">
+                        <div class="flex items-center gap-4 mb-6">
+                            <div class="w-14 h-14 bg-gold/20 rounded-xl flex items-center justify-center">
+                                <i class="fas fa-brain text-2xl text-gold"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold text-white">Artificial Intelligence</h3>
+                                <p class="text-gray-500 text-sm">Machine Learning & LLMs</p>
+                            </div>
+                        </div>
+                        <div class="space-y-4">
+                            <div>
+                                <div class="flex justify-between mb-2">
+                                    <span class="text-gray-400">Machine Learning</span>
+                                    <span class="text-gold">95%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" style="--progress: 0.95;"></div>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="flex justify-between mb-2">
+                                    <span class="text-gray-400">Deep Learning</span>
+                                    <span class="text-gold">90%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" style="--progress: 0.90;"></div>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="flex justify-between mb-2">
+                                    <span class="text-gray-400">LLM Integration</span>
+                                    <span class="text-gold">92%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" style="--progress: 0.92;"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Skill Category 2 -->
+                <div class="fade-up">
+                    <div class="bg-dark-card p-8 rounded-2xl border border-white/10">
+                        <div class="flex items-center gap-4 mb-6">
+                            <div class="w-14 h-14 bg-cyan/20 rounded-xl flex items-center justify-center">
+                                <i class="fab fa-python text-2xl text-cyan"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold text-white">Python Development</h3>
+                                <p class="text-gray-500 text-sm">Backend & Automation</p>
+                            </div>
+                        </div>
+                        <div class="space-y-4">
+                            <div>
+                                <div class="flex justify-between mb-2">
+                                    <span class="text-gray-400">Django/Flask</span>
+                                    <span class="text-cyan">95%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" style="--progress: 0.95;"></div>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="flex justify-between mb-2">
+                                    <span class="text-gray-400">Automation</span>
+                                    <span class="text-cyan">98%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" style="--progress: 0.98;"></div>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="flex justify-between mb-2">
+                                    <span class="text-gray-400">Scripting</span>
+                                    <span class="text-cyan">96%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" style="--progress: 0.96;"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Skill Category 3 -->
+                <div class="fade-up">
+                    <div class="bg-dark-card p-8 rounded-2xl border border-white/10">
+                        <div class="flex items-center gap-4 mb-6">
+                            <div class="w-14 h-14 bg-purple-500/20 rounded-xl flex items-center justify-center">
+                                <i class="fas fa-cloud text-2xl text-purple-400"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold text-white">Cloud & DevOps</h3>
+                                <p class="text-gray-500 text-sm">Infrastructure</p>
+                            </div>
+                        </div>
+                        <div class="space-y-4">
+                            <div>
+                                <div class="flex justify-between mb-2">
+                                    <span class="text-gray-400">AWS/Azure</span>
+                                    <span class="text-purple-400">90%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" style="--progress: 0.90;"></div>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="flex justify-between mb-2">
+                                    <span class="text-gray-400">Docker/Kubernetes</span>
+                                    <span class="text-purple-400">88%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" style="--progress: 0.88;"></div>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="flex justify-between mb-2">
+                                    <span class="text-gray-400">CI/CD</span>
+                                    <span class="text-purple-400">92%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" style="--progress: 0.92;"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Skill Category 4 -->
+                <div class="fade-up">
+                    <div class="bg-dark-card p-8 rounded-2xl border border-white/10">
+                        <div class="flex items-center gap-4 mb-6">
+                            <div class="w-14 h-14 bg-red-500/20 rounded-xl flex items-center justify-center">
+                                <i class="fas fa-video text-2xl text-red-400"></i>
+                            </div>
+                            <div>
+                                <h3 class="text-xl font-bold text-white">Content Creation</h3>
+                                <p class="text-gray-500 text-sm">Education & Media</p>
+                            </div>
+                        </div>
+                        <div class="space-y-4">
+                            <div>
+                                <div class="flex justify-between mb-2">
+                                    <span class="text-gray-400">Video Production</span>
+                                    <span class="text-red-400">94%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" style="--progress: 0.94;"></div>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="flex justify-between mb-2">
+                                    <span class="text-gray-400">Curriculum Design</span>
+                                    <span class="text-red-400">96%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" style="--progress: 0.96;"></div>
+                                </div>
+                            </div>
+                            <div>
+                                <div class="flex justify-between mb-2">
+                                    <span class="text-gray-400">Technical Writing</span>
+                                    <span class="text-red-400">92%</span>
+                                </div>
+                                <div class="skill-bar">
+                                    <div class="skill-progress" style="--progress: 0.92;"></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Philosophy Section -->
+    <section class="py-24">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 fade-up">
+                <span class="text-gold text-sm tracking-widest uppercase">Core Philosophy</span>
+                <h2 class="text-4xl md:text-5xl font-bold font-space text-white mt-4">
+                    Logic is <span class="gradient-text">Universal</span>
+                </h2>
+            </div>
+
+            <div class="fade-up text-center">
+                <blockquote class="text-3xl md:text-4xl font-space text-white leading-relaxed mb-8">
+                    "The capacity for <span class="text-gold">computational thinking</span> is innate to the human mind and is not dependent on the language of instruction."
+                </blockquote>
+                <p class="text-gray-400 text-lg max-w-2xl mx-auto">
+                    By teaching high-level concepts in Sinhala first, we prove that English fluency is not a prerequisite for technical literacy. Once you understand the concept, English is just a label.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-24 bg-dark-surface">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <div class="fade-up">
+                <h2 class="text-4xl md:text-5xl font-bold font-space text-white mb-6">
+                    Let's Build Something <span class="gradient-text">Amazing</span>
+                </h2>
+                <p class="text-xl text-gray-400 mb-12 max-w-2xl mx-auto">
+                    Whether you're looking for collaboration, consultation, or just want to chat about technology — I'm always open to connecting.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <a href="contact.html" class="px-8 py-4 bg-gradient-to-r from-gold to-gold-dark text-black font-bold rounded-full hover:shadow-[0_0_30px_rgba(255,215,0,0.4)] transition-all duration-300">
+                        <i class="fas fa-envelope mr-2"></i>
+                        Get in Touch
+                    </a>
+                    <a href="courses.html" class="px-8 py-4 border-2 border-white/20 rounded-full hover:border-gold hover:text-gold transition-all duration-300">
+                        <i class="fas fa-play mr-2"></i>
+                        Explore Courses
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
     <div id="footer-container"></div>
+
     <script src="js/main.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Scroll-triggered animations
+            const fadeElements = document.querySelectorAll('.fade-up');
+
+            const fadeObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+
+                        // Animate skill bars
+                        const skillBars = entry.target.querySelectorAll('.skill-progress');
+                        skillBars.forEach(bar => {
+                            const progress = bar.style.getPropertyValue('--progress');
+                            bar.style.transform = `scaleX(${progress})`;
+                            bar.classList.add('animate');
+                        });
+                    }
+                });
+            }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+
+            fadeElements.forEach(el => fadeObserver.observe(el));
+
+            // Smooth scroll for anchor links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    const href = this.getAttribute('href');
+                    if (href !== '#') {
+                        e.preventDefault();
+                        const target = document.querySelector(href);
+                        if (target) {
+                            target.scrollIntoView({
+                                behavior: 'smooth',
+                                block: 'start'
+                            });
+                        }
+                    }
+                });
+            });
+        });
+    </script>
 </body>
 </html>

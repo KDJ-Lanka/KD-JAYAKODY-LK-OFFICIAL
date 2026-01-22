@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery | K.D. Jayakody (KDJ)</title>
+    <meta name="description" content="Photo gallery of K.D. Jayakody - events, projects, conferences, and more.">
+    <meta name="keywords" content="KDJ Gallery, Photos, Events, Conferences Sri Lanka">
+    <meta name="author" content="K.D. Jayakody">
+
+    <!-- Tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        gold: '#FFD700',
+                        'gold-dark': '#B8860B',
+                        cyan: '#00bcd4',
+                        'cyan-light': '#26C6DA',
+                        dark: '#050505',
+                        'dark-surface': '#0a0a0a',
+                        'dark-card': '#0f0f0f'
+                    },
+                    fontFamily: {
+                        sans: ['Outfit', 'sans-serif'],
+                        space: ['Space Grotesk', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background-color: #050505;
+        }
+
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #0a0a0a;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: linear-gradient(180deg, #FFD700, #B8860B);
+            border-radius: 4px;
+        }
+
+        .gradient-text {
+            background: linear-gradient(135deg, #FFD700 0%, #FFA500 50%, #FFD700 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .hero-bg {
+            background: radial-gradient(ellipse at 20% 20%, rgba(255, 215, 0, 0.08) 0%, transparent 50%),
+                        radial-gradient(ellipse at 80% 80%, rgba(0, 188, 212, 0.08) 0%, transparent 50%),
+                        linear-gradient(180deg, #050505 0%, #0a0a0a 100%);
+        }
+
+        /* Gallery Filter Buttons */
+        .filter-btn {
+            position: relative;
+            overflow: hidden;
+        }
+        .filter-btn::before {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            width: 0;
+            height: 2px;
+            background: linear-gradient(90deg, #FFD700, #00bcd4);
+            transition: all 0.3s ease;
+            transform: translateX(-50%);
+        }
+        .filter-btn:hover::before,
+        .filter-btn.active::before {
+            width: 100%;
+        }
+        .filter-btn.active {
+            color: #FFD700;
+        }
+
+        /* Masonry Grid */
+        .masonry-grid {
+            columns: 1;
+            column-gap: 1.5rem;
+        }
+        @media (min-width: 640px) {
+            .masonry-grid { columns: 2; }
+        }
+        @media (min-width: 1024px) {
+            .masonry-grid { columns: 3; }
+        }
+        @media (min-width: 1280px) {
+            .masonry-grid { columns: 4; }
+        }
+
+        /* Gallery Item */
+        .gallery-item {
+            break-inside: avoid;
+            margin-bottom: 1.5rem;
+        }
+
+        .gallery-image {
+            position: relative;
+            overflow: hidden;
+            border-radius: 1rem;
+            cursor: pointer;
+        }
+
+        .gallery-image img {
+            width: 100%;
+            transition: transform 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
+        }
+
+        .gallery-image:hover img {
+            transform: scale(1.1);
+        }
+
+        .gallery-overlay {
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(180deg, transparent 0%, rgba(0,0,0,0.8) 100%);
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            padding: 1.5rem;
+        }
+
+        .gallery-image:hover .gallery-overlay {
+            opacity: 1;
+        }
+
+        /* Lightbox */
+        .lightbox {
+            position: fixed;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.95);
+            z-index: 9999;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }
+        .lightbox.active {
+            display: flex;
+            opacity: 1;
+        }
+        .lightbox img {
+            max-width: 90%;
+            max-height: 90vh;
+            object-fit: contain;
+            border-radius: 0.5rem;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .gallery-item {
+            animation: fadeIn 0.5s ease forwards;
+        }
+    </style>
+</head>
+<body class="bg-dark text-gray-200 antialiased">
+
+    <!-- Header -->
+    <div id="header-container"></div>
+
+    <!-- Main Content -->
+    <main class="pt-32 pb-20">
+        <!-- Hero Section -->
+        <section class="mb-16 relative">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center">
+                    <span class="text-gold font-bold tracking-widest uppercase">Visual Stories</span>
+                    <h1 class="text-5xl md:text-6xl lg:text-7xl font-bold font-space text-white mb-6">
+                        <span class="gradient-text">Gallery</span>
+                    </h1>
+                    <p class="text-xl text-gray-400 max-w-2xl mx-auto">
+                        Capturing moments from events, conferences, workshops, and the journey of KDJ
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Category Filter -->
+        <section class="mb-12">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="flex flex-wrap justify-center gap-4 md:gap-8" id="category-filters">
+                    <button class="filter-btn active text-white font-medium px-6 py-3 transition-all" data-category="all">
+                        <i class="fas fa-th mr-2"></i>All
+                    </button>
+                    <button class="filter-btn text-gray-400 hover:text-white font-medium px-6 py-3 transition-all" data-category="events">
+                        <i class="fas fa-calendar-alt mr-2"></i>Events
+                    </button>
+                    <button class="filter-btn text-gray-400 hover:text-white font-medium px-6 py-3 transition-all" data-category="conferences">
+                        <i class="fas fa-microphone-alt mr-2"></i>Conferences
+                    </button>
+                    <button class="filter-btn text-gray-400 hover:text-white font-medium px-6 py-3 transition-all" data-category="workshops">
+                        <i class="fas fa-chalkboard-teacher mr-2"></i>Workshops
+                    </button>
+                    <button class="filter-btn text-gray-400 hover:text-white font-medium px-6 py-3 transition-all" data-category="training">
+                        <i class="fas fa-graduation-cap mr-2"></i>Training
+                    </button>
+                    <button class="filter-btn text-gray-400 hover:text-white font-medium px-6 py-3 transition-all" data-category="awards">
+                        <i class="fas fa-trophy mr-2"></i>Awards
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Empty State -->
+        <section id="empty-state" class="hidden">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="text-center py-20">
+                    <div class="w-24 h-24 bg-gold/5 rounded-full flex items-center justify-center mx-auto mb-6">
+                        <i class="fas fa-images text-5xl text-gold/30"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-white mb-3">No Images Found</h3>
+                    <p class="text-gray-500 max-w-md mx-auto">
+                        Add images to the gallery folders or update the gallery images array below.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Gallery Grid -->
+        <section id="gallery-section">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div class="masonry-grid" id="gallery-grid">
+                    <!-- Gallery items will be dynamically inserted here -->
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Lightbox -->
+    <div class="lightbox" id="lightbox">
+        <button class="absolute top-6 right-6 text-white text-3xl hover:text-gold transition-colors z-10" onclick="closeLightbox()">
+            <i class="fas fa-times"></i>
+        </button>
+        <button class="absolute left-6 top-1/2 -translate-y-1/2 text-white text-3xl hover:text-gold transition-colors z-10" onclick="navigateLightbox(-1)">
+            <i class="fas fa-chevron-left"></i>
+        </button>
+        <button class="absolute right-6 top-1/2 -translate-y-1/2 text-white text-3xl hover:text-gold transition-colors z-10" onclick="navigateLightbox(1)">
+            <i class="fas fa-chevron-right"></i>
+        </button>
+        <img id="lightbox-image" src="" alt="Gallery Image">
+        <div class="absolute bottom-6 left-1/2 -translate-x-1/2 text-white text-center px-4">
+            <p id="lightbox-caption" class="text-lg font-medium"></p>
+            <p id="lightbox-category" class="text-sm text-gold"></p>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <div id="footer-container"></div>
+
+    <script src="js/main.js"></script>
+    <script src="js/gallery-images.js"></script>
+    <script>
+        // =====================================================
+        // GALLERY AUTO-LOAD FUNCTIONALITY
+        // =====================================================
+        // Automatically loads images from folders without needing to specify filenames
+        // Just name your images: 1.jpg, 2.jpg, 3.jpg, etc. in each folder
+        // =====================================================
+
+        const galleryImages = [];
+        const galleryBasePath = 'assets/images/gallery/';
+        let loadedCount = 0;
+        let totalFolders = Object.keys(galleryConfig.maxImages).length;
+
+        // Async function to check if an image exists
+        function imageExists(url) {
+            return new Promise((resolve) => {
+                const img = new Image();
+                img.onload = () => resolve(true);
+                img.onerror = () => resolve(false);
+                img.src = url;
+            });
+        }
+
+        // Auto-load images from a folder
+        async function loadImagesFromFolder(category, maxNum) {
+            const folderPath = galleryBasePath + category + '/';
+
+            for (let i = 1; i <= maxNum; i++) {
+                let found = false;
+
+                // Try each extension until we find one that works
+                for (const ext of galleryConfig.extensions) {
+                    const imgUrl = folderPath + i + '.' + ext;
+
+                    if (await imageExists(imgUrl)) {
+                        galleryImages.push({
+                            src: imgUrl,
+                            title: `${galleryConfig.categoryNames[category]} ${i}`,
+                            categorySlug: category,
+                            category: galleryConfig.categoryNames[category],
+                            date: ''
+                        });
+                        found = true;
+                        break; // Stop trying extensions for this number
+                    }
+                }
+
+                // If we tried all extensions and none worked for this number,
+                // and we're past the first few images, assume no more images
+                if (!found && i > 5) {
+                    // Check if we should stop (optional optimization)
+                    // Uncomment below to stop at first gap:
+                    // break;
+                }
+            }
+
+            loadedCount++;
+            checkAllLoaded();
+        }
+
+        // Check if all folders have been scanned
+        function checkAllLoaded() {
+            if (loadedCount >= totalFolders) {
+                // Update allImages reference
+                allImages = [...galleryImages];
+                // Shuffle images for random order
+                shuffleArray(galleryImages);
+                // Render the gallery
+                renderGallery(galleryImages);
+            }
+        }
+
+        // Shuffle array for random order
+        function shuffleArray(array) {
+            for (let i = array.length - 1; i > 0; i--) {
+                const j = Math.floor(Math.random() * (i + 1));
+                [array[i], array[j]] = [array[j], array[i]];
+            }
+        }
+
+        // Start loading images from all folders
+        async function initGallery() {
+            for (const [category, maxNum] of Object.entries(galleryConfig.maxImages)) {
+                await loadImagesFromFolder(category, maxNum);
+            }
+        }
+
+        // =====================================================
+        // GALLERY FUNCTIONALITY (No need to edit below)
+        // =====================================================
+
+        let currentImageIndex = 0;
+        let currentImages = [];
+        let allImages = [];
+
+        // Render gallery
+        function renderGallery(images) {
+            const grid = document.getElementById('gallery-grid');
+            const emptyState = document.getElementById('empty-state');
+            const gallerySection = document.getElementById('gallery-section');
+
+            if (images.length === 0) {
+                emptyState.classList.remove('hidden');
+                gallerySection.classList.add('hidden');
+                return;
+            }
+
+            emptyState.classList.add('hidden');
+            gallerySection.classList.remove('hidden');
+
+            grid.innerHTML = images.map((img, index) => `
+                <div class="gallery-item" data-category="${img.categorySlug}" style="animation-delay: ${index * 0.05}s">
+                    <div class="gallery-image" onclick="openLightbox(${getAllImagesIndex(img.categorySlug, index)})">
+                        <img src="${img.src}" alt="${img.title}" loading="lazy" onerror="this.parentElement.parentElement.style.display='none'">
+                        <div class="gallery-overlay">
+                            <h3 class="text-white font-bold mb-1">${img.title}</h3>
+                            <p class="text-gold text-sm">${img.category}${img.date ? ' • ' + img.date : ''}</p>
+                        </div>
+                    </div>
+                </div>
+            `).join('');
+        }
+
+        function getAllImagesIndex(categorySlug, filteredIndex) {
+            const filtered = getCurrentFilteredImages();
+            if (filtered.length === 0) return 0;
+            const img = filtered[filteredIndex];
+            return allImages.findIndex(i => i.src === img.src);
+        }
+
+        function getCurrentFilteredImages() {
+            const activeBtn = document.querySelector('.filter-btn.active');
+            const category = activeBtn ? activeBtn.dataset.category : 'all';
+            if (category === 'all') return allImages;
+            return allImages.filter(img => img.categorySlug === category);
+        }
+
+        // Lightbox functions
+        function openLightbox(index) {
+            currentImages = allImages;
+            currentImageIndex = index;
+            const lightbox = document.getElementById('lightbox');
+            const lightboxImage = document.getElementById('lightbox-image');
+            const caption = document.getElementById('lightbox-caption');
+            const category = document.getElementById('lightbox-category');
+
+            lightboxImage.src = allImages[index].src;
+            caption.textContent = allImages[index].title || '';
+            category.textContent = allImages[index].category + (allImages[index].date ? ' • ' + allImages[index].date : '');
+            lightbox.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeLightbox() {
+            document.getElementById('lightbox').classList.remove('active');
+            document.body.style.overflow = '';
+        }
+
+        function navigateLightbox(direction) {
+            currentImageIndex = (currentImageIndex + direction + currentImages.length) % currentImages.length;
+            const lightboxImage = document.getElementById('lightbox-image');
+            const caption = document.getElementById('lightbox-caption');
+            const category = document.getElementById('lightbox-category');
+
+            lightboxImage.src = currentImages[currentImageIndex].src;
+            caption.textContent = currentImages[currentImageIndex].title || '';
+            category.textContent = currentImages[currentImageIndex].category + (currentImages[currentImageIndex].date ? ' • ' + currentImages[currentImageIndex].date : '');
+        }
+
+        // Close lightbox on escape key
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') closeLightbox();
+            if (e.key === 'ArrowLeft') navigateLightbox(-1);
+            if (e.key === 'ArrowRight') navigateLightbox(1);
+        });
+
+        // Category filter functionality
+        document.querySelectorAll('.filter-btn').forEach(btn => {
+            btn.addEventListener('click', function() {
+                document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+                this.classList.add('active');
+
+                const category = this.dataset.category;
+                filterGallery(category);
+            });
+        });
+
+        function filterGallery(category) {
+            if (category === 'all') {
+                renderGallery(allImages);
+            } else {
+                const filtered = allImages.filter(img => img.categorySlug === category);
+                renderGallery(filtered);
+            }
+        }
+
+        // Initialize gallery on page load
+        document.addEventListener('DOMContentLoaded', function() {
+            initGallery();
+        });
+    </script>
+</body>
+</html>

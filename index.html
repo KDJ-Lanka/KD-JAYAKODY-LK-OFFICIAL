@@ -3,25 +3,25 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>K.D. Jayakody (KDJ) | Sri Lanka's Premier Digital Architect & AI Educator</title>
-    <meta name="description" content="K.D. Jayakody (KDJ) is Sri Lanka's leading Tech Educator and Digital Architect. bridging the gap between Silicon Valley innovation and local mass education. Founder of KDJ Lanka & KDJ Tools.">
-    <meta name="keywords" content="K.D. Jayakody, KDJ, KDJ Lanka, AI Sri Lanka, Best Tech Educator Sri Lanka, Software Engineer Sri Lanka, SaaS Sri Lanka, AI Mantharaya, Sinhala Tech, Future of Work Sri Lanka">
+    <title>K.D. Jayakody (KDJ) | The Architect of the Digital Pearl</title>
+    <meta name="description" content="K.D. Jayakody (KDJ) - Sri Lanka's Digital Architect, Tech Educator, and AI Pioneer. Transforming the nation's technological ecosystem through education, innovation, and grassroots empowerment.">
+    <meta name="keywords" content="K.D. Jayakody, KDJ, KDJ Lanka, AI Sri Lanka, Tech Educator Sri Lanka, Software Engineer, SaaS Sri Lanka, AI Mantharaya, Sinhala Tech, Digital Architect Sri Lanka">
     <meta name="author" content="K.D. Jayakody">
     <meta name="robots" content="index, follow">
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://www.kdj.lk/">
-    <meta property="og:title" content="K.D. Jayakody (KDJ) | Sri Lanka's #1 Digital Architect">
-    <meta property="og:description" content="Redefining the digital landscape of Sri Lanka. From the Special Task Force to 90k+ students. Join the revolution.">
-    <meta property="og:image" content="https://www.kdj.lk/assets/images/profile.jpg">
+    <meta property="og:title" content="K.D. Jayakody (KDJ) | The Architect of the Digital Pearl">
+    <meta property="og:description" content="From the Special Task Force to 90,000+ students. Discover the journey of Sri Lanka's Digital Architect.">
+    <meta property="og:image" content="https://www.kdj.lk/assets/images/kdjayakodybrand.png">
 
     <!-- Twitter -->
     <meta property="twitter:card" content="summary_large_image">
     <meta property="twitter:url" content="https://www.kdj.lk/">
-    <meta property="twitter:title" content="K.D. Jayakody (KDJ) | Digital Architect">
-    <meta property="twitter:description" content="Redefining the digital landscape of Sri Lanka. From the Special Task Force to 90k+ students.">
-    <meta property="twitter:image" content="https://www.kdj.lk/assets/images/profile.jpg">
+    <meta property="twitter:title" content="K.D. Jayakody (KDJ) | The Architect of the Digital Pearl">
+    <meta property="twitter:description" content="From the Special Task Force to 90,000+ students. Discover the journey of Sri Lanka's Digital Architect.">
+    <meta property="twitter:image" content="https://www.kdj.lk/assets/images/kdjayakodybrand.png">
 
     <!-- Schema.org -->
     <script type="application/ld+json">
@@ -31,8 +31,8 @@
       "name": "K.D. Jayakody",
       "alternateName": "KDJ",
       "url": "https://www.kdj.lk",
-      "image": "https://www.kdj.lk/assets/images/profile.jpg",
-      "jobTitle": "Founder & CTO",
+      "image": "https://www.kdj.lk/assets/images/kdjayakodybrand.png",
+      "jobTitle": "Founder & CEO",
       "worksFor": {
         "@type": "Organization",
         "name": "KDJ Lanka (Pvt) Ltd"
@@ -45,7 +45,7 @@
       ]
     }
     </script>
-    
+
     <!-- Tailwind -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
@@ -54,9 +54,12 @@
                 extend: {
                     colors: {
                         gold: '#FFD700',
+                        'gold-dark': '#B8860B',
                         cyan: '#00bcd4',
+                        'cyan-light': '#26C6DA',
                         dark: '#050505',
-                        'dark-surface': '#0a0a0a'
+                        'dark-surface': '#0a0a0a',
+                        'dark-card': '#0f0f0f'
                     },
                     fontFamily: {
                         sans: ['Outfit', 'sans-serif'],
@@ -68,74 +71,1475 @@
     </script>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <!-- GSAP -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
-</head>
-<body class="bg-dark text-gray-200 antialiased overflow-hidden-y">
 
+    <!-- CSS Animations -->
+    <style>
+        /* Fade In Up Animation */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(40px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        /* Fade In Animation */
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        /* Scale In Animation */
+        @keyframes scaleIn {
+            from {
+                opacity: 0;
+                transform: scale(0.9);
+            }
+            to {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        /* Apply animations when visible */
+        .animate-visible {
+            animation: fadeInUp 0.8s ease-out forwards;
+        }
+
+        .animate-fade-in {
+            animation: fadeIn 0.6s ease-out forwards;
+        }
+
+        .animate-scale-in {
+            animation: scaleIn 0.6s ease-out forwards;
+        }
+
+        /* Stagger delays */
+        .delay-100 { animation-delay: 0.1s; }
+        .delay-200 { animation-delay: 0.2s; }
+        .delay-300 { animation-delay: 0.3s; }
+        .delay-400 { animation-delay: 0.4s; }
+        .delay-500 { animation-delay: 0.5s; }
+    </style>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
+
+        /* Smooth Scrolling */
+        html {
+            scroll-behavior: smooth;
+            scroll-padding-top: 80px;
+        }
+
+        body {
+            background-color: #050505;
+        }
+
+        /* Custom Scrollbar */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #0a0a0a;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: linear-gradient(180deg, #FFD700, #B8860B);
+            border-radius: 4px;
+        }
+
+        /* Gradient Text */
+        .gradient-text {
+            background: linear-gradient(135deg, #FFD700 0%, #FFA500 50%, #FFD700 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .gradient-text-cyan {
+            background: linear-gradient(135deg, #00bcd4 0%, #26C6DA 50%, #00bcd4 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        /* Animated Background */
+        .hero-bg {
+            background: radial-gradient(ellipse at 20% 20%, rgba(255, 215, 0, 0.08) 0%, transparent 50%),
+                        radial-gradient(ellipse at 80% 80%, rgba(0, 188, 212, 0.08) 0%, transparent 50%),
+                        linear-gradient(180deg, #050505 0%, #0a0a0a 100%);
+        }
+
+        /* Floating Animation */
+        @keyframes float {
+            0%, 100% { transform: translateY(0px) rotate(0deg); }
+            50% { transform: translateY(-20px) rotate(2deg); }
+        }
+        .float-animation {
+            animation: float 6s ease-in-out infinite;
+        }
+
+        /* Pulse Glow */
+        @keyframes pulse-glow {
+            0%, 100% { box-shadow: 0 0 20px rgba(255, 215, 0, 0.3); }
+            50% { box-shadow: 0 0 40px rgba(255, 215, 0, 0.6); }
+        }
+        .pulse-glow {
+            animation: pulse-glow 3s ease-in-out infinite;
+        }
+
+        /* Timeline Styles */
+        .timeline-line {
+            background: linear-gradient(180deg, transparent 0%, #FFD700 10%, #FFD700 90%, transparent 100%);
+        }
+
+        /* Card Hover Effects */
+        .service-card {
+            transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+        }
+        .service-card:hover {
+            transform: translateY(-10px) scale(1.02);
+            box-shadow: 0 20px 40px rgba(255, 215, 0, 0.15);
+        }
+
+        /* Number Counter Animation */
+        .counter-value {
+            font-variant-numeric: tabular-nums;
+        }
+
+        /* Grain Overlay */
+        .grain-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 9998;
+            opacity: 0.4;
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.05'/%3E%3C/svg%3E");
+        }
+
+        /* Section Divider */
+        .section-divider {
+            height: 1px;
+            background: linear-gradient(90deg, transparent 0%, rgba(255, 215, 0, 0.3) 50%, transparent 100%);
+        }
+
+        /* Milestone Card */
+        .milestone-card {
+            background: linear-gradient(135deg, rgba(255, 215, 0, 0.05) 0%, rgba(0, 188, 212, 0.05) 100%);
+            border: 1px solid rgba(255, 215, 0, 0.1);
+        }
+
+        /* Quote Styling */
+        .quote-mark {
+            font-size: 120px;
+            line-height: 1;
+            opacity: 0.1;
+        }
+
+        /* ==================== PARALLAX EFFECTS ==================== */
+        .parallax-section {
+            position: relative;
+            overflow: hidden;
+        }
+
+        #about::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            background: radial-gradient(ellipse at 30% 50%, rgba(255, 215, 0, 0.03) 0%, transparent 70%);
+            pointer-events: none;
+        }
+
+        #ecosystem::before {
+            content: '';
+            position: absolute;
+            width: 500px;
+            height: 500px;
+            background: radial-gradient(circle, rgba(255, 215, 0, 0.05) 0%, transparent 70%);
+            border-radius: 50%;
+            position: absolute;
+            top: -250px;
+            right: -250px;
+            animation: float 20s ease-in-out infinite;
+            pointer-events: none;
+        }
+
+        #content-section::before {
+            content: '';
+            position: absolute;
+            width: 400px;
+            height: 400px;
+            background: radial-gradient(circle, rgba(205, 46, 58, 0.05) 0%, transparent 70%);
+            border-radius: 50%;
+            position: absolute;
+            bottom: -200px;
+            left: -200px;
+            animation: float-reverse 15s ease-in-out infinite;
+            pointer-events: none;
+        }
+
+        @keyframes float {
+            0%, 100% { transform: translate(0, 0); }
+            50% { transform: translate(30px, 30px); }
+        }
+
+        @keyframes float-reverse {
+            0%, 100% { transform: translate(0, 0); }
+            50% { transform: translate(-30px, -30px); }
+        }
+
+        /* ==================== VERTICAL NAVIGATION ==================== */
+        .vertical-nav {
+            position: fixed;
+            right: 2rem;
+            top: 50%;
+            transform: translateY(-50%);
+            z-index: 1000;
+            display: none;
+            flex-direction: column;
+            gap: 1rem;
+        }
+
+        .vertical-nav .nav-dot {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.2);
+            border: 2px solid transparent;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            position: relative;
+        }
+
+        .vertical-nav .nav-dot:hover {
+            background: rgba(255, 215, 0, 0.5);
+            transform: scale(1.2);
+        }
+
+        .vertical-nav .nav-dot.active {
+            background: #FFD700;
+            border-color: #FFD700;
+            transform: scale(1.3);
+        }
+
+        .vertical-nav .nav-dot .tooltip {
+            position: absolute;
+            right: 24px;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(0, 0, 0, 0.9);
+            color: #fff;
+            padding: 0.5rem 1rem;
+            border-radius: 0.5rem;
+            font-size: 0.75rem;
+            white-space: nowrap;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.3s ease;
+            min-width: max-content;
+        }
+
+        .vertical-nav .nav-dot:hover .tooltip {
+            opacity: 1;
+        }
+
+        /* Scroll Progress Indicator */
+        .scroll-progress {
+            position: fixed;
+            right: 0;
+            top: 0;
+            width: 4px;
+            height: 100%;
+            background: rgba(255, 255, 255, 0.1);
+            z-index: 999;
+        }
+
+        .scroll-progress-bar {
+            width: 100%;
+            height: 0;
+            background: linear-gradient(180deg, #FFD700, #B8860B);
+            transition: height 0.1s ease-out;
+        }
+
+        /* Mobile menu enhancement */
+        .mobile-menu-overlay {
+            position: fixed;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.95);
+            backdrop-filter: blur(10px);
+            z-index: 40;
+            opacity: 0;
+            pointer-events: none;
+            transition: opacity 0.3s ease;
+        }
+
+        .mobile-menu-overlay.active {
+            opacity: 1;
+            pointer-events: all;
+        }
+
+        /* Active section indicator */
+        .section-indicator {
+            position: fixed;
+            left: 2rem;
+            top: 50%;
+            transform: translateY(-50%);
+            z-index: 1000;
+            font-family: 'Space Grotesk', sans-serif;
+            font-weight: 600;
+            writing-mode: vertical-rl;
+            text-orientation: mixed;
+            color: #FFD700;
+            opacity: 0.7;
+            font-size: 0.75rem;
+            letter-spacing: 0.2em;
+            display: none;
+        }
+
+        @media (min-width: 1024px) {
+            .vertical-nav {
+                display: flex;
+            }
+            .section-indicator {
+                display: block;
+            }
+        }
+    </style>
+</head>
+<body class="bg-dark text-gray-200 antialiased">
+
+    <!-- Grain Overlay -->
     <div class="grain-overlay"></div>
+
+    <!-- Scroll Progress Indicator -->
+    <div class="scroll-progress">
+        <div class="scroll-progress-bar" id="scrollProgressBar"></div>
+    </div>
+
+    <!-- Vertical Navigation -->
+    <nav class="vertical-nav" id="verticalNav">
+        <a href="#hero" class="nav-dot active" data-section="Hero">
+            <span class="tooltip">Home</span>
+        </a>
+        <a href="#about" class="nav-dot" data-section="About">
+            <span class="tooltip">About</span>
+        </a>
+        <a href="#timeline-section" class="nav-dot" data-section="Journey">
+            <span class="tooltip">Journey</span>
+        </a>
+        <a href="#philosophy" class="nav-dot" data-section="Philosophy">
+            <span class="tooltip">Philosophy</span>
+        </a>
+        <a href="#ecosystem" class="nav-dot" data-section="Ecosystem">
+            <span class="tooltip">Ecosystem</span>
+        </a>
+        <a href="#content-section" class="nav-dot" data-section="Content">
+            <span class="tooltip">Content</span>
+        </a>
+        <a href="#books-section" class="nav-dot" data-section="Books">
+            <span class="tooltip">Books</span>
+        </a>
+        <a href="#impact-section" class="nav-dot" data-section="Impact">
+            <span class="tooltip">Impact</span>
+        </a>
+        <a href="#cta-section" class="nav-dot" data-section="Contact">
+            <span class="tooltip">Contact</span>
+        </a>
+    </nav>
+
+    <!-- Section Indicator -->
+    <div class="section-indicator" id="sectionIndicator">HOME</div>
+
+    <!-- Header -->
     <div id="header-container"></div>
 
-    <main class="relative h-screen w-full overflow-hidden flex items-center justify-center">
-        <!-- Background Video/Image Parallax -->
-        <div class="absolute inset-0 z-0 scale-110" id="hero-bg-wrapper">
-            <img src="assets/images/hero_bg_v2.png" class="w-full h-full object-cover opacity-60 brightness-50" alt="Background">
-            <div class="absolute inset-0 bg-gradient-to-t from-dark via-dark/40 to-transparent"></div>
+    <!-- Hero Section -->
+    <section id="hero" class="relative min-h-[100dvh] flex items-center justify-center hero-bg overflow-hidden pt-20">
+        <!-- Animated Background Elements -->
+        <div class="absolute inset-0 overflow-hidden pointer-events-none">
+            <div class="absolute top-1/4 left-1/4 w-64 md:w-96 h-64 md:h-96 bg-gold/5 rounded-full blur-3xl animate-pulse"></div>
+            <div class="absolute bottom-1/4 right-1/4 w-64 md:w-96 h-64 md:h-96 bg-cyan/5 rounded-full blur-3xl animate-pulse" style="animation-delay: 1s;"></div>
         </div>
 
-        <div class="relative z-10 text-center px-4 max-w-6xl mx-auto">
-             <div class="mb-4 overflow-hidden">
-                 <h2 class="text-gold tracking-[0.8em] text-sm md:text-lg uppercase font-bold animate-reveal transform translate-y-full">Innovation • Education • Impact</h2>
-             </div>
-             
-             <h1 class="text-6xl md:text-8xl lg:text-9xl font-bold font-space text-white mb-8 tracking-tighter leading-none mix-blend-screen opacity-0" id="hero-title">
-                KD<span class="text-transparent bg-clip-text bg-gradient-to-r from-gold to-yellow-600">JAYAKODY</span>
-             </h1>
+        <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 md:py-12">
+            <div class="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
+                <!-- Hero Content -->
+                <div class="text-center lg:text-left space-y-6 md:space-y-8 order-2 lg:order-1">
+                    <div class="inline-flex items-center gap-2 px-3 md:px-4 py-1.5 md:py-2 rounded-full border border-gold/30 bg-gold/5 backdrop-blur-sm mx-auto lg:mx-0 w-fit">
+                        <span class="w-2 h-2 bg-gold rounded-full animate-pulse flex-shrink-0"></span>
+                        <span class="text-gold text-xs md:text-sm font-medium tracking-wide">Sri Lanka's Digital Architect</span>
+                    </div>
 
-             <p class="text-xl text-gray-400 max-w-2xl mx-auto mb-12 font-light leading-relaxed opacity-0" id="hero-subtitle">
-                 Bridging <b>Corporate Innovation</b> & <b>Grassroots Education</b>.
-                 <br class="hidden md:block">
-                 From transforming the <span class="text-red-500 font-bold">Special Task Force</span> to empowering 90k+ students.
-             </p>
+                    <h1 class="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold font-space leading-tight">
+                        <span class="block text-white">The Architect of</span>
+                        <span class="block gradient-text">The Digital Pearl</span>
+                    </h1>
 
-             <div class="flex flex-col md:flex-row justify-center gap-6 opacity-0" id="hero-cta">
-                 <a href="projects.html" class="group relative px-8 py-4 bg-white/5 backdrop-blur border border-white/10 overflow-hidden hover:border-gold transition-colors duration-300">
-                     <span class="relative z-10 font-bold uppercase tracking-widest text-sm group-hover:text-gold transition-colors">See the Ecosystem</span>
-                     <div class="absolute inset-0 bg-gold/10 transform -translate-x-full group-hover:translate-x-0 transition-transform duration-500 ease-out"></div>
-                 </a>
-                 <a href="about.html" class="px-8 py-4 text-gray-400 hover:text-white font-medium tracking-widest text-sm uppercase transition-colors flex items-center gap-2">
-                     Read The Story <i class="fas fa-arrow-right text-xs"></i>
-                 </a>
-             </div>
+                    <p class="text-lg md:text-xl lg:text-2xl text-gray-400 leading-relaxed max-w-xl mx-auto lg:mx-0">
+                        <span class="hidden md:inline">From</span><span class="md:hidden">From</span> <span class="text-gold font-semibold">Silicon Valley innovation</span> <span class="hidden md:inline">to</span><span class="md:hidden">to</span> <span class="text-cyan font-semibold">grassroots education</span> — transforming Sri Lanka's technological landscape.
+                    </p>
+
+                    <div class="flex flex-col sm:flex-row gap-3 md:gap-4 justify-center lg:justify-start">
+                        <a href="#about" class="group px-6 md:px-8 py-3 md:py-4 bg-gradient-to-r from-gold to-gold-dark text-black font-bold rounded-full hover:shadow-[0_0_30px_rgba(255,215,0,0.4)] transition-all duration-300 flex items-center justify-center gap-2 text-sm md:text-base">
+                            Discover The Journey
+                            <i class="fas fa-arrow-down group-hover:translate-y-1 transition-transform"></i>
+                        </a>
+                        <a href="#ecosystem" class="px-6 md:px-8 py-3 md:py-4 border border-white/20 rounded-full hover:border-gold/50 hover:text-gold transition-all duration-300 flex items-center justify-center gap-2 text-sm md:text-base">
+                            <i class="fas fa-play"></i>
+                            Explore Ecosystem
+                        </a>
+                    </div>
+
+                    <!-- Quick Stats -->
+                    <div class="grid grid-cols-3 gap-4 md:gap-6 pt-6 md:pt-8 border-t border-white/10">
+                        <div class="text-center lg:text-left">
+                            <div class="text-2xl md:text-3xl lg:text-4xl font-bold text-white counter-value" data-target="90000">0</div>
+                            <div class="text-xs md:text-sm text-gray-500">Students Empowered</div>
+                        </div>
+                        <div class="text-center lg:text-left">
+                            <div class="text-2xl md:text-3xl lg:text-4xl font-bold text-white counter-value" data-target="10">0</div>
+                            <div class="text-xs md:text-sm text-gray-500">Years of Impact</div>
+                        </div>
+                        <div class="text-center lg:text-left">
+                            <div class="text-2xl md:text-3xl lg:text-4xl font-bold text-white counter-value" data-target="500">0</div>
+                            <div class="text-xs md:text-sm text-gray-500">Plus Videos</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Hero Image -->
+                <div class="relative flex justify-center order-1 lg:order-2 mb-8 lg:mb-0">
+                    <div class="relative float-animation w-full max-w-[320px] md:max-w-[380px]">
+                        <!-- Glow Effect -->
+                        <div class="absolute inset-0 bg-gradient-to-br from-gold/20 via-transparent to-cyan/20 rounded-2xl blur-3xl"></div>
+
+                        <!-- Image Container - No Circle -->
+                        <div class="relative w-full aspect-square rounded-2xl overflow-hidden border-4 border-gold/30 pulse-glow shadow-2xl">
+                            <img src="assets/images/kdjayakodybrand.png" alt="K.D. Jayakody - The Digital Architect" class="w-full h-full object-cover">
+                        </div>
+
+                        <!-- Floating Badges -->
+                        <div class="absolute -top-3 md:-top-4 -right-2 md:-right-4 px-3 md:px-4 py-1.5 md:py-2 bg-dark-card/90 backdrop-blur border border-gold/30 rounded-full">
+                            <span class="text-gold text-xs md:text-sm font-bold">Founder & CEO</span>
+                        </div>
+                        <div class="absolute -bottom-3 md:-bottom-4 -left-2 md:-left-4 px-3 md:px-4 py-1.5 md:py-2 bg-dark-card/90 backdrop-blur border border-cyan/30 rounded-full">
+                            <span class="text-cyan text-xs md:text-sm font-bold">Tech Educator</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
 
-        <!-- Social Side Bar -->
-        <div class="hidden lg:flex flex-col absolute left-10 bottom-0 z-20 space-y-6 pb-20 items-center">
-            <div class="w-[1px] h-20 bg-gray-700"></div>
-            <a href="#" class="text-gray-500 hover:text-gold transition-colors text-xl"><i class="fab fa-github"></i></a>
-            <a href="#" class="text-gray-500 hover:text-cyan-400 transition-colors text-xl"><i class="fab fa-linkedin-in"></i></a>
-            <a href="#" class="text-gray-500 hover:text-red-500 transition-colors text-xl"><i class="fab fa-youtube"></i></a>
+        <!-- Scroll Indicator -->
+        <div class="absolute bottom-6 md:bottom-8 left-1/2 transform -translate-x-1/2 flex flex-col items-center gap-1 md:gap-2 animate-bounce hidden md:flex">
+            <span class="text-[10px] md:text-xs text-gray-500 tracking-widest uppercase">Scroll</span>
+            <i class="fas fa-chevron-down text-gold text-sm"></i>
         </div>
-    </main>
+    </section>
+
+    <!-- Section Divider -->
+    <div class="section-divider max-w-4xl mx-auto"></div>
+
+    <!-- About Section -->
+    <section id="about" class="py-24 relative parallax-section">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-2 gap-16 items-center">
+                <!-- Left Content -->
+                <div class="space-y-8 animate-on-scroll">
+                    <div>
+                        <span class="text-gold text-sm font-bold tracking-widest uppercase">The Visionary</span>
+                        <h2 class="text-4xl md:text-5xl font-bold font-space mt-4 text-white">
+                            K.D. Jayakody
+                        </h2>
+                        <p class="text-2xl text-gray-400 mt-2 font-light">A "Sovereign Technologist" & Cultural Translator</p>
+                    </div>
+
+                    <div class="space-y-6 text-gray-300 leading-relaxed">
+                        <p>
+                            In a decade marked by Sri Lanka's rapid digital evolution (2016–2026), one figure emerged as the bridge between <span class="text-gold">hyper-innovation</span> and <span class="text-cyan">grassroots reality</span>.
+                        </p>
+                        <p>
+                            K.D. Jayakody — universally known as <span class="text-white font-semibold">"KDJ"</span> — is not merely an educator or entrepreneur. He is a <span class="text-gold">systematic enabler of digital literacy</span>, dismantling linguistic barriers and automating bureaucratic obstacles to empower a nation.
+                        </p>
+                        <p>
+                            From transforming the <span class="text-red-400">Special Task Force's</span> cyber capabilities to creating a <span class="text-gold">$1 education model</span> for the masses, his work represents a microcosm for the Global South's potential to leapfrog developmental stages through strategic AI application.
+                        </p>
+                    </div>
+
+                    <!-- Key Roles -->
+                    <div class="grid grid-cols-2 gap-4">
+                        <div class="flex items-center gap-3 p-4 bg-dark-card/50 rounded-lg border border-white/5">
+                            <div class="w-10 h-10 bg-gold/20 rounded-lg flex items-center justify-center">
+                                <i class="fas fa-graduation-cap text-gold"></i>
+                            </div>
+                            <span class="text-white font-medium">Educator</span>
+                        </div>
+                        <div class="flex items-center gap-3 p-4 bg-dark-card/50 rounded-lg border border-white/5">
+                            <div class="w-10 h-10 bg-cyan/20 rounded-lg flex items-center justify-center">
+                                <i class="fas fa-rocket text-cyan"></i>
+                            </div>
+                            <span class="text-white font-medium">Entrepreneur</span>
+                        </div>
+                        <div class="flex items-center gap-3 p-4 bg-dark-card/50 rounded-lg border border-white/5">
+                            <div class="w-10 h-10 bg-purple-500/20 rounded-lg flex items-center justify-center">
+                                <i class="fas fa-brain text-purple-400"></i>
+                            </div>
+                            <span class="text-white font-medium">AI Consultant</span>
+                        </div>
+                        <div class="flex items-center gap-3 p-4 bg-dark-card/50 rounded-lg border border-white/5">
+                            <div class="w-10 h-10 bg-red-500/20 rounded-lg flex items-center justify-center">
+                                <i class="fas fa-shield-alt text-red-400"></i>
+                            </div>
+                            <span class="text-white font-medium">State Enabler</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Content - Philosophy Quote -->
+                <div class="relative animate-on-scroll">
+                    <div class="relative p-8 md:p-12 bg-gradient-to-br from-dark-card to-dark-surface rounded-2xl border border-gold/20">
+                        <span class="quote-mark absolute top-4 left-4 font-space text-gold">"</span>
+                        <blockquote class="relative z-10">
+                            <p class="text-2xl md:text-3xl font-space text-white leading-relaxed mb-6">
+                                Logic is <span class="gradient-text">Universal</span>
+                            </p>
+                            <p class="text-gray-400 leading-relaxed">
+                                The capacity for computational thinking is innate to the human mind and is not dependent on the language of instruction. By teaching high-level concepts in Sinhala first, we prove that English fluency is not a prerequisite for technical literacy.
+                            </p>
+                        </blockquote>
+                        <span class="quote-mark absolute bottom-4 right-4 font-space text-gold rotate-180">"</span>
+                    </div>
+
+                    <!-- Decorative Elements -->
+                    <div class="absolute -top-4 -right-4 w-24 h-24 bg-gradient-to-br from-gold/20 to-transparent rounded-full blur-xl"></div>
+                    <div class="absolute -bottom-4 -left-4 w-32 h-32 bg-gradient-to-tr from-cyan/20 to-transparent rounded-full blur-xl"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Divider -->
+    <div class="section-divider max-w-4xl mx-auto"></div>
+
+    <!-- Timeline Section -->
+    <section id="timeline-section" class="py-24 relative bg-dark-surface/50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 animate-on-scroll">
+                <span class="text-gold text-sm font-bold tracking-widest uppercase">The Journey</span>
+                <h2 class="text-4xl md:text-5xl font-bold font-space mt-4 text-white">
+                    A Decade of Transformation
+                </h2>
+                <p class="text-xl text-gray-400 mt-4 max-w-2xl mx-auto">
+                    From Nenasala classrooms to the Special Task Force — tracing the evolution of a digital revolution
+                </p>
+            </div>
+
+            <div class="relative">
+                <!-- Timeline Line -->
+                <div class="absolute left-1/2 transform -translate-x-1/2 w-1 h-full timeline-line hidden md:block"></div>
+
+                <!-- Timeline Items -->
+                <div class="space-y-16">
+                    <!-- 2016 -->
+                    <div class="relative flex flex-col md:flex-row items-center gap-8 animate-on-scroll">
+                        <div class="flex-1 text-center md:text-right">
+                            <div class="inline-block p-6 bg-dark-card rounded-xl border border-white/10 hover:border-gold/30 transition-all max-w-md">
+                                <span class="text-gold font-bold text-lg">2016</span>
+                                <h3 class="text-xl font-bold text-white mt-2">The Beginning</h3>
+                                <p class="text-gray-400 mt-2">Founded KDJ Hosting & began teaching Python & Hardware at Nenasala Gampaha to Grades 6-9 students</p>
+                            </div>
+                        </div>
+                        <div class="w-12 h-12 bg-gold rounded-full flex items-center justify-center z-10 pulse-glow">
+                            <i class="fas fa-seedling text-black"></i>
+                        </div>
+                        <div class="flex-1"></div>
+                    </div>
+
+                    <!-- 2018 -->
+                    <div class="relative flex flex-col md:flex-row items-center gap-8 animate-on-scroll">
+                        <div class="flex-1"></div>
+                        <div class="w-12 h-12 bg-cyan rounded-full flex items-center justify-center z-10">
+                            <i class="fas fa-university text-black"></i>
+                        </div>
+                        <div class="flex-1 text-center md:text-left">
+                            <div class="inline-block p-6 bg-dark-card rounded-xl border border-white/10 hover:border-cyan/30 transition-all max-w-md">
+                                <span class="text-cyan font-bold text-lg">2018-2022</span>
+                                <h3 class="text-xl font-bold text-white mt-2">Academic Excellence</h3>
+                                <p class="text-gray-400 mt-2">Pursued Bachelor's degree at Teesside University while building KDJ Hosting into a major web hosting provider</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 2020 -->
+                    <div class="relative flex flex-col md:flex-row items-center gap-8 animate-on-scroll">
+                        <div class="flex-1 text-center md:text-right">
+                            <div class="inline-block p-6 bg-dark-card rounded-xl border border-white/10 hover:border-gold/30 transition-all max-w-md">
+                                <span class="text-gold font-bold text-lg">2020</span>
+                                <h3 class="text-xl font-bold text-white mt-2">Corporate Leadership</h3>
+                                <p class="text-gray-400 mt-2">Became Founder & CEO of KDJ Lanka (Pvt) Ltd and CTO of Australian parent company</p>
+                            </div>
+                        </div>
+                        <div class="w-12 h-12 bg-gold rounded-full flex items-center justify-center z-10 pulse-glow">
+                            <i class="fas fa-building text-black"></i>
+                        </div>
+                        <div class="flex-1"></div>
+                    </div>
+
+                    <!-- 2024 -->
+                    <div class="relative flex flex-col md:flex-row items-center gap-8 animate-on-scroll">
+                        <div class="flex-1"></div>
+                        <div class="w-12 h-12 bg-cyan rounded-full flex items-center justify-center z-10">
+                            <i class="fas fa-users text-black"></i>
+                        </div>
+                        <div class="flex-1 text-center md:text-left">
+                            <div class="inline-block p-6 bg-dark-card rounded-xl border border-white/10 hover:border-cyan/30 transition-all max-w-md">
+                                <span class="text-cyan font-bold text-lg">2024</span>
+                                <h3 class="text-xl font-bold text-white mt-2">The Pro Hub Launch</h3>
+                                <p class="text-gray-400 mt-2">Introduced revolutionary $1 subscription model on Nas.io, democratizing tech education for all</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- 2025 -->
+                    <div class="relative flex flex-col md:flex-row items-center gap-8 animate-on-scroll">
+                        <div class="flex-1 text-center md:text-right">
+                            <div class="inline-block p-6 bg-dark-card rounded-xl border border-white/10 hover:border-gold/30 transition-all max-w-md">
+                                <span class="text-gold font-bold text-lg">2025</span>
+                                <h3 class="text-xl font-bold text-white mt-2">National Impact</h3>
+                                <p class="text-gray-400 mt-2">Trained the Special Task Force Cyber Division & Uva Province officials in "Physical AI" — automating government red tape</p>
+                            </div>
+                        </div>
+                        <div class="w-12 h-12 bg-gold rounded-full flex items-center justify-center z-10 pulse-glow">
+                            <i class="fas fa-shield-alt text-black"></i>
+                        </div>
+                        <div class="flex-1"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Divider -->
+    <div class="section-divider max-w-4xl mx-auto"></div>
+
+    <!-- Pedagogy Section -->
+    <section id="philosophy" class="py-24 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 animate-on-scroll">
+                <span class="text-gold text-sm font-bold tracking-widest uppercase">The Philosophy</span>
+                <h2 class="text-4xl md:text-5xl font-bold font-space mt-4 text-white">
+                    Logic is Universal
+                </h2>
+                <p class="text-xl text-gray-400 mt-4 max-w-3xl mx-auto">
+                    Dismantling the "Linguistic Divide" — proving that technical literacy transcends language barriers
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Card 1 -->
+                <div class="service-card p-8 bg-gradient-to-br from-dark-card to-dark-surface rounded-2xl border border-white/10 animate-on-scroll">
+                    <div class="w-16 h-16 bg-gold/20 rounded-2xl flex items-center justify-center mb-6">
+                        <i class="fas fa-language text-2xl text-gold"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-white mb-4">Concept First</h3>
+                    <p class="text-gray-400 leading-relaxed">
+                        Students learn the mechanics of algorithms, neural networks, and cloud infrastructure in their native Sinhala — making complex concepts intuitive and accessible.
+                    </p>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="service-card p-8 bg-gradient-to-br from-dark-card to-dark-surface rounded-2xl border border-white/10 animate-on-scroll">
+                    <div class="w-16 h-16 bg-cyan/20 rounded-2xl flex items-center justify-center mb-6">
+                        <i class="fas fa-tag text-2xl text-cyan"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-white mb-4">Label Second</h3>
+                    <p class="text-gray-400 leading-relaxed">
+                        English terminology is introduced secondarily — merely as a system of labels for concepts students already understand and have mastered.
+                    </p>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="service-card p-8 bg-gradient-to-br from-dark-card to-dark-surface rounded-2xl border border-white/10 animate-on-scroll">
+                    <div class="w-16 h-16 bg-purple-500/20 rounded-2xl flex items-center justify-center mb-6">
+                        <i class="fas fa-lightbulb text-2xl text-purple-400"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold text-white mb-4">Metaphor Bridge</h3>
+                    <p class="text-gray-400 leading-relaxed">
+                        Complex technical concepts are grounded in local reality — explaining DevOps through Colombo bus routes or cloud servers through familiar analogies.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Impact Statement -->
+            <div class="mt-16 p-8 md:p-12 bg-gradient-to-r from-gold/10 via-transparent to-cyan/10 rounded-2xl border border-gold/20 animate-on-scroll">
+                <div class="flex flex-col md:flex-row items-center gap-8">
+                    <div class="flex-1">
+                        <h3 class="text-2xl font-bold text-white mb-4">The $1 Revolution</h3>
+                        <p class="text-gray-300 leading-relaxed">
+                            In response to Sri Lanka's economic crisis, KDJ launched the "Pro Hub" with a revolutionary <span class="text-gold">$1 subscription model</span> (≈300 LKR). This micro-transaction approach democratized access to "uncut masterclasses" while including "Learn & Earn" challenges — aligning education with immediate economic opportunities.
+                        </p>
+                    </div>
+                    <div class="flex-shrink-0 text-center">
+                        <div class="text-6xl font-bold gradient-text">$1</div>
+                        <div class="text-gray-400 mt-2">per month</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Divider -->
+    <div class="section-divider max-w-4xl mx-auto"></div>
+
+    <!-- Ecosystem Section -->
+    <section id="ecosystem" class="py-24 relative bg-dark-surface/50 parallax-section">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 animate-on-scroll">
+                <span class="text-gold text-sm font-bold tracking-widest uppercase">The Empire</span>
+                <h2 class="text-4xl md:text-5xl font-bold font-space mt-4 text-white">
+                    The KDJ Ecosystem
+                </h2>
+                <p class="text-xl text-gray-400 mt-4 max-w-2xl mx-auto">
+                    A comprehensive digital infrastructure spanning education, hosting, SaaS products, and community
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- KDJ Lanka -->
+                <div class="service-card p-8 bg-dark-card rounded-2xl border border-white/10 group animate-on-scroll">
+                    <div class="flex items-start justify-between mb-6">
+                        <div class="w-14 h-14 bg-gold/20 rounded-xl flex items-center justify-center">
+                            <i class="fas fa-landmark text-xl text-gold"></i>
+                        </div>
+                        <span class="px-3 py-1 bg-gold/20 text-gold text-xs font-bold rounded-full">FLAGSHIP</span>
+                    </div>
+                    <h3 class="text-2xl font-bold text-white mb-3">KDJ Lanka (Pvt) Ltd</h3>
+                    <p class="text-gray-400 mb-6">From web hosting to sophisticated SaaS products. Leading tech innovation in Sri Lanka since 2016.</p>
+                    <div class="space-y-2 text-sm text-gray-500">
+                        <div class="flex items-center gap-2"><i class="fas fa-check text-gold"></i> Web Solutions</div>
+                        <div class="flex items-center gap-2"><i class="fas fa-check text-gold"></i> Digital Services</div>
+                        <div class="flex items-center gap-2"><i class="fas fa-check text-gold"></i> SaaS Products</div>
+                    </div>
+                </div>
+
+                <!-- KDJ Hosting -->
+                <div class="service-card p-8 bg-dark-card rounded-2xl border border-white/10 group animate-on-scroll">
+                    <div class="flex items-start justify-between mb-6">
+                        <div class="w-14 h-14 bg-cyan/20 rounded-xl flex items-center justify-center">
+                            <i class="fas fa-server text-xl text-cyan"></i>
+                        </div>
+                        <span class="px-3 py-1 bg-cyan/20 text-cyan text-xs font-bold rounded-full">INFRASTRUCTURE</span>
+                    </div>
+                    <h3 class="text-2xl font-bold text-white mb-3">KDJ Hosting</h3>
+                    <p class="text-gray-400 mb-6">Major web hosting provider with domain services, ERP solutions, and Linode partnership for enterprise-grade hosting.</p>
+                    <div class="space-y-2 text-sm text-gray-500">
+                        <div class="flex items-center gap-2"><i class="fas fa-check text-cyan"></i> Domain Services</div>
+                        <div class="flex items-center gap-2"><i class="fas fa-check text-cyan"></i> Cloud Infrastructure</div>
+                        <div class="flex items-center gap-2"><i class="fas fa-check text-cyan"></i> ERP Solutions</div>
+                    </div>
+                </div>
+
+                <!-- KDJ AI Super App -->
+                <div class="service-card p-8 bg-dark-card rounded-2xl border border-white/10 group animate-on-scroll">
+                    <div class="flex items-start justify-between mb-6">
+                        <div class="w-14 h-14 bg-purple-500/20 rounded-xl flex items-center justify-center">
+                            <i class="fas fa-robot text-xl text-purple-400"></i>
+                        </div>
+                        <span class="px-3 py-1 bg-purple-500/20 text-purple-400 text-xs font-bold rounded-full">NEW</span>
+                    </div>
+                    <h3 class="text-2xl font-bold text-white mb-3">KDJ AI Super App</h3>
+                    <p class="text-gray-400 mb-6">An all-in-one AI interface aggregating various tools for the Sri Lankan market — bypassing tool fragmentation.</p>
+                    <div class="space-y-2 text-sm text-gray-500">
+                        <div class="flex items-center gap-2"><i class="fas fa-check text-purple-400"></i> Multi-Model AI</div>
+                        <div class="flex items-center gap-2"><i class="fas fa-check text-purple-400"></i> Localized Interface</div>
+                        <div class="flex items-center gap-2"><i class="fas fa-check text-purple-400"></i> All-in-One Platform</div>
+                    </div>
+                </div>
+
+                <!-- eLearning.lk -->
+                <div class="service-card p-8 bg-dark-card rounded-2xl border border-white/10 group animate-on-scroll">
+                    <div class="flex items-start justify-between mb-6">
+                        <div class="w-14 h-14 bg-green-500/20 rounded-xl flex items-center justify-center">
+                            <i class="fas fa-graduation-cap text-xl text-green-400"></i>
+                        </div>
+                        <span class="px-3 py-1 bg-green-500/20 text-green-400 text-xs font-bold rounded-full">EDUCATION</span>
+                    </div>
+                    <h3 class="text-2xl font-bold text-white mb-3">eLearning.lk</h3>
+                    <p class="text-gray-400 mb-6">Top-rated instructor with perfect 5/5 ratings across AI, graphic design, video editing, and Microsoft Office courses.</p>
+                    <div class="space-y-2 text-sm text-gray-500">
+                        <div class="flex items-center gap-2"><i class="fas fa-check text-green-400"></i> AI Mantharaya</div>
+                        <div class="flex items-center gap-2"><i class="fas fa-check text-green-400"></i> Zero to Hero Courses</div>
+                        <div class="flex items-center gap-2"><i class="fas fa-check text-green-400"></i> Corporate Training</div>
+                    </div>
+                </div>
+
+                <!-- KDJ Tools -->
+                <div class="service-card p-8 bg-dark-card rounded-2xl border border-white/10 group animate-on-scroll">
+                    <div class="flex items-start justify-between mb-6">
+                        <div class="w-14 h-14 bg-orange-500/20 rounded-xl flex items-center justify-center">
+                            <i class="fas fa-tools text-xl text-orange-400"></i>
+                        </div>
+                        <span class="px-3 py-1 bg-orange-500/20 text-orange-400 text-xs font-bold rounded-full">FREE</span>
+                    </div>
+                    <h3 class="text-2xl font-bold text-white mb-3">KDJ Tools</h3>
+                    <p class="text-gray-400 mb-6">Free developer tools and productivity suite including PDF generators, code formatters, and AI-powered utilities.</p>
+                    <div class="space-y-2 text-sm text-gray-500">
+                        <div class="flex items-center gap-2"><i class="fas fa-check text-orange-400"></i> PDF Tools</div>
+                        <div class="flex items-center gap-2"><i class="fas fa-check text-orange-400"></i> Code Formatters</div>
+                        <div class="flex items-center gap-2"><i class="fas fa-check text-orange-400"></i> AI Utilities</div>
+                    </div>
+                </div>
+
+                <!-- Pro Hub -->
+                <div class="service-card p-8 bg-dark-card rounded-2xl border border-white/10 group animate-on-scroll">
+                    <div class="flex items-start justify-between mb-6">
+                        <div class="w-14 h-14 bg-red-500/20 rounded-xl flex items-center justify-center">
+                            <i class="fas fa-users text-xl text-red-400"></i>
+                        </div>
+                        <span class="px-3 py-1 bg-red-500/20 text-red-400 text-xs font-bold rounded-full">$1/MO</span>
+                    </div>
+                    <h3 class="text-2xl font-bold text-white mb-3">Pro Hub</h3>
+                    <p class="text-gray-400 mb-6">Exclusive community on Nas.io offering uncut masterclasses, Learn & Earn challenges, and direct mentorship.</p>
+                    <div class="space-y-2 text-sm text-gray-500">
+                        <div class="flex items-center gap-2"><i class="fas fa-check text-red-400"></i> Uncut Classes</div>
+                        <div class="flex items-center gap-2"><i class="fas fa-check text-red-400"></i> Learn & Earn</div>
+                        <div class="flex items-center gap-2"><i class="fas fa-check text-red-400"></i> Community Access</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Divider -->
+    <div class="section-divider max-w-4xl mx-auto"></div>
+
+    <!-- YouTube / Content Section -->
+    <section id="content-section" class="py-24 relative parallax-section">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid lg:grid-cols-2 gap-16 items-center">
+                <!-- Content -->
+                <div class="space-y-8 animate-on-scroll">
+                    <div>
+                        <span class="text-gold text-sm font-bold tracking-widest uppercase">Content Empire</span>
+                        <h2 class="text-4xl md:text-5xl font-bold font-space mt-4 text-white">
+                            The YouTube University
+                        </h2>
+                    </div>
+
+                    <div class="space-y-6">
+                        <div class="flex items-start gap-4">
+                            <div class="w-12 h-12 bg-red-500/20 rounded-lg flex items-center justify-center flex-shrink-0">
+                                <i class="fab fa-youtube text-red-500"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-xl font-bold text-white">90,000+ Subscribers</h4>
+                                <p class="text-gray-400">Nearly 900 videos covering AI, Python, DevOps, and productivity</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4">
+                            <div class="w-12 h-12 bg-blue-500/20 rounded-lg flex items-center justify-center flex-shrink-0">
+                                <i class="fas fa-brain text-blue-400"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-xl font-bold text-white">Deep Research Series</h4>
+                                <p class="text-gray-400">Mastering Google Gemini, NotebookLM, and advanced information synthesis</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4">
+                            <div class="w-12 h-12 bg-green-500/20 rounded-lg flex items-center justify-center flex-shrink-0">
+                                <i class="fas fa-code text-green-400"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-xl font-bold text-white">Python from Scratch</h4>
+                                <p class="text-gray-400">Complete Sinhala-language programming curriculum from zero to hero</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4">
+                            <div class="w-12 h-12 bg-purple-500/20 rounded-lg flex items-center justify-center flex-shrink-0">
+                                <i class="fas fa-music text-purple-400"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-xl font-bold text-white">AI Music Creation</h4>
+                                <p class="text-gray-400">Suno AI experiments generating Sinhala lyrics and melodies</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <a href="https://youtube.com/kdjayakody" target="_blank" class="inline-flex items-center gap-3 px-8 py-4 bg-red-500 hover:bg-red-600 text-white font-bold rounded-full transition-all duration-300">
+                        <i class="fab fa-youtube text-xl"></i>
+                        Subscribe to the Channel
+                    </a>
+                </div>
+
+                <!-- Featured Video Thumbnail -->
+                <div class="relative animate-on-scroll">
+                    <div class="aspect-video bg-dark-card rounded-2xl overflow-hidden border border-white/10 group cursor-pointer" onclick="window.open('https://youtube.com/kdjayakody', '_blank')">
+                        <img src="assets/images/hero_bg_v2.png" alt="KDJ YouTube Channel" class="w-full h-full object-cover opacity-60 group-hover:opacity-80 group-hover:scale-105 transition-all duration-500">
+                        <div class="absolute inset-0 flex items-center justify-center">
+                            <div class="w-20 h-20 bg-red-500 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform">
+                                <i class="fas fa-play text-white text-2xl ml-1"></i>
+                            </div>
+                        </div>
+                        <div class="absolute bottom-4 left-4 right-4">
+                            <div class="px-4 py-2 bg-black/80 backdrop-blur rounded-lg">
+                                <p class="text-white font-semibold">Latest: Deep Research with Gemini AI</p>
+                                <p class="text-gray-400 text-sm">Master advanced AI-powered research techniques</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Divider -->
+    <div class="section-divider max-w-4xl mx-auto"></div>
+
+    <!-- Books Section -->
+    <section id="books-section" class="py-24 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 animate-on-scroll">
+                <span class="text-gold text-sm font-bold tracking-widest uppercase">Publications</span>
+                <h2 class="text-4xl md:text-5xl font-bold font-space mt-4 text-white">
+                    Books & Resources
+                </h2>
+                <p class="text-xl text-gray-400 mt-4 max-w-2xl mx-auto">
+                    In-depth guides and books on technology, AI, and innovation in Sinhala
+                </p>
+            </div>
+
+            <div class="flex justify-center">
+                <!-- Book Card -->
+                <div class="group max-w-sm animate-on-scroll">
+                    <div class="relative bg-gradient-to-br from-dark-card to-dark-surface rounded-2xl border border-white/10 overflow-hidden hover:border-gold/50 transition-all duration-500 hover:shadow-[0_20px_60px_rgba(255,215,0,0.15)] hover:-translate-y-2">
+                        <!-- Book Cover -->
+                        <div class="aspect-[3/4] overflow-hidden">
+                            <img src="https://public-files.gumroad.com/m3108157g775z3qnwm8smuj51yi1" alt="Elon Musk Thinking - Sinhala Edition" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        </div>
+
+                        <!-- Book Info -->
+                        <div class="p-6">
+                            <div class="flex items-center gap-2 mb-3">
+                                <span class="px-3 py-1 bg-gold/20 text-gold text-xs font-bold rounded-full">NEW</span>
+                                <span class="px-3 py-1 bg-cyan/20 text-cyan text-xs font-bold rounded-full">SINHALA</span>
+                            </div>
+                            <h3 class="text-xl font-bold text-white mb-2">Elon Musk Thinking</h3>
+                            <p class="text-gray-400 text-sm mb-4">Master the thinking patterns and strategies of the world's most innovative entrepreneur - now in Sinhala!</p>
+
+                            <!-- Features -->
+                            <div class="space-y-2 mb-6">
+                                <div class="flex items-center gap-2 text-sm text-gray-300">
+                                    <i class="fas fa-check text-gold text-xs"></i>
+                                    <span>First Principles Thinking</span>
+                                </div>
+                                <div class="flex items-center gap-2 text-sm text-gray-300">
+                                    <i class="fas fa-check text-gold text-xs"></i>
+                                    <span>Problem-Solving Frameworks</span>
+                                </div>
+                                <div class="flex items-center gap-2 text-sm text-gray-300">
+                                    <i class="fas fa-check text-gold text-xs"></i>
+                                    <span>Innovation Strategies</span>
+                                </div>
+                            </div>
+
+                            <!-- CTA Button -->
+                            <a href="https://kdjayakody.gumroad.com/l/elonmuskthinkingsinhala" target="_blank" class="group/btn flex items-center justify-center gap-2 w-full px-6 py-3 bg-gradient-to-r from-gold to-gold-dark text-black font-bold rounded-full hover:shadow-[0_0_30px_rgba(255,215,0,0.4)] transition-all duration-300">
+                                <span>Get the Book</span>
+                                <i class="fas fa-external-link-alt group-hover/btn:translate-x-1 transition-transform"></i>
+                            </a>
+                        </div>
+
+                        <!-- Glow Effect -->
+                        <div class="absolute inset-0 bg-gradient-to-br from-gold/5 via-transparent to-cyan/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"></div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- More Coming Soon -->
+            <div class="text-center mt-12 animate-on-scroll">
+                <p class="text-gray-500 text-sm">
+                    <i class="fas fa-book-open mr-2 text-gold"></i>
+                    More books coming soon on AI, Python, and Digital Transformation
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Divider -->
+    <div class="section-divider max-w-4xl mx-auto"></div>
+
+    <!-- STF / State Impact Section -->
+    <section class="py-24 relative bg-gradient-to-b from-dark-surface/50 to-transparent">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 animate-on-scroll">
+                <span class="text-red-400 text-sm font-bold tracking-widest uppercase">National Impact</span>
+                <h2 class="text-4xl md:text-5xl font-bold font-space mt-4 text-white">
+                    From the Jungle to the Digital Frontier
+                </h2>
+                <p class="text-xl text-gray-400 mt-4 max-w-3xl mx-auto">
+                    STF Cyber Division Boot Camp — A pivotal moment in Sri Lanka's national security transformation
+                </p>
+            </div>
+
+            <div class="max-w-4xl mx-auto">
+                <div class="p-8 md:p-12 bg-gradient-to-br from-red-500/10 via-transparent to-red-500/10 rounded-2xl border border-red-500/20 animate-on-scroll">
+                    <div class="flex flex-col md:flex-row gap-8 items-center">
+                        <div class="flex-1 space-y-6">
+                            <div class="flex items-center gap-4">
+                                <div class="w-16 h-16 bg-red-500/20 rounded-xl flex items-center justify-center">
+                                    <i class="fas fa-shield-alt text-3xl text-red-400"></i>
+                                </div>
+                                <div>
+                                    <h3 class="text-2xl font-bold text-white">Special Task Force</h3>
+                                    <p class="text-gray-400">Cyber Division Training</p>
+                                </div>
+                            </div>
+
+                            <p class="text-gray-300 leading-relaxed">
+                                In December 2025, KDJ conducted a landmark 5-day residential workshop for Sri Lanka's elite Special Task Force. This "Physical AI" training transformed commandos into cyber-operators capable of:
+                            </p>
+
+                            <div class="grid grid-cols-2 gap-4">
+                                <div class="p-4 bg-dark-card/50 rounded-lg border border-white/10">
+                                    <i class="fas fa-laptop-code text-gold mb-2"></i>
+                                    <p class="text-white font-medium">Virtual Staff Officer</p>
+                                    <p class="text-gray-500 text-sm">AI-assisted command</p>
+                                </div>
+                                <div class="p-4 bg-dark-card/50 rounded-lg border border-white/10">
+                                    <i class="fas fa-terminal text-cyan mb-2"></i>
+                                    <p class="text-white font-medium">Python Logic</p>
+                                    <p class="text-gray-500 text-sm">Code-level security</p>
+                                </div>
+                                <div class="p-4 bg-dark-card/50 rounded-lg border border-white/10">
+                                    <i class="fas fa-database text-purple-400 mb-2"></i>
+                                    <p class="text-white font-medium">NotebookLM</p>
+                                    <p class="text-gray-500 text-sm">Intelligence analysis</p>
+                                </div>
+                                <div class="p-4 bg-dark-card/50 rounded-lg border border-white/10">
+                                    <i class="fas fa-search text-green-400 mb-2"></i>
+                                    <p class="text-white font-medium">Gemini AI</p>
+                                    <p class="text-gray-500 text-sm">Deep research</p>
+                                </div>
+                            </div>
+
+                            <blockquote class="border-l-4 border-gold pl-4 italic text-gray-400">
+                                "Commended by DIG Samantha de Silva for program success"
+                            </blockquote>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Uva Province -->
+            <div class="mt-12 max-w-4xl mx-auto animate-on-scroll">
+                <div class="p-8 bg-dark-card/50 rounded-xl border border-cyan/20">
+                    <div class="flex items-center gap-6">
+                        <div class="w-16 h-16 bg-cyan/20 rounded-xl flex items-center justify-center flex-shrink-0">
+                            <i class="fas fa-landmark text-2xl text-cyan"></i>
+                        </div>
+                        <div>
+                            <h4 class="text-xl font-bold text-white">Uva Province Workshop</h4>
+                            <p class="text-gray-400">November 2025 — "Physical AI" training for government officials, automating bureaucratic red tape through digitization, synthesis, and AI-powered drafting.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Divider -->
+    <div class="section-divider max-w-4xl mx-auto"></div>
+
+    <!-- Creative Side Section -->
+    <section class="py-24 relative">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 animate-on-scroll">
+                <span class="text-gold text-sm font-bold tracking-widest uppercase">Beyond Tech</span>
+                <h2 class="text-4xl md:text-5xl font-bold font-space mt-4 text-white">
+                    The Creative Soul
+                </h2>
+                <p class="text-xl text-gray-400 mt-4 max-w-2xl mx-auto">
+                    Defying the stereotype of the sterile technician — music, writing, and human vulnerability
+                </p>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-8">
+                <!-- Music -->
+                <div class="p-8 bg-gradient-to-br from-purple-500/10 to-transparent rounded-2xl border border-purple-500/20 animate-on-scroll">
+                    <div class="flex items-center gap-4 mb-6">
+                        <div class="w-16 h-16 bg-purple-500/20 rounded-xl flex items-center justify-center">
+                            <i class="fas fa-music text-2xl text-purple-400"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-2xl font-bold text-white">AI Music Pioneer</h3>
+                            <p class="text-gray-400">Suno AI Experiments</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-300 leading-relaxed mb-6">
+                        Mastering the technical challenge of generating Sinhala lyrics and melodies through AI. Tracks like "Weralē Piya Satahan" (Footprints on the Beach) and "Me Hitha" prove that AI can be "acculturated" to non-Western art forms.
+                    </p>
+                    <div class="flex items-center gap-4">
+                        <a href="#" class="px-4 py-2 bg-purple-500/20 text-purple-400 rounded-full text-sm font-medium hover:bg-purple-500/30 transition">
+                            <i class="fab fa-apple mr-2"></i> Apple Music
+                        </a>
+                        <a href="#" class="px-4 py-2 bg-white/10 text-gray-300 rounded-full text-sm font-medium hover:bg-white/20 transition">
+                            <i class="fab fa-spotify mr-2"></i> Spotify
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Writing -->
+                <div class="p-8 bg-gradient-to-br from-cyan/10 to-transparent rounded-2xl border border-cyan/20 animate-on-scroll">
+                    <div class="flex items-center gap-4 mb-6">
+                        <div class="w-16 h-16 bg-cyan/20 rounded-xl flex items-center justify-center">
+                            <i class="fab fa-medium-m text-2xl text-cyan"></i>
+                        </div>
+                        <div>
+                            <h3 class="text-2xl font-bold text-white">Vulnerable Storyteller</h3>
+                            <p class="text-gray-400">Medium Publications</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-300 leading-relaxed mb-6">
+                        Writing with narrative flair that humanizes technical advice. From "The Day My Overconfidence Met Reality" to health scare reflections — preaching a philosophy of balance and anti-toxic productivity.
+                    </p>
+                    <a href="https://blog.kdj.lk" target="_blank" class="inline-flex items-center gap-2 px-4 py-2 bg-cyan/20 text-cyan rounded-full text-sm font-medium hover:bg-cyan/30 transition">
+                        Read the Blog <i class="fas fa-external-link-alt"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Section Divider -->
+    <div class="section-divider max-w-4xl mx-auto"></div>
+
+    <!-- Testimonials / Impact Section -->
+    <section id="impact-section" class="py-24 relative bg-dark-surface/50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 animate-on-scroll">
+                <span class="text-gold text-sm font-bold tracking-widest uppercase">Impact</span>
+                <h2 class="text-4xl md:text-5xl font-bold font-space mt-4 text-white">
+                    Transforming Lives
+                </h2>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8 mb-8">
+                <div class="p-8 bg-dark-card rounded-2xl border border-white/10 text-center animate-on-scroll">
+                    <div class="text-5xl font-bold gradient-text mb-2 counter-value" data-target="90000">0</div>
+                    <div class="text-gray-400">YouTube Subscribers</div>
+                </div>
+                <div class="p-8 bg-dark-card rounded-2xl border border-white/10 text-center animate-on-scroll">
+                    <div class="text-5xl font-bold gradient-text-cyan mb-2 counter-value" data-target="500">0</div>
+                    <div class="text-gray-400">Plus Videos Created</div>
+                </div>
+                <div class="p-8 bg-dark-card rounded-2xl border border-white/10 text-center animate-on-scroll">
+                    <div class="text-5xl font-bold text-purple-400 mb-2 counter-value" data-target="100000">0</div>
+                    <div class="text-gray-400">Lives Impacted</div>
+                </div>
+            </div>
+
+            <!-- Social Media Followers -->
+            <h3 class="text-center text-2xl font-bold font-space text-white mb-8 animate-on-scroll">Social Media Reach</h3>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="p-6 bg-dark-card rounded-2xl border border-white/10 text-center animate-on-scroll">
+                    <div class="flex justify-center mb-3">
+                        <i class="fab fa-tiktok text-3xl text-gray-300"></i>
+                    </div>
+                    <div class="text-4xl font-bold text-white mb-1 counter-value" data-target="170000">0</div>
+                    <div class="text-gray-400 text-sm">TikTok Followers</div>
+                </div>
+                <div class="p-6 bg-dark-card rounded-2xl border border-white/10 text-center animate-on-scroll">
+                    <div class="flex justify-center mb-3">
+                        <i class="fab fa-linkedin-in text-3xl text-blue-400"></i>
+                    </div>
+                    <div class="text-4xl font-bold text-white mb-1 counter-value" data-target="12000">0</div>
+                    <div class="text-gray-400 text-sm">LinkedIn Followers</div>
+                </div>
+                <div class="p-6 bg-dark-card rounded-2xl border border-white/10 text-center animate-on-scroll">
+                    <div class="flex justify-center mb-3">
+                        <i class="fab fa-facebook-f text-3xl text-blue-500"></i>
+                    </div>
+                    <div class="text-4xl font-bold text-white mb-1 counter-value" data-target="205000">0</div>
+                    <div class="text-gray-400 text-sm">Facebook Followers</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Final CTA Section -->
+    <section id="cta-section" class="py-24 relative">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <div class="animate-on-scroll">
+                <h2 class="text-4xl md:text-6xl font-bold font-space text-white mb-6">
+                    Ready to Join the <span class="gradient-text">Digital Revolution</span>?
+                </h2>
+                <p class="text-xl text-gray-400 mb-12 max-w-2xl mx-auto">
+                    Whether you're a student, professional, or organization — KDJ has the tools, courses, and expertise to transform your digital journey.
+                </p>
+
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <a href="courses.html" class="group px-8 py-4 bg-gradient-to-r from-gold to-gold-dark text-black font-bold rounded-full hover:shadow-[0_0_30px_rgba(255,215,0,0.4)] transition-all duration-300 flex items-center justify-center gap-2">
+                        <i class="fas fa-graduation-cap"></i>
+                        Explore Courses
+                    </a>
+                    <a href="contact.html" class="px-8 py-4 border border-white/20 rounded-full hover:border-gold/50 hover:text-gold transition-all duration-300 flex items-center justify-center gap-2">
+                        <i class="fas fa-envelope"></i>
+                        Get in Touch
+                    </a>
+                </div>
+
+                <!-- Social Links -->
+                <div class="mt-16 flex justify-center gap-6">
+                    <a href="https://youtube.com/kdjayakody" target="_blank" class="w-12 h-12 bg-dark-card rounded-full flex items-center justify-center border border-white/10 hover:border-red-500 hover:text-red-500 transition-all">
+                        <i class="fab fa-youtube text-xl"></i>
+                    </a>
+                    <a href="https://linkedin.com/in/kdjayakody" target="_blank" class="w-12 h-12 bg-dark-card rounded-full flex items-center justify-center border border-white/10 hover:border-blue-500 hover:text-blue-500 transition-all">
+                        <i class="fab fa-linkedin-in text-xl"></i>
+                    </a>
+                    <a href="https://facebook.com/kdjjayakodypro" target="_blank" class="w-12 h-12 bg-dark-card rounded-full flex items-center justify-center border border-white/10 hover:border-blue-400 hover:text-blue-400 transition-all">
+                        <i class="fab fa-facebook-f text-xl"></i>
+                    </a>
+                    <a href="https://instagram.com/kdjayakody" target="_blank" class="w-12 h-12 bg-dark-card rounded-full flex items-center justify-center border border-white/10 hover:border-pink-500 hover:text-pink-500 transition-all">
+                        <i class="fab fa-instagram text-xl"></i>
+                    </a>
+                    <a href="https://github.com/kdjayakody" target="_blank" class="w-12 h-12 bg-dark-card rounded-full flex items-center justify-center border border-white/10 hover:border-gray-400 hover:text-gray-300 transition-all">
+                        <i class="fab fa-github text-xl"></i>
+                    </a>
+                    <a href="https://tiktok.com/@kdjayakody" target="_blank" class="w-12 h-12 bg-dark-card rounded-full flex items-center justify-center border border-white/10 hover:border-white hover:text-white transition-all">
+                        <i class="fab fa-tiktok text-xl"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <div id="footer-container"></div>
 
     <script src="js/main.js"></script>
     <script>
-        // Local animation script for Index only
+        // Pure CSS + Intersection Observer - NO GSAP dependency!
         document.addEventListener('DOMContentLoaded', () => {
-             const tl = gsap.timeline();
-             
-             tl.to('.animate-reveal', { y: 0, duration: 1, ease: 'power4.out', delay: 0.5 })
-               .to('#hero-title', { opacity: 1, duration: 1.5, ease: 'power2.inOut' }, "-=0.5")
-               .to('#hero-subtitle', { opacity: 1, y: 0, duration: 1, ease: 'power3.out' }, "-=1")
-               .to('#hero-cta', { opacity: 1, y: 0, duration: 1, ease: 'power3.out' }, "-=0.8");
+            // Counter animation with Intersection Observer (pure JavaScript)
+            const counterObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const counter = entry.target;
+                        const target = parseInt(counter.getAttribute('data-target'));
+                        const duration = 2000;
+                        const start = performance.now();
 
-             // Subtle parallax on mouse move
-             document.addEventListener('mousemove', (e) => {
-                 const x = (e.clientX / window.innerWidth - 0.5) * 20;
-                 const y = (e.clientY / window.innerHeight - 0.5) * 20;
-                 gsap.to('#hero-bg-wrapper', { x: -x, y: -y, duration: 2, ease: 'power1.out' });
-             });
+                        const animate = (currentTime) => {
+                            const elapsed = currentTime - start;
+                            const progress = Math.min(elapsed / duration, 1);
+                            // Ease out cubic
+                            const easeOut = 1 - Math.pow(1 - progress, 3);
+                            const current = Math.floor(easeOut * target);
+                            counter.textContent = current.toLocaleString();
+
+                            if (progress < 1) {
+                                requestAnimationFrame(animate);
+                            } else {
+                                counterObserver.unobserve(counter);
+                            }
+                        };
+
+                        requestAnimationFrame(animate);
+                    }
+                });
+            }, { threshold: 0.5, rootMargin: '0px' });
+
+            document.querySelectorAll('.counter-value').forEach(counter => {
+                counterObserver.observe(counter);
+            });
+
+            // Scroll-triggered animations with Intersection Observer (CSS-based)
+            const scrollObserver = new IntersectionObserver((entries) => {
+                entries.forEach((entry, index) => {
+                    if (entry.isIntersecting) {
+                        // Add small stagger delay based on index
+                        setTimeout(() => {
+                            entry.target.classList.add('animate-visible');
+                        }, index * 50);
+                        scrollObserver.unobserve(entry.target);
+                    }
+                });
+            }, {
+                threshold: 0.1,
+                rootMargin: '0px 0px -100px 0px'
+            });
+
+            // Observe elements for scroll animation
+            document.querySelectorAll('.animate-on-scroll').forEach(el => {
+                // Set initial state via CSS
+                el.style.opacity = '0';
+                scrollObserver.observe(el);
+            });
+
+            // Subtle parallax for hero image (pure JavaScript, no GSAP)
+            const heroImage = document.querySelector('.float-animation');
+            if (heroImage) {
+                let ticking = false;
+                document.addEventListener('mousemove', (e) => {
+                    if (!ticking) {
+                        requestAnimationFrame(() => {
+                            const x = (e.clientX / window.innerWidth - 0.5) * 15;
+                            const y = (e.clientY / window.innerHeight - 0.5) * 15;
+                            heroImage.style.transform = `translate(${-x}px, ${-y}px)`;
+                            ticking = false;
+                        });
+                        ticking = true;
+                    }
+                });
+            }
+
+            // Smooth scroll for anchor links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function(e) {
+                    const href = this.getAttribute('href');
+                    if (href !== '#') {
+                        e.preventDefault();
+                        const target = document.querySelector(href);
+                        if (target) {
+                            target.scrollIntoView({
+                                behavior: 'smooth',
+                                block: 'start'
+                            });
+                        }
+                    }
+                });
+            });
+
+            // ==================== VERTICAL NAVIGATION ====================
+            const sections = document.querySelectorAll('section[id]');
+            const navDots = document.querySelectorAll('.nav-dot');
+            const sectionIndicator = document.getElementById('sectionIndicator');
+            const scrollProgressBar = document.getElementById('scrollProgressBar');
+
+            // Update active nav dot and section indicator on scroll
+            function updateActiveNav() {
+                let currentSection = '';
+                const scrollPosition = window.scrollY + 300; // Offset for better detection
+
+                sections.forEach(section => {
+                    const sectionTop = section.offsetTop;
+                    const sectionHeight = section.offsetHeight;
+
+                    if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
+                        currentSection = section.getAttribute('id');
+                    }
+                });
+
+                // Update nav dots
+                navDots.forEach(dot => {
+                    dot.classList.remove('active');
+                    if (dot.getAttribute('href') === `#${currentSection}`) {
+                        dot.classList.add('active');
+                    }
+                });
+
+                // Update section indicator
+                const activeDot = document.querySelector('.nav-dot.active');
+                if (activeDot && sectionIndicator) {
+                    const sectionName = activeDot.getAttribute('data-section');
+                    sectionIndicator.textContent = sectionName.toUpperCase();
+                }
+            }
+
+            // Throttled scroll handler for navigation
+            let tickingNav = false;
+            window.addEventListener('scroll', () => {
+                if (!tickingNav) {
+                    requestAnimationFrame(() => {
+                        updateActiveNav();
+                        tickingNav = false;
+                    });
+                    tickingNav = true;
+                }
+            });
+
+            // ==================== SCROLL PROGRESS BAR ====================
+            function updateScrollProgress() {
+                const windowHeight = document.documentElement.scrollHeight - window.innerHeight;
+                const scrolled = (window.scrollY / windowHeight) * 100;
+                if (scrollProgressBar) {
+                    scrollProgressBar.style.height = scrolled + '%';
+                }
+            }
+
+            let tickingProgress = false;
+            window.addEventListener('scroll', () => {
+                if (!tickingProgress) {
+                    requestAnimationFrame(() => {
+                        updateScrollProgress();
+                        tickingProgress = false;
+                    });
+                    tickingProgress = true;
+                }
+            });
+
+            // Initial calls
+            updateActiveNav();
+            updateScrollProgress();
+
+            // ==================== PARALLAX SCROLL EFFECTS ====================
+            const parallaxSections = document.querySelectorAll('.parallax-section');
+
+            function applyParallax() {
+                const scrollY = window.scrollY;
+
+                parallaxSections.forEach(section => {
+                    const sectionTop = section.offsetTop;
+                    const sectionHeight = section.offsetHeight;
+                    const windowHeight = window.innerHeight;
+
+                    // Check if section is in view
+                    if (scrollY + windowHeight > sectionTop && scrollY < sectionTop + sectionHeight) {
+                        const yPos = (scrollY - sectionTop) * 0.3; // Parallax speed
+
+                        // Apply transform to the pseudo-element container
+                        const beforeElement = section;
+                        if (beforeElement) {
+                            beforeElement.style.backgroundPositionY = yPos + 'px';
+                        }
+                    }
+                });
+            }
+
+            let tickingParallax = false;
+            window.addEventListener('scroll', () => {
+                if (!tickingParallax) {
+                    requestAnimationFrame(() => {
+                        applyParallax();
+                        tickingParallax = false;
+                    });
+                    tickingParallax = true;
+                }
+            });
+
+            // Initial parallax application
+            applyParallax();
+
+            // ==================== ENHANCED HORIZONTAL NAVIGATION ====================
+            // Add header background on scroll
+            const header = document.querySelector('header');
+            if (header) {
+                window.addEventListener('scroll', () => {
+                    if (window.scrollY > 100) {
+                        header.classList.add('bg-dark/95', 'backdrop-blur-md', 'shadow-lg');
+                    } else {
+                        header.classList.remove('bg-dark/95', 'backdrop-blur-md', 'shadow-lg');
+                    }
+                });
+            }
         });
     </script>
 </body>

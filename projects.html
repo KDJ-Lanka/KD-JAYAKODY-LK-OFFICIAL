@@ -3,37 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projects & SaaS Ecosystem | K.D. Jayakody</title>
-    <meta name="description" content="Explore the KDJ Tools Ecosystem. Over 100+ Free Utilities, Singlish Unicode Converter, and Enterprise SaaS solutions built by K.D. Jayakody for Sri Lanka.">
-    <meta name="keywords" content="KDJ Tools, Singlish Converter, Sinhala Typing App, SaaS Sri Lanka, Productivity Tools, Free Software Sri Lanka, KDJ POS, Markdown Studio">
+    <title>Projects & Ecosystem | K.D. Jayakody (KDJ)</title>
+    <meta name="description" content="Explore the KDJ Ecosystem - KDJ Lanka, KDJ Hosting, KDJ Tools, KDJ AI Super App, eLearning.lk, and Pro Hub. Innovative solutions for Sri Lanka.">
+    <meta name="keywords" content="KDJ Lanka, KDJ Hosting, KDJ Tools, Singlish Converter, KDJ AI, eLearning.lk, Pro Hub, SaaS Sri Lanka">
+    <meta name="author" content="K.D. Jayakody">
     <meta name="robots" content="index, follow">
-    
+
     <!-- Open Graph -->
-    <meta property="og:title" content="KDJ Tools Ecosystem | 100+ Free Apps">
-    <meta property="og:description" content="Empowering creativity and productivity. Explore Singlish, KDJ Video, and more.">
-    <meta property="og:image" content="https://www.kdj.lk/assets/images/img43.jpg">
+    <meta property="og:type" content="website">
     <meta property="og:url" content="https://www.kdj.lk/projects">
+    <meta property="og:title" content="Projects & Ecosystem | K.D. Jayakody">
+    <meta property="og:description" content="Explore the complete KDJ Ecosystem - from hosting to AI tools and education platforms.">
+    <meta property="og:image" content="https://www.kdj.lk/assets/images/kdjayakodybrand.png">
 
-    <!-- Schema.org SoftwareApplication -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "SoftwareApplication",
-      "name": "KDJ Tools Ecosystem",
-      "applicationCategory": "ProductivityApplication",
-      "operatingSystem": "Web, Android, Windows",
-      "offers": {
-        "@type": "Offer",
-        "price": "0",
-        "priceCurrency": "USD"
-      },
-      "author": {
-          "@type": "Person",
-          "name": "K.D. Jayakody"
-      }
-    }
-    </script>
-
+    <!-- Tailwind -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
@@ -41,9 +24,12 @@
                 extend: {
                     colors: {
                         gold: '#FFD700',
+                        'gold-dark': '#B8860B',
                         cyan: '#00bcd4',
+                        'cyan-light': '#26C6DA',
                         dark: '#050505',
-                        'dark-surface': '#0a0a0a'
+                        'dark-surface': '#0a0a0a',
+                        'dark-card': '#0f0f0f'
                     },
                     fontFamily: {
                         sans: ['Outfit', 'sans-serif'],
@@ -55,91 +41,738 @@
     </script>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
+
+        html {
+            scroll-behavior: smooth;
+            scroll-padding-top: 80px;
+        }
+
+        body {
+            background-color: #050505;
+        }
+
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #0a0a0a;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: linear-gradient(180deg, #FFD700, #B8860B);
+            border-radius: 4px;
+        }
+
+        .gradient-text {
+            background: linear-gradient(135deg, #FFD700 0%, #FFA500 50%, #FFD700 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        /* Unique Projects Hero */
+        .projects-hero {
+            background: linear-gradient(180deg, #050505 0%, #0a0a0a 100%);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .projects-hero::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255, 215, 0, 0.03) 0%, transparent 50%);
+            animation: rotate 30s linear infinite;
+        }
+
+        @keyframes rotate {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+
+        /* Project Card 3D Effect */
+        .project-card-3d {
+            perspective: 1000px;
+        }
+
+        .project-card-3d .card-inner {
+            transition: transform 0.6s;
+            transform-style: preserve-3d;
+        }
+
+        .project-card-3d:hover .card-inner {
+            transform: rotateY(5deg) rotateX(5deg);
+        }
+
+        /* Floating Icons Animation */
+        @keyframes floatUpDown {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-15px); }
+        }
+
+        .float-icon {
+            animation: floatUpDown 3s ease-in-out infinite;
+        }
+
+        .float-icon:nth-child(2) { animation-delay: 0.5s; }
+        .float-icon:nth-child(3) { animation-delay: 1s; }
+        .float-icon:nth-child(4) { animation-delay: 1.5s; }
+
+        /* Category Tabs */
+        .category-tab {
+            transition: all 0.3s ease;
+        }
+
+        .category-tab.active {
+            background: linear-gradient(135deg, #FFD700, #B8860B);
+            color: #000;
+            border-color: transparent;
+        }
+
+        /* Project Grid Item */
+        .project-item {
+            transition: all 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+        }
+
+        .project-item:hover {
+            transform: translateY(-10px);
+        }
+
+        .project-item:hover .project-icon {
+            transform: scale(1.1) rotate(5deg);
+        }
+
+        /* Morphing Shape */
+        .morph-shape {
+            animation: morph 8s ease-in-out infinite;
+        }
+
+        @keyframes morph {
+            0%, 100% { border-radius: 60% 40% 30% 70% / 60% 30% 70% 40%; }
+            25% { border-radius: 30% 60% 70% 40% / 50% 60% 30% 60%; }
+            50% { border-radius: 50% 50% 30% 70% / 60% 40% 60% 50%; }
+            75% { border-radius: 60% 40% 60% 30% / 30% 60% 50% 60%; }
+        }
+
+        /* Number Counter */
+        .big-number {
+            font-size: 8rem;
+            line-height: 1;
+            background: linear-gradient(135deg, rgba(255, 215, 0, 0.1), rgba(255, 215, 0, 0.05));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        /* Grain Overlay */
+        .grain-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 9998;
+            opacity: 0.3;
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.05'/%3E%3C/svg%3E");
+        }
+
+        /* Scroll Animations */
+        .fade-up {
+            opacity: 0;
+            transform: translateY(40px);
+            transition: opacity 0.8s ease, transform 0.8s ease;
+        }
+
+        .fade-up.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Stats Counter */
+        .stat-number {
+            font-variant-numeric: tabular-nums;
+        }
+
+        /* Gradient Border Card */
+        .gradient-border-card {
+            position: relative;
+            background: #0f0f0f;
+            border-radius: 1rem;
+        }
+
+        .gradient-border-card::before {
+            content: '';
+            position: absolute;
+            inset: 0;
+            border-radius: 1rem;
+            padding: 2px;
+            background: linear-gradient(135deg, #FFD700, #00bcd4);
+            -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+            -webkit-mask-composite: xor;
+            mask-composite: exclude;
+            pointer-events: none;
+        }
+
+        /* Tech Stack Badge */
+        .tech-badge {
+            transition: all 0.3s ease;
+        }
+
+        .tech-badge:hover {
+            transform: scale(1.05);
+            box-shadow: 0 4px 15px rgba(255, 215, 0, 0.3);
+        }
+    </style>
 </head>
 <body class="bg-dark text-gray-200 antialiased">
+
+    <!-- Grain Overlay -->
     <div class="grain-overlay"></div>
+
+    <!-- Header -->
     <div id="header-container"></div>
 
-    <main class="pt-32 pb-20">
+    <!-- Hero Section -->
+    <section class="projects-hero min-h-[70vh] flex items-center py-20 pt-32">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="mb-20 animate-on-scroll">
-                <span class="text-gold font-bold tracking-widest uppercase">Portfolio</span>
-                <h1 class="text-6xl md:text-8xl font-bold font-space text-white mb-6">Digital <span class="text-cyan-400">Solutions</span>.</h1>
-                <p class="text-xl text-gray-400 max-w-2xl">Solving Sri Lankan problems with world-class engineering.</p>
+            <div class="text-center">
+                <!-- Badge -->
+                <div class="fade-up inline-flex items-center gap-2 mb-6">
+                    <div class="w-2 h-2 bg-gold rounded-full animate-pulse"></div>
+                    <span class="text-gold text-sm tracking-widest uppercase">The Ecosystem</span>
+                </div>
+
+                <!-- Title -->
+                <div class="fade-up mb-8">
+                    <h1 class="text-5xl md:text-7xl lg:text-8xl font-bold font-space text-white leading-tight mb-4">
+                        Building <span class="gradient-text">Digital Infrastructure</span>
+                    </h1>
+                    <h2 class="text-2xl md:text-3xl text-gray-400">
+                        for Sri Lanka's Future
+                    </h2>
+                </div>
+
+                <!-- Description -->
+                <div class="fade-up max-w-3xl mx-auto mb-12">
+                    <p class="text-gray-400 text-lg leading-relaxed">
+                        From web hosting to AI-powered tools — a complete ecosystem designed to democratize technology and empower the next generation of digital innovators.
+                    </p>
+                </div>
+
+                <!-- Quick Stats -->
+                <div class="fade-up flex flex-wrap justify-center gap-8 md:gap-16">
+                    <div class="text-center">
+                        <div class="big-number font-bold text-white stat-number" data-target="6">0</div>
+                        <div class="text-gray-500 text-sm">Major Products</div>
+                    </div>
+                    <div class="text-center">
+                        <div class="big-number font-bold text-white stat-number" data-target="100">0</div>
+                        <div class="text-gray-500 text-sm">Free Tools</div>
+                    </div>
+                    <div class="text-center">
+                        <div class="big-number font-bold text-white stat-number" data-target="50000">0</div>
+                        <div class="text-gray-500 text-sm">Users Served</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Grid Section -->
+    <section class="py-24">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <!-- Section Header -->
+            <div class="text-center mb-16 fade-up">
+                <span class="text-gold text-sm tracking-widest uppercase">Our Products</span>
+                <h2 class="text-4xl md:text-5xl font-bold font-space text-white mt-4">
+                    The <span class="gradient-text">KDJ Ecosystem</span>
+                </h2>
             </div>
 
-            <div class="space-y-32">
-                
-                <!-- Singlish Converter -->
-                <div class="group grid grid-cols-1 lg:grid-cols-2 gap-12 items-center animate-on-scroll">
-                    <div class="order-2 lg:order-1 relative rounded-2xl overflow-hidden glass p-2 hover-lift">
-                        <div class="bg-gradient-to-br from-gray-900 to-black h-80 flex items-center justify-center relative overflow-hidden">
-                             <!-- Abstract code background for thumbnail -->
-                            <div class="absolute inset-0 opacity-20">
-                                <pre class="text-xs text-green-500 p-4">function convert(text) { return text.replace(...) }</pre>
-                            </div>
-                            <h3 class="text-4xl font-bold text-white z-10">Singlish</h3>
+            <!-- Projects Grid -->
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+
+                <!-- KDJ Lanka -->
+                <div class="fade-up project-item gradient-border-card p-8">
+                    <div class="relative z-10">
+                        <!-- Icon -->
+                        <div class="w-20 h-20 bg-gold/20 rounded-2xl flex items-center justify-center mb-6 project-icon transition-transform duration-300">
+                            <i class="fas fa-landmark text-4xl text-gold"></i>
                         </div>
-                    </div>
-                    <div class="order-1 lg:order-2 space-y-6">
-                        <h2 class="text-4xl font-bold text-white">Singlish Unicode Converter</h2>
-                        <div class="flex flex-wrap gap-2">
-                             <span class="px-3 py-1 bg-white/5 rounded-full text-xs text-cyan-400 border border-white/10">Voice Typing</span>
-                             <span class="px-3 py-1 bg-white/5 rounded-full text-xs text-cyan-400 border border-white/10">OCR</span>
-                             <span class="px-3 py-1 bg-white/5 rounded-full text-xs text-cyan-400 border border-white/10">SaaS</span>
+
+                        <!-- Badge -->
+                        <div class="flex items-center gap-2 mb-4">
+                            <span class="px-3 py-1 bg-gold/20 text-gold text-xs font-bold rounded-full">FLAGSHIP</span>
+                            <span class="px-3 py-1 bg-white/10 text-gray-400 text-xs rounded-full">Since 2016</span>
                         </div>
-                        <p class="text-gray-400 text-lg leading-relaxed">
-                            Sri Lanka's premier transliteration engine. Breaks the linguistic divide by allowing phonetically typed Sinhala. Features advanced <b>Voice Typing</b> and <b>Image-to-Text OCR</b>, making it a critical tool for digitizing bureaucratic archives.
+
+                        <!-- Title -->
+                        <h3 class="text-2xl font-bold text-white mb-3">KDJ Lanka (Pvt) Ltd</h3>
+
+                        <!-- Description -->
+                        <p class="text-gray-400 mb-6">
+                            The parent company driving innovation in web solutions, digital services, and SaaS products across Sri Lanka.
                         </p>
-                        <ul class="text-gray-500 space-y-2 list-disc list-inside">
-                            <li>Available as a Chrome Extension & Android App</li>
-                            <li>Real-time transliteration (Amma -> අම්මා)</li>
-                            <li>Used for official documentation</li>
-                        </ul>
-                         <div class="pt-4">
-                            <a href="https://singlish.kdj.lk" target="_blank" class="inline-flex items-center text-gold font-bold hover:underline">
-                                Launch Tool <i class="fas fa-external-link-alt ml-2 text-xs"></i>
-                            </a>
+
+                        <!-- Tech Stack -->
+                        <div class="flex flex-wrap gap-2 mb-6">
+                            <span class="tech-badge px-3 py-1 bg-white/5 rounded-full text-xs text-gray-400">Web Dev</span>
+                            <span class="tech-badge px-3 py-1 bg-white/5 rounded-full text-xs text-gray-400">SaaS</span>
+                            <span class="tech-badge px-3 py-1 bg-white/5 rounded-full text-xs text-gray-400">Consulting</span>
+                        </div>
+
+                        <!-- Link -->
+                        <a href="https://kdj.lk" target="_blank" class="inline-flex items-center text-gold font-bold hover:text-gold-dark transition">
+                            Learn More <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- KDJ Hosting -->
+                <div class="fade-up project-item gradient-border-card p-8">
+                    <div class="relative z-10">
+                        <!-- Icon -->
+                        <div class="w-20 h-20 bg-cyan/20 rounded-2xl flex items-center justify-center mb-6 project-icon transition-transform duration-300">
+                            <i class="fas fa-server text-4xl text-cyan"></i>
+                        </div>
+
+                        <!-- Badge -->
+                        <div class="flex items-center gap-2 mb-4">
+                            <span class="px-3 py-1 bg-cyan/20 text-cyan text-xs font-bold rounded-full">INFRASTRUCTURE</span>
+                            <span class="px-3 py-1 bg-white/10 text-gray-400 text-xs rounded-full">Established 2016</span>
+                        </div>
+
+                        <!-- Title -->
+                        <h3 class="text-2xl font-bold text-white mb-3">KDJ Hosting</h3>
+
+                        <!-- Description -->
+                        <p class="text-gray-400 mb-6">
+                            Premium web hosting provider with domain registration, cloud infrastructure, and enterprise-grade ERP solutions.
+                        </p>
+
+                        <!-- Tech Stack -->
+                        <div class="flex flex-wrap gap-2 mb-6">
+                            <span class="tech-badge px-3 py-1 bg-white/5 rounded-full text-xs text-gray-400">Hosting</span>
+                            <span class="tech-badge px-3 py-1 bg-white/5 rounded-full text-xs text-gray-400">Domains</span>
+                            <span class="tech-badge px-3 py-1 bg-white/5 rounded-full text-xs text-gray-400">Cloud</span>
+                        </div>
+
+                        <!-- Link -->
+                        <a href="https://kdjhosting.com" target="_blank" class="inline-flex items-center text-cyan font-bold hover:text-cyan-light transition">
+                            Learn More <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- KDJ Tools -->
+                <div class="fade-up project-item gradient-border-card p-8">
+                    <div class="relative z-10">
+                        <!-- Icon -->
+                        <div class="w-20 h-20 bg-purple-500/20 rounded-2xl flex items-center justify-center mb-6 project-icon transition-transform duration-300">
+                            <i class="fas fa-tools text-4xl text-purple-400"></i>
+                        </div>
+
+                        <!-- Badge -->
+                        <div class="flex items-center gap-2 mb-4">
+                            <span class="px-3 py-1 bg-purple-500/20 text-purple-400 text-xs font-bold rounded-full">100+ TOOLS</span>
+                            <span class="px-3 py-1 bg-green-500/20 text-green-400 text-xs rounded-full">FREE</span>
+                        </div>
+
+                        <!-- Title -->
+                        <h3 class="text-2xl font-bold text-white mb-3">KDJ Tools</h3>
+
+                        <!-- Description -->
+                        <p class="text-gray-400 mb-6">
+                            Massive suite of free productivity tools including PDF generators, code formatters, and AI-powered utilities.
+                        </p>
+
+                        <!-- Tech Stack -->
+                        <div class="flex flex-wrap gap-2 mb-6">
+                            <span class="tech-badge px-3 py-1 bg-white/5 rounded-full text-xs text-gray-400">PDF Tools</span>
+                            <span class="tech-badge px-3 py-1 bg-white/5 rounded-full text-xs text-gray-400">Converters</span>
+                            <span class="tech-badge px-3 py-1 bg-white/5 rounded-full text-xs text-gray-400">AI</span>
+                        </div>
+
+                        <!-- Link -->
+                        <a href="https://tools.kdj.lk" target="_blank" class="inline-flex items-center text-purple-400 font-bold hover:text-purple-300 transition">
+                            Explore Tools <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- KDJ AI Super App -->
+                <div class="fade-up project-item gradient-border-card p-8">
+                    <div class="relative z-10">
+                        <!-- Icon -->
+                        <div class="w-20 h-20 bg-gold/20 rounded-2xl flex items-center justify-center mb-6 project-icon transition-transform duration-300">
+                            <i class="fas fa-robot text-4xl text-gold"></i>
+                        </div>
+
+                        <!-- Badge -->
+                        <div class="flex items-center gap-2 mb-4">
+                            <span class="px-3 py-1 bg-gold/20 text-gold text-xs font-bold rounded-full">NEW</span>
+                            <span class="px-3 py-1 bg-white/10 text-gray-400 text-xs rounded-full">Coming Soon</span>
+                        </div>
+
+                        <!-- Title -->
+                        <h3 class="text-2xl font-bold text-white mb-3">KDJ AI Super App</h3>
+
+                        <!-- Description -->
+                        <p class="text-gray-400 mb-6">
+                            All-in-one AI interface aggregating multiple AI models for the Sri Lankan market with localized Sinhala support.
+                        </p>
+
+                        <!-- Tech Stack -->
+                        <div class="flex flex-wrap gap-2 mb-6">
+                            <span class="tech-badge px-3 py-1 bg-white/5 rounded-full text-xs text-gray-400">Multi-Model</span>
+                            <span class="tech-badge px-3 py-1 bg-white/5 rounded-full text-xs text-gray-400">Sinhala AI</span>
+                        </div>
+
+                        <!-- Status -->
+                        <div class="inline-flex items-center text-orange-400">
+                            <i class="fas fa-clock mr-2"></i>
+                            <span class="text-sm">In Development</span>
                         </div>
                     </div>
                 </div>
 
-                <!-- KDJ Tools Ecosystem -->
-                <div class="group grid grid-cols-1 lg:grid-cols-2 gap-12 items-center animate-on-scroll">
-                    <div class="order-1 lg:order-1 space-y-6">
-                        <h2 class="text-4xl font-bold text-white">KDJ Tools Ecosystem</h2>
-                        <div class="flex gap-2">
-                             <span class="px-3 py-1 bg-white/5 rounded-full text-xs text-purple-400 border border-white/10">100+ Apps</span>
-                             <span class="px-3 py-1 bg-white/5 rounded-full text-xs text-purple-400 border border-white/10">Productivity</span>
-                             <span class="px-3 py-1 bg-white/5 rounded-full text-xs text-purple-400 border border-white/10">SaaS</span>
+                <!-- eLearning.lk -->
+                <div class="fade-up project-item gradient-border-card p-8">
+                    <div class="relative z-10">
+                        <!-- Icon -->
+                        <div class="w-20 h-20 bg-green-500/20 rounded-2xl flex items-center justify-center mb-6 project-icon transition-transform duration-300">
+                            <i class="fas fa-graduation-cap text-4xl text-green-400"></i>
                         </div>
-                        <p class="text-gray-400 text-lg leading-relaxed">
-                            A massive suite of over 100 free utilities designed to eliminate "context switching." From <b>Markdown Studio</b> for technical writers to <b>KDJ Video</b> for creative animation and subtitle generation, this ecosystem supports the entire project lifecycle.
+
+                        <!-- Badge -->
+                        <div class="flex items-center gap-2 mb-4">
+                            <span class="px-3 py-1 bg-green-500/20 text-green-400 text-xs font-bold rounded-full">EDUCATION</span>
+                            <span class="px-3 py-1 bg-gold/20 text-gold text-xs rounded-full">5/5 Rated</span>
+                        </div>
+
+                        <!-- Title -->
+                        <h3 class="text-2xl font-bold text-white mb-3">eLearning.lk</h3>
+
+                        <!-- Description -->
+                        <p class="text-gray-400 mb-6">
+                            Top-rated instructor with perfect 5/5 ratings across AI, graphic design, video editing, and Microsoft Office courses.
                         </p>
-                        <ul class="text-gray-500 space-y-2 list-disc list-inside">
-                            <li>Includes Markdown Studio (Live Preview/PDF Export)</li>
-                            <li>Completely Free ($0) access model</li>
-                        </ul>
-                         <div class="pt-4">
-                           <a href="#" class="inline-flex items-center text-gold font-bold hover:underline">
-                                Explore Ecosystem <i class="fas fa-arrow-right ml-2 text-xs"></i>
-                            </a>
+
+                        <!-- Tech Stack -->
+                        <div class="flex flex-wrap gap-2 mb-6">
+                            <span class="tech-badge px-3 py-1 bg-white/5 rounded-full text-xs text-gray-400">AI Course</span>
+                            <span class="tech-badge px-3 py-1 bg-white/5 rounded-full text-xs text-gray-400">Design</span>
+                            <span class="tech-badge px-3 py-1 bg-white/5 rounded-full text-xs text-gray-400">Office</span>
                         </div>
+
+                        <!-- Link -->
+                        <a href="https://elearning.lk" target="_blank" class="inline-flex items-center text-green-400 font-bold hover:text-green-300 transition">
+                            View Courses <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
                     </div>
-                    <div class="order-2 lg:order-2 relative rounded-2xl overflow-hidden glass p-2 hover-lift">
-                        <div class="bg-gradient-to-br from-indigo-900 to-black h-80 flex items-center justify-center relative overflow-hidden">
-                             <i class="fas fa-toolbox text-6xl text-white z-10 opacity-80"></i>
+                </div>
+
+                <!-- Pro Hub -->
+                <div class="fade-up project-item gradient-border-card p-8">
+                    <div class="relative z-10">
+                        <!-- Icon -->
+                        <div class="w-20 h-20 bg-red-500/20 rounded-2xl flex items-center justify-center mb-6 project-icon transition-transform duration-300">
+                            <i class="fas fa-users text-4xl text-red-400"></i>
                         </div>
+
+                        <!-- Badge -->
+                        <div class="flex items-center gap-2 mb-4">
+                            <span class="px-3 py-1 bg-red-500/20 text-red-400 text-xs font-bold rounded-full">$1/MONTH</span>
+                            <span class="px-3 py-1 bg-white/10 text-gray-400 text-xs rounded-full">Nas.io</span>
+                        </div>
+
+                        <!-- Title -->
+                        <h3 class="text-2xl font-bold text-white mb-3">Pro Hub Community</h3>
+
+                        <!-- Description -->
+                        <p class="text-gray-400 mb-6">
+                            Exclusive community offering uncut masterclasses, Learn & Earn challenges, and direct mentorship from KDJ.
+                        </p>
+
+                        <!-- Tech Stack -->
+                        <div class="flex flex-wrap gap-2 mb-6">
+                            <span class="tech-badge px-3 py-1 bg-white/5 rounded-full text-xs text-gray-400">Community</span>
+                            <span class="tech-badge px-3 py-1 bg-white/5 rounded-full text-xs text-gray-400">Mentorship</span>
+                        </div>
+
+                        <!-- Link -->
+                        <a href="https://nas.io/kdj-pro" target="_blank" class="inline-flex items-center text-red-400 font-bold hover:text-red-300 transition">
+                            Join Community <i class="fas fa-arrow-right ml-2"></i>
+                        </a>
                     </div>
                 </div>
 
             </div>
         </div>
-    </main>
+    </section>
 
+    <!-- Featured Project Deep Dive -->
+    <section class="py-24 bg-dark-surface">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <!-- Section Header -->
+            <div class="text-center mb-16 fade-up">
+                <span class="text-gold text-sm tracking-widest uppercase">Featured</span>
+                <h2 class="text-4xl md:text-5xl font-bold font-space text-white mt-4">
+                    Spotlight: <span class="gradient-text">KDJ Tools</span>
+                </h2>
+            </div>
+
+            <div class="grid lg:grid-cols-2 gap-16 items-center">
+                <!-- Left - Visual -->
+                <div class="fade-up">
+                    <div class="relative">
+                        <!-- Morphing Background Shape -->
+                        <div class="morph-shape absolute -inset-4 bg-gradient-to-br from-gold/10 via-transparent to-cyan/10"></div>
+
+                        <!-- Icon Grid -->
+                        <div class="relative grid grid-cols-4 gap-4 p-8 bg-dark-card rounded-3xl border border-white/10">
+                            <div class="float-icon aspect-square bg-gold/10 rounded-xl flex items-center justify-center">
+                                <i class="fas fa-file-pdf text-2xl text-gold"></i>
+                            </div>
+                            <div class="float-icon aspect-square bg-cyan/10 rounded-xl flex items-center justify-center">
+                                <i class="fas fa-code text-2xl text-cyan"></i>
+                            </div>
+                            <div class="float-icon aspect-square bg-purple-500/10 rounded-xl flex items-center justify-center">
+                                <i class="fas fa-image text-2xl text-purple-400"></i>
+                            </div>
+                            <div class="float-icon aspect-square bg-red-500/10 rounded-xl flex items-center justify-center">
+                                <i class="fas fa-video text-2xl text-red-400"></i>
+                            </div>
+                            <div class="float-icon aspect-square bg-green-500/10 rounded-xl flex items-center justify-center">
+                                <i class="fas fa-file-excel text-2xl text-green-400"></i>
+                            </div>
+                            <div class="float-icon aspect-square bg-blue-500/10 rounded-xl flex items-center justify-center">
+                                <i class="fas fa-language text-2xl text-blue-400"></i>
+                            </div>
+                            <div class="float-icon aspect-square bg-yellow-500/10 rounded-xl flex items-center justify-center">
+                                <i class="fas fa-palette text-2xl text-yellow-400"></i>
+                            </div>
+                            <div class="float-icon aspect-square bg-pink-500/10 rounded-xl flex items-center justify-center">
+                                <i class="fas fa-font text-2xl text-pink-400"></i>
+                            </div>
+                        </div>
+
+                        <!-- Center Badge -->
+                        <div class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2">
+                            <div class="bg-black px-6 py-3 rounded-full border border-gold/30">
+                                <span class="text-gold font-bold">100+ TOOLS</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right - Content -->
+                <div class="space-y-8 fade-up">
+                    <div>
+                        <h3 class="text-3xl font-bold text-white mb-4">Your Digital Swiss Army Knife</h3>
+                        <p class="text-gray-400 text-lg leading-relaxed">
+                            KDJ Tools is a comprehensive suite of free utilities designed to eliminate context switching and boost productivity. Whether you're a developer, designer, writer, or business professional — we have tools for you.
+                        </p>
+                    </div>
+
+                    <!-- Feature List -->
+                    <div class="space-y-4">
+                        <div class="flex items-start gap-4">
+                            <div class="w-10 h-10 bg-gold/20 rounded-lg flex items-center justify-center flex-shrink-0">
+                                <i class="fas fa-check text-gold"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-white font-bold mb-1">Markdown Studio</h4>
+                                <p class="text-gray-500 text-sm">Live preview editor with PDF export</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4">
+                            <div class="w-10 h-10 bg-cyan/20 rounded-lg flex items-center justify-center flex-shrink-0">
+                                <i class="fas fa-check text-cyan"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-white font-bold mb-1">KDJ Video</h4>
+                                <p class="text-gray-500 text-sm">Video editing & subtitle generation</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4">
+                            <div class="w-10 h-10 bg-purple-500/20 rounded-lg flex items-center justify-center flex-shrink-0">
+                                <i class="fas fa-check text-purple-400"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-white font-bold mb-1">Code Formatter</h4>
+                                <p class="text-gray-500 text-sm">Beautify code in multiple languages</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-start gap-4">
+                            <div class="w-10 h-10 bg-red-500/20 rounded-lg flex items-center justify-center flex-shrink-0">
+                                <i class="fas fa-check text-red-400"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-white font-bold mb-1">PDF Toolkit</h4>
+                                <p class="text-gray-500 text-sm">Merge, split, convert PDFs easily</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- CTA -->
+                    <div class="pt-4">
+                        <a href="https://tools.kdj.lk" target="_blank" class="inline-flex items-center px-8 py-4 bg-gradient-to-r from-gold to-gold-dark text-black font-bold rounded-full hover:shadow-[0_0_30px_rgba(255,215,0,0.4)] transition-all">
+                            <i class="fas fa-rocket mr-2"></i>
+                            Explore All Tools
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Technology Stack Section -->
+    <section class="py-24">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16 fade-up">
+                <span class="text-gold text-sm tracking-widest uppercase">Technology Stack</span>
+                <h2 class="text-4xl md:text-5xl font-bold font-space text-white mt-4">
+                    Built with <span class="gradient-text">Modern Tech</span>
+                </h2>
+            </div>
+
+            <!-- Tech Categories -->
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Frontend -->
+                <div class="fade-up">
+                    <div class="bg-dark-card p-6 rounded-2xl border border-white/10">
+                        <h3 class="text-xl font-bold text-white mb-4 flex items-center gap-2">
+                            <i class="fas fa-palette text-gold"></i>
+                            Frontend
+                        </h3>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 bg-white/5 rounded-lg text-sm text-gray-400">React</span>
+                            <span class="px-3 py-1 bg-white/5 rounded-lg text-sm text-gray-400">Vue.js</span>
+                            <span class="px-3 py-1 bg-white/5 rounded-lg text-sm text-gray-400">Tailwind</span>
+                            <span class="px-3 py-1 bg-white/5 rounded-lg text-sm text-gray-400">Next.js</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Backend -->
+                <div class="fade-up">
+                    <div class="bg-dark-card p-6 rounded-2xl border border-white/10">
+                        <h3 class="text-xl font-bold text-white mb-4 flex items-center gap-2">
+                            <i class="fas fa-server text-cyan"></i>
+                            Backend
+                        </h3>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 bg-white/5 rounded-lg text-sm text-gray-400">Python</span>
+                            <span class="px-3 py-1 bg-white/5 rounded-lg text-sm text-gray-400">Django</span>
+                            <span class="px-3 py-1 bg-white/5 rounded-lg text-sm text-gray-400">Flask</span>
+                            <span class="px-3 py-1 bg-white/5 rounded-lg text-sm text-gray-400">Node.js</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- AI/ML -->
+                <div class="fade-up">
+                    <div class="bg-dark-card p-6 rounded-2xl border border-white/10">
+                        <h3 class="text-xl font-bold text-white mb-4 flex items-center gap-2">
+                            <i class="fas fa-brain text-purple-400"></i>
+                            AI & ML
+                        </h3>
+                        <div class="flex flex-wrap gap-2">
+                            <span class="px-3 py-1 bg-white/5 rounded-lg text-sm text-gray-400">TensorFlow</span>
+                            <span class="px-3 py-1 bg-white/5 rounded-lg text-sm text-gray-400">OpenAI</span>
+                            <span class="px-3 py-1 bg-white/5 rounded-lg text-sm text-gray-400">Claude</span>
+                            <span class="px-3 py-1 bg-white/5 rounded-lg text-sm text-gray-400">Gemini</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-24 bg-dark-surface">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <div class="fade-up">
+                <h2 class="text-4xl md:text-5xl font-bold font-space text-white mb-6">
+                    Ready to <span class="gradient-text">Build Something</span>?
+                </h2>
+                <p class="text-xl text-gray-400 mb-12 max-w-2xl mx-auto">
+                    Let's collaborate to bring your ideas to life. Whether you need web development, AI solutions, or digital transformation — I'm here to help.
+                </p>
+                <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                    <a href="contact.html" class="px-8 py-4 bg-gradient-to-r from-gold to-gold-dark text-black font-bold rounded-full hover:shadow-[0_0_30px_rgba(255,215,0,0.4)] transition-all">
+                        <i class="fas fa-paper-plane mr-2"></i>
+                        Start a Project
+                    </a>
+                    <a href="courses.html" class="px-8 py-4 border-2 border-white/20 rounded-full hover:border-gold hover:text-gold transition-all">
+                        <i class="fas fa-graduation-cap mr-2"></i>
+                        Learn Skills
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
     <div id="footer-container"></div>
+
     <script src="js/main.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // Scroll-triggered animations
+            const fadeElements = document.querySelectorAll('.fade-up');
+
+            const fadeObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add('visible');
+                    }
+                });
+            }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
+
+            fadeElements.forEach(el => fadeObserver.observe(el));
+
+            // Number counter animation
+            const statNumbers = document.querySelectorAll('.stat-number');
+
+            const counterObserver = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        const target = parseInt(entry.target.getAttribute('data-target'));
+                        const duration = 2000;
+                        const start = performance.now();
+
+                        const animate = (currentTime) => {
+                            const elapsed = currentTime - start;
+                            const progress = Math.min(elapsed / duration, 1);
+                            const easeOut = 1 - Math.pow(1 - progress, 3);
+                            const current = Math.floor(easeOut * target);
+                            entry.target.textContent = current.toLocaleString();
+
+                            if (progress < 1) {
+                                requestAnimationFrame(animate);
+                            } else {
+                                counterObserver.unobserve(entry.target);
+                            }
+                        };
+
+                        requestAnimationFrame(animate);
+                    }
+                });
+            }, { threshold: 0.5 });
+
+            statNumbers.forEach(num => counterObserver.observe(num));
+        });
+    </script>
 </body>
 </html>

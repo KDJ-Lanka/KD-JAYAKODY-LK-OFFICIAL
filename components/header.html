@@ -12,6 +12,8 @@
                     <a href="about.html" class="nav-link text-gray-400 hover:text-white hover:text-gold px-3 py-2 rounded-md text-sm font-medium transition-all relative">About</a>
                     <a href="projects.html" class="nav-link text-gray-400 hover:text-white hover:text-gold px-3 py-2 rounded-md text-sm font-medium transition-all relative">Projects</a>
                     <a href="courses.html" class="nav-link text-gray-400 hover:text-white hover:text-gold px-3 py-2 rounded-md text-sm font-medium transition-all relative">Courses</a>
+                    <a href="books.html" class="nav-link text-gray-400 hover:text-white hover:text-gold px-3 py-2 rounded-md text-sm font-medium transition-all relative">Books</a>
+                    <a href="gallery.html" class="nav-link text-gray-400 hover:text-white hover:text-gold px-3 py-2 rounded-md text-sm font-medium transition-all relative">Gallery</a>
                     <a href="contact.html" class="px-6 py-2 rounded-full border border-gold/50 text-gold hover:bg-gold hover:text-black transition-all duration-300 font-medium text-sm shadow-[0_0_15px_rgba(255,215,0,0.2)] hover:shadow-[0_0_25px_rgba(255,215,0,0.5)]">Contact</a>
                 </div>
             </div>
@@ -29,11 +31,13 @@
     <!-- Mobile menu -->
     <div class="hidden md:hidden bg-dark-surface/95 backdrop-blur-xl border-b border-white/10 absolute w-full" id="mobile-menu">
         <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
-            <a href="index.html" class="text-gray-300 hover:text-gold block px-3 py-2 rounded-md text-base font-medium">Home</a>
-                <a href="about.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-white hover:bg-white/10 transition">About</a>
-                <a href="projects.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-white hover:bg-white/10 transition">Projects</a>
-                <a href="courses.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-white hover:bg-white/10 transition">Courses</a>
-                <a href="contact.html" class="block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-white hover:bg-white/10 transition">Contact</a>
+            <a href="index.html" class="mobile-menu-link text-gray-300 hover:text-gold block px-3 py-2 rounded-md text-base font-medium">Home</a>
+                <a href="about.html" class="mobile-menu-link block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-white hover:bg-white/10 transition">About</a>
+                <a href="projects.html" class="mobile-menu-link block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-white hover:bg-white/10 transition">Projects</a>
+                <a href="courses.html" class="mobile-menu-link block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-white hover:bg-white/10 transition">Courses</a>
+                <a href="books.html" class="mobile-menu-link block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-white hover:bg-white/10 transition">Books</a>
+                <a href="gallery.html" class="mobile-menu-link block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-white hover:bg-white/10 transition">Gallery</a>
+                <a href="contact.html" class="mobile-menu-link block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-white hover:bg-white/10 transition">Contact</a>
         </div>
     </div>
 </nav>
@@ -48,5 +52,12 @@
             // Add a subtle indicator
             link.innerHTML += '<span class="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-1 h-1 bg-gold rounded-full"></span>';
         }
+    });
+
+    // Close mobile menu when a link is clicked
+    document.querySelectorAll('.mobile-menu-link').forEach(link => {
+        link.addEventListener('click', () => {
+            document.getElementById('mobile-menu').classList.add('hidden');
+        });
     });
 </script>

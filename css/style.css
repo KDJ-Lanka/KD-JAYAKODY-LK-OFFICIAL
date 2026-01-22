@@ -12,6 +12,7 @@
 
 html {
     scroll-behavior: smooth;
+    scroll-padding-top: 80px; /* Account for fixed header height */
     background-color: var(--dark-bg);
 }
 
@@ -131,4 +132,15 @@ h1, h2, h3, h4, h5, h6 {
 
 .reveal-text-char {
     display: inline-block;
+}
+
+/* Content padding for fixed header */
+.content-with-header {
+    padding-top: 6rem; /* 96px - accounts for h-20 (80px) header + spacing */
+}
+
+@media (max-width: 768px) {
+    .content-with-header {
+        padding-top: 5rem; /* 80px on mobile */
+    }
 }
